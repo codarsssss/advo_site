@@ -1,927 +1,620 @@
 <!doctype html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 
 <head>
-
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--====== Title ======-->
-    <title>Livvic - personal Portfolio  HTML Template</title>
-
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/bootstrap.min.css' %}">
-
-    <!--====== Fontawesome pro css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/all.css' %}">
-
-    <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/magnific-popup.css' %}">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/slick.css' %}">
-
-    <!--====== Slick css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/slick-menu.css' %}">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/default.css' %}">
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/style.css' %}">
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="{% static 'homeapp/assets/css/responsive.css' %}">
-
-
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{% static 'homeapp/img/favicon.png' %}"> type="image/png">
+	<title>LAWFUL LAWFIRM</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'homeapp/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/vendors/linericon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/vendors/owl-carousel/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/vendors/lightbox/simpleLightbox.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/vendors/nice-select/css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'homeapp/vendors/animate-css/animate.css' %}">
+	<!-- main css -->
+	<link rel="stylesheet" href="{% static 'homeapp/css/style.css' %}">
 </head>
 
 <body>
-    <!--======  PRELOADER PART START ======-->
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="object" id="object_one"></div>
-                <div class="object" id="object_two"></div>
-                <div class="object" id="object_three"></div>
-                <div class="object" id="object_four"></div>
-            </div>
-        </div>
-    </div>
-    <!--======  PRELOADER PART END ======-->
 
-    <!--======  OFFCANVAS-SEARCH PART START ======-->
-    <div class="offcanvas-search-area">
-        <form action="#">
-            <input type="text" placeholder="search">
-            <span class="close-bar"><i class="fas fa-times"></i></span>
-        </form>
-    </div>
-    <!--======  OFFCANVAS-SEARCH PART END ======-->
+	<!--================ Start Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<div class="search_input" id="search_input_box">
+				<div class="container">
+					<form class="d-flex justify-content-between">
+						<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+						<button type="submit" class="btn"></button>
+						<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+					</form>
+				</div>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="{% static 'homeapp/img/logo.png' %}" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="">Начало</a></li>
+							<li class="nav-item"><a class="nav-link" href="about-us/">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="service/">Service</a></li>
+							<li class="nav-item"><a class="nav-link" href="team/">Team</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav ml-auto">
+							<div class="social-icons d-flex align-items-center">
+								<a href="">
+									<li><i class="fa fa-facebook"></i></li>
+								</a>
+								<a href="">
+									<li><i class="fa fa-twitter"></i></li>
+								</a>
+								<a href="">
+									<li><i class="fa fa-dribbble"></i></li>
+								</a>
+								<a href="">
+									<li><i class="fa fa-behance"></i></li>
+								</a>
+							</div>
+							<li class="nav-item"><a href="#" class="search">
+								<i class="lnr lnr-magnifier" id="search"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Menu Area =================-->
 
-    <!--======  HEADER PART START ======-->
-    <header>
-        <div class="top-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="top-header-content">
-                                    <span><i class="fas fa-phone"></i>+012 (345) 67899</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="top-header-content">
-                                    <span><i class="fas fa-map-marker-alt"></i>63 Plabon Road, USA</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="top-header-content">
-                                    <span><i class="far fa-clock"></i>Sun - Friday : 10 am - 08 pm</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 text-right border">
-                        <div class="top-header-social-links">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <div class="logo">
-                            <a href="index.html"><img src="../../static/homeapp/assets/images/logo.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-10 text-right">
-                        <div class="mobile-menu-wrap"></div>
-                        <div class="header-search">
-                            <span class="search-btn"><i class="fa fa-search"></i></span>
-                        </div>
-                        <div class="main-menu">
-                            <nav>
-                                <ul id="mobile-menu"> 
-                                    <li class="current"><a href="#home">Home</a></li>
-                                    <li><a href="#About">About</a></li>
-                                    <li><a href="#Services">Services</a></li>
-                                    <li><a href="#portfolio">portfolio</a></li>
-                                    <li><a href="#team">team</a></li>
-                                    <li><a href="#price">price</a></li>
-                                    <li><a href="#Blog">Blog</a>
-                                        <ul class="submenu">
-                                            <Li><a href="blog.html">Latest Blog</a></Li>
-                                            <Li><a href="blog-details.html">Blog Details</a></Li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#Contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--======  HEADER PART END ======-->
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area overlay">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row fullscreen d-flex align-items-center justify-content-center">
+					<div class="banner_content">
+						<h2>
+							We Combine<br>
+							Business with Finance<br>
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua.
+						</p>
+						<a class="primary-btn text-uppercase" href="#">Get Free Quote</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
 
-    <!--======  HERO PART START ======-->
-    <section class="hero-area hero-carousel-active" id="home">
-        <div class="single-hero-area hero-bg-1 bg_cover" data-scroll-area="true">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="hero-area-content">
-                            <p class="hero-para">Start New Business  <br>
-                                With Our New Experience and</p>
-                            <h1 class="hero-heading">
-                                Creative Minds
-                            </h1>
-                            <div class="hero-area-menu">
-                                <ul>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                    <li><a href="#">Developemt</a></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn hero-btn">get Started <i class="fa fa-arrow-right"></i></a>
-                            <a href="https://www.youtube.com/watch?v=iogabydg2y0" class="video-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scrolli">
-                <span><i class="fa fa-arrow-down"></i></span>
-            </div>
-        </div>
-        <div class="single-hero-area hero-bg-2 bg_cover" data-scroll-area="true">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="hero-area-content">
-                            <p class="hero-para">Start New Business  <br>
-                                With Our New Experience and</p>
-                            <h1 class="hero-heading">
-                                Creative Minds
-                            </h1>
-                            <div class="hero-area-menu">
-                                <ul>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                    <li><a href="#">Developemt</a></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn hero-btn">get Started <i class="fa fa-arrow-right"></i></a>
-                            <a href="#" class="video-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scrolli">
-                <span><i class="fa fa-arrow-down"></i></span>
-            </div>
-        </div>
-        <div class="single-hero-area hero-bg-3 bg_cover" data-scroll-area="true">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="hero-area-content">
-                            <p class="hero-para">Start New Business  <br>
-                                With Our New Experience and</p>
-                            <h1 class="hero-heading">
-                                Creative Minds
-                            </h1>
-                            <div class="hero-area-menu">
-                                <ul>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                    <li><a href="#">Developemt</a></li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn hero-btn">get Started <i class="fa fa-arrow-right"></i></a>
-                            <a href="#" class="video-btn video-popup"><i class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scrolli">
-                <span><i class="fa fa-arrow-down"></i></span>
-            </div>
-        </div>
-    </section>
-    <!--======  HERO PART END ======-->
+	<!--================ Start Features Area =================-->
+	<section class="features_area" id="features_counter">
+		<div class="container">
+			<div class="row counter_wrapper">
+				<!-- single feature -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single_feature">
+						<div class="thumb">
+							<img src="{% static 'homeapp/img/features/1.png'%}" alt="">
+						</div>
+						<div class="info-content">
+							<h4><span class="counter">596</span>+</h4>
+							<p>Qualified Lawyer</p>
 
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single_feature">
+						<div class="thumb">
+							<img src="{% static 'homeapp/img/features/2.png' %}" alt="">
+						</div>
+						<div class="info-content">
+							<h4><span class="counter">20650</span>+</h4>
+							<p>Solved Cases</p>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single_feature">
+						<div class="thumb">
+							<img src="{% static 'homeapp/img/features/3.png' %}" alt="">
+						</div>
+						<div class="info-content">
+							<h4><span class="counter">2.5</span>k</h4>
+							<p>Trusted Clients</p>
+						</div>
+					</div>
+				</div>
+				<!-- single feature -->
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single_feature">
+						<div class="thumb">
+							<img src="{% static 'homeapp/img/features/4.png' %}" alt="">
+						</div>
+						<div class="info-content">
+							<h4><span class="counter">50</span>+</h4>
+							<p>Achievements</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
 
-    <!--======  SERVICE-CATEGORIES PART START ======-->
-    <section class="service-area service-categories pt-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-service-area">
-                        <span class="service-num">01</span>
-                    </div>
-                    <div class="service-icon">
-                        <img src="../../static/homeapp/assets/images/service-icon/1.png" alt="">
-                    </div>
-                    <div class="service-content">
-                        <h4>Product Design</h4>
-                        <p>It is pleasure, but because those who do not know how  pursue pleasure ration</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service-area">
-                        <span class="service-num">02</span>
-                    </div>
-                    <div class="service-icon">
-                        <img src="../../static/homeapp/assets/images/service-icon/2.png" alt="">
-                    </div>
-                    <div class="service-content">
-                        <h4>UX/UI Strategy</h4>
-                        <p>Pain can procure hi some great pleasutrivial example, which ever undertakes </p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-service-area">
-                        <span class="service-num">03</span>
-                    </div>
-                    <div class="service-icon">
-                        <img src="../../static/homeapp/assets/images/service-icon/3.png" alt="">
-                    </div>
-                    <div class="service-content">
-                        <h4>Market Analysis</h4>
-                        <p>Some advantage from but who has any right tfind fault with a man chooses</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  SERVICE-CATEGORIES PART END ======-->
+	<!--================ Start Video Area =================-->
+	<section class="video-sec-area section_gap_top" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 video-left overlay">
+					<div class="video-inner justify-content-center align-items-center d-flex">
+						<a id="play-home-video" class="video-play-button" href="https://www.youtube.com/watch?time_continue=2&v=J9YzcEe29d0">
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-6 video-right">
+					<h1>Get to Know Project Estimate?</h1>
+					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s
+						exciting to think about setting up your own viewing station whether that is on the deck.</p>
+					<a href="#" class="primary-btn">Learn More</a>
 
-    <!--======  ABOUT-US PART START ======-->
-    <section class="about-us-area" id="About">
-        <div class="container">
-            <div class="row">
-                <div class="about-us-img">
-                    <img src="../../static/homeapp/assets/images/about-us/1.png" alt="" class="about-img-1">
-                    <img src="../../static/homeapp/assets/images/about-us/2.png" alt="" class="about-img-2">
-                </div>
-                <div class="col-lg-5 offset-lg-7">
-                    <div class="about-us-content">
-                        <div class="section-title about-us-title">
-                            <p class="section-para"><span></span>About Us</p>
-                            <h1>Most Creative Agency
-                                For Your Project</h1>
-                            
-                        </div>
-                        <div class="about-us-text">
-                            <span>A</span>
-                            <p>Avoids pleasure itself, because it is pleasure, but because those who do not know how to pursuetw pleasure ration counter consequences that ares extremely painful. Nor again is tanyone who loves or pursues or desires to obtain pain</p>
-                        </div>
-                        <ul class="about-menu">
-                            <li><a href="#"><i class="fas fa-check"></i>Web Design</a></li>
-                            <li><a href="#"><i class="fas fa-check"></i>Web Development</a></li>
-                            <li><a href="#"><i class="fas fa-check"></i>Graphics Arts</a></li>
-                            <li><a href="#"><i class="fas fa-check"></i>Product Marketing</a></li>
-                            <li><a href="#"><i class="fas fa-check"></i>User Research</a></li>
-                        </ul>
-                        <a href="#" class="btn about-btn">Contact Us <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  ABOUT-US PART END ======-->
+					<div class="right-bottom-area">
+						<div class="author-lacture">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod
+								tempor incididunt labore dolore magna aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna aliqua enim minim veniam quis
+								nostrud.</p>
+							<div class="author-title">
+								<div class="thumb"><img src="{% static 'homeapp/img/about-author.png' %}" alt=""></div>
+								<div class="a-desc">
+									<h6>Marvel Maison</h6>
+									<p>Chief Executive, Amazon</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- about -->
+	<section class="about-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about-inner">
+						<div class="row">
+							<!-- single success -->
+							<div class="col-lg-6 col-md-6">
+								<div class="single-success">
+									<h5>Road to Success</h5>
+									<p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore magna.</p>
+								</div>
+							</div>
+							<!-- single success -->
+							<div class="col-lg-6 col-md-6">
+								<div class="single-success">
+									<h5>Road to Success</h5>
+									<p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore magna.</p>
+								</div>
+							</div>
+							<!-- single success -->
+							<div class="col-lg-6 col-md-6">
+								<div class="single-success">
+									<h5>Road to Success</h5>
+									<p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore magna.</p>
+								</div>
+							</div>
+							<!-- single success -->
+							<div class="col-lg-6 col-md-6">
+								<div class="single-success">
+									<h5>Road to Success</h5>
+									<p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore magna.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end about -->
+	<!--================ End video Area =================-->
 
-    <!--======  SERVICE PART START ======-->
-    <section class="service-area service-bg pt-140 pb-140" id="Services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 text-center pb-80">
-                    <div class="section-title service-title">
-                        <span><img src="../../static/homeapp/assets/images/service-text.png" alt=""></span>
-                        <p class="section-para"><span></span>About Us</p>
-                        <h1>Most Creative Agency
-                            For Your Project</h1>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-30">
-                <div class="col-lg-6">
-                    <div class="single-service-box">
-                        <div class="single-service-icon-box">
-                            <p>01</p>
-                            <i class="fas fa-bezier-curve"></i>
-                        </div>
-                        <div class="service-box-content">
-                            <h3>Graphics Design</h3>
-                            <p>Inventore veritatis et quasi beata vitae dicta sunt explicabo. Neenms ipsam voluptatem voluptas</p>
-                            <a href="#" class="service-btn">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-service-box">
-                        <div class="single-service-icon-box">
-                            <p>02</p>
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="service-box-content">
-                            <h3>Web Development</h3>
-                            <p>Inventore veritatis et quasi beata vitae dicta sunt explicabo. Neenms ipsam voluptatem voluptas</p>
-                            <a href="#" class="service-btn">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="single-service-box">
-                        <div class="single-service-icon-box">
-                            <p>03</p>
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="service-box-content">
-                            <h3>Data Analysis</h3>
-                            <p>Inventore veritatis et quasi beata vitae dicta sunt explicabo. Neenms ipsam voluptatem voluptas</p>
-                            <a href="#" class="service-btn">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-service-box">
-                        <div class="single-service-icon-box">
-                            <p>04</p>
-                            <i class="fas fa-anchor"></i>
-                        </div>
-                        <div class="service-box-content">
-                            <h3>Server Security</h3>
-                            <p>Inventore veritatis et quasi beata vitae dicta sunt explicabo. Neenms ipsam voluptatem voluptas</p>
-                            <a href="#" class="service-btn">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  ABOUT-US PART END ======-->
+	<!--================ Start service Area =================-->
+	<section class="service-area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h1>Services Offered By Us</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+							aliqua enim minim veniam quis nostrud.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<!-- single service -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-service">
+						<div class="service-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/service/service1.jpg' %}" alt="">
+						</div>
+						<div class="service-details">
+							<h5><a href="#">Get to Know Project Estimate?</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-service">
+						<div class="service-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/service/service2.jpg' %}" alt="">
+						</div>
+						<div class="service-details">
+							<h5><a href="#">Get to Know Project Estimate?</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-service">
+						<div class="service-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/service/service3.jpg' %}" alt="">
+						</div>
+						<div class="service-details">
+							<h5><a href="#">Get to Know Project Estimate?</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End service Area =================-->
 
-    <!--======  PORTFOLIO PART START ======-->
-    <section class="portfolio-area pt-140 pb-140" id="portfolio">
-        <div class="container">
-            <div class="row pb-80">
-                <div class="col-lg-5">
-                    <div class="section-title portfolio-title">
-                        <p class="section-para"><span></span>About Us</p>
-                        <h1>Most Creative Agency
-                            For Your Project</h1>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-7 text-right">
-                    <div class="portfolio-btn-area">
-                        <a href="#" class="btn portfolio-btn">View more <i class="fa fa-arrow-right"></i></a>
-                        <a href="#" class="portfolio-btn-2">Let’s Talk <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="single-portfolio-item">
-                        <img src="../../static/homeapp/assets/images/portfolio/1.jpg" alt="">
-                        <div class="portfolio-overlay-content">
-                            <h2>Creative Works</h2>
-                            <p>Light Illustration</p>
-                            <a href="../../static/homeapp/assets/images/portfolio/1.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="row">
-                        <div class="col-lg-6 pb-30 col-md-6">
-                            <div class="single-portfolio-item">
-                                <img src="../../static/homeapp/assets/images/portfolio/2.jpg" alt="">
-                                <div class="portfolio-overlay-content">
-                                    <h2>Creative Works</h2>
-                                    <p>Light Illustration</p>
-                                    <a href="../../static/homeapp/assets/images/portfolio/2.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pb-30 col-md-6">
-                            <div class="single-portfolio-item">
-                                <img src="../../static/homeapp/assets/images/portfolio/3.jpg" alt="">
-                                <div class="portfolio-overlay-content">
-                                    <h2>Creative Works</h2>
-                                    <p>Light Illustration</p>
-                                    <a href="../../static/homeapp/assets/images/portfolio/3.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-portfolio-item">
-                                <img src="../../static/homeapp/assets/images/portfolio/4.jpg" alt="">
-                                <div class="portfolio-overlay-content">
-                                    <h2>Creative Works</h2>
-                                    <p>Light Illustration</p>
-                                    <a href="../../static/homeapp/assets/images/portfolio/4.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-portfolio-item">
-                                <img src="../../static/homeapp/assets/images/portfolio/5.jpg" alt="">
-                                <div class="portfolio-overlay-content">
-                                    <h2>Creative Works</h2>
-                                    <p>Light Illustration</p>
-                                    <a href="../../static/homeapp/assets/images/portfolio/5.jpg" class="portfolio-icon img-popup"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  PORTFOLIO PART END ======-->
-
-    <!--======  CTA PART START ======-->
-    <section class="cta-area cta-bg pt-140 pb-140">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="cta-title">
-                        <span><img src="../../static/homeapp/assets/images/cta-text.png" alt=""></span>
-                        <h1>Have Any 
-                            Creative Project</h1>
-                        <p>We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure</p>
-                        <a href="#" class="btn cta-btn">meet with us <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  CTA PART END ======-->
-
-    <!--======  TEAM PART START ======-->
-    <section class="team-area pt-140 pb-140" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 text-center pb-80">
-                    <div class="section-title team-title">
-                        <p class="section-para"><span></span>our team member</p>
-                        <h1>Meet Our Most Creative Minds
-                            That Are Professional</h1>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row team-carousel-active">
-                <div class="col-lg-4">
-                    <div class="single-team-area">
-                        <div class="single-team-img text-center">
-                            <img src="../../static/homeapp/assets/images/team/1.png" alt="">
-                            <span class="team-icon-1"><img src="../../static/homeapp/assets/images/team/icon/1.png" alt=""></span>
-                            <span class="team-icon-2"><img src="../../static/homeapp/assets/images/team/icon/2.png" alt=""></span>
-                            <span class="team-icon-3"><img src="../../static/homeapp/assets/images/team/icon/3.png" alt=""></span>
-                        </div>
-                        <div class="single-team-content text-center">
-                            <h4>Joseph M. Fondren</h4>
-                            <p>Apps deigner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-team-area">
-                        <div class="single-team-img text-center">
-                            <img src="../../static/homeapp/assets/images/team/2.png" alt="">
-                            <span class="team-icon-1"><img src="../../static/homeapp/assets/images/team/icon/1.png" alt=""></span>
-                            <span class="team-icon-2"><img src="../../static/homeapp/assets/images/team/icon/2.png" alt=""></span>
-                            <span class="team-icon-3"><img src="../../static/homeapp/assets/images/team/icon/3.png" alt=""></span>
-                        </div>
-                        <div class="single-team-content text-center">
-                            <h4>Pauline R. Stapleton</h4>
-                            <p>Web developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-team-area">
-                        <div class="single-team-img text-center">
-                            <img src="../../static/homeapp/assets/images/team/3.png" alt="">
-                            <span class="team-icon-1"><img src="../../static/homeapp/assets/images/team/icon/1.png" alt=""></span>
-                            <span class="team-icon-2"><img src="../../static/homeapp/assets/images/team/icon/2.png" alt=""></span>
-                            <span class="team-icon-3"><img src="../../static/homeapp/assets/images/team/icon/3.png" alt=""></span>
-                        </div>
-                        <div class="single-team-content text-center">
-                            <h4>Robin A. Santiago</h4>
-                            <p>apps designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-team-area">
-                        <div class="single-team-img text-center">
-                            <img src="../../static/homeapp/assets/images/team/2.png" alt="">
-                            <span class="team-icon-1"><img src="../../static/homeapp/assets/images/team/icon/1.png" alt=""></span>
-                            <span class="team-icon-2"><img src="../../static/homeapp/assets/images/team/icon/2.png" alt=""></span>
-                            <span class="team-icon-3"><img src="../../static/homeapp/assets/images/team/icon/3.png" alt=""></span>
-                        </div>
-                        <div class="single-team-content text-center">
-                            <h4>Pauline R. Stapleton</h4>
-                            <p>Web developer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  TEAM PART END ======-->
-
-    <!--======  VIDEO PART START ======-->
-    <section class="video-area vdeo-bg" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="video-icon-area">
-                        <a href="https://www.youtube.com/watch?v=iogabydg2y0" class="video-icon video-popup"><i class="fa fa-play"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="video-content">
-            <span><img src="../../static/homeapp/assets/images/video-text.png" alt=""></span>
-            <h1>Watch Our Latest Videos</h1>
-            <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the</p>
-            <a href="#" class="video-read-more">Learn More <i class="fa fa-arrow-right"></i></a>
-        </div>
-    </section>
-    <!--======  VIDEO PART END ======-->
-
-    <!--======  PROJECTS PART START ======-->
-    <section class="project-counter-area">
-        <div class="container">
-            <div class="row pb-80">
-                <div class="col-lg-6">
-                    <div class="section-title project-title">
-                        <p class="section-para"><span></span>company fact</p>
-                        <h1>We Are Digital And
-                            Creative Agency</h1>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-6 text-right">
-                    <a href="#" class="btn counter-btn">get started <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="counter-text">
-                        <h1 class="count">6320</h1>
-                        <p>Project complate</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-icon">
-                        <i class="fas fa-life-ring"></i>
-                    </div>
-                    <div class="counter-text">
-                        <h1 class="count">8563</h1>
-                        <p>Satisfied Clients</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="counter-text">
-                        <h1 class="count">963</h1>
-                        <p>Pwins awards</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-icon">
-                        <i class="fas fa-universal-access"></i>
-                    </div>
-                    <div class="counter-text">
-                        <h1 class="count">4975</h1>
-                        <p>Expert Team Member</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  PROJECTS PART END ======-->
-
-    <!--======  TESTIMONIAL PART START ======-->
-    <section class="testimonial-area" id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <img src="../../static/homeapp/assets/images/testimonial/1.png" alt="">
-                </div>
-                <div class="col-lg-7 textimonial-carousel-active">
-                    <div class="single-testimonial-content">
-                        <span class="testimonial-quote"><i class="fa fa-quote-right"></i></span>
-                        <p>Avoids pleasur itself because pleas because those who do not know how to pursue plesure rationally encou eque that are extrem painful again is there anyone who loves pursues or 
-                            desires to obtain pain of itself.</p>
-                        <div class="autohor-details">
-                            <img src="../../static/homeapp/assets/images/testimonial/author.png" alt="" class="author-img">
-                            <h5 class="author-name">Michele L. Racinea <span>Web Designer</span></h5>
-                        </div>
-                    </div>
-                    <div class="single-testimonial-content">
-                        <span class="testimonial-quote"><i class="fa fa-quote-right"></i></span>
-                        <p>Avoids pleasur itself because pleas because those who do not know how to pursue plesure rationally encou eque that are extrem painful again is there anyone who loves pursues or 
-                            desires to obtain pain of itself.</p>
-                        <div class="autohor-details">
-                            <img src="../../static/homeapp/assets/images/testimonial/author.png" alt="" class="author-img">
-                            <h5 class="author-name">Michele L. Racinea <span>Web Designer</span></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  TESTIMONIAL PART END ======-->
+	<!--================ Start service-2 Area =================-->
+	<section class="service-area-2">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg-6">
+					<div class="service-2-left">
+						<div class="get-know">
+							<p class="df-color">Get to Know Project Estimate?</p>
+							<h1>Get to Know Project Estimate?</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud.</p>
+						</div>
+						<div class="author-lacture">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+								aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod
+								tempor incididunt labore dolore magna aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet,
+								consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna aliqua enim minim veniam quis
+								nostrud.</p>
+							<div class="author-title">
+								<div class="thumb"><img src="{% static 'homeapp/img/about-author.png' %}" alt=""></div>
+								<div class="a-desc">
+									<h6>Marvel Maison</h6>
+									<p>Chief Executive, Amazon</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="service-2-right">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6">
+								<div class="left-image">
+									<div class="s-img"><img class="img-fluid" src="{% static 'homeapp/img/service/service4.jpg' %}" alt=""></div>
+									<div class="s-img"><img class="img-fluid" src="{% static 'homeapp/img/service/service5.jpg' %}" alt=""></div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6">
+								<div class="right-image">
+										<div class="s-img"><img class="img-fluid" src="{% static 'homeapp/img/service/service6.jpg' %}" alt=""></div>
+										<div class="s-img"><img class="img-fluid" src="{% static 'homeapp/img/service/service7.jpg' %}" alt=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End service-2 Area =================-->
 
 
-    <!--======  PRICING PART START ======-->
-    <section class="pricing-area pt-140 pb-140" id="price">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 text-center">
-                    <div class="section-title pricing-title pb-80">
-                        <p class="section-para"><span></span>our pricing</p>
-                        <h1>Popular Pricing Plan For 
-                            Creative Project</h1>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-price-box">
-                        <div class="absolute-price-num">
-                            <h2>01 <span>basic</span></h2>
-                        </div>
-                        <img src="../../static/homeapp/assets/images/price-icon.png" alt="" class="price-icon">
-                        <h3><span>$45.99</span>  For Monthly
-                            Project Charge</h3>
-                        <p><i class="fa fa-arrow-right"></i>Web Design (UX/UI)</p>
-                        <p><i class="fa fa-arrow-right"></i>Software Development</p>
-                        <p><i class="fa fa-arrow-right"></i>Fashion Design (Arts)</p>
-                        <p><i class="fa fa-arrow-right"></i>Web Development (php)</p>
-                        <div class="hover-pricing-text">
-                            <p><i class="fa fa-arrow-right"></i>Game Design & DV</p>
-                            <p><i class="fa fa-arrow-right"></i>Computer Hardware</p>
-                        </div>
-                        <a href="#" class="btn price-btn">make plan <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-price-box active">
-                        <div class="absolute-price-num">
-                            <h2>02 <span>smart</span></h2>
-                        </div>
-                        <img src="../../static/homeapp/assets/images/price-icon.png" alt="" class="price-icon">
-                        <h3><span>$65.99</span> For Monthly
-                            Project Charge</h3>
-                        <p><i class="fa fa-arrow-right"></i>Web Design (UX/UI)</p>
-                        <p><i class="fa fa-arrow-right"></i>Software Development</p>
-                        <p><i class="fa fa-arrow-right"></i>Fashion Design (Arts)</p>
-                        <p><i class="fa fa-arrow-right"></i>Web Development (php)</p>
-                        <div class="hover-pricing-text">
-                            <p><i class="fa fa-arrow-right"></i>Game Design & DV</p>
-                            <p><i class="fa fa-arrow-right"></i>Computer Hardware</p>
-                        </div>
-                        <a href="#" class="btn price-btn">make plan <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-price-box">
-                        <div class="absolute-price-num">
-                            <h2>03 <span>Premium</span></h2>
-                        </div>
-                        <img src="../../static/homeapp/assets/images/price-icon.png" alt="" class="price-icon">
-                        <h3><span>$103.99</span>   For Monthly
-                            Project Charge</h3>
-                        <p><i class="fa fa-arrow-right"></i>Web Design (UX/UI)</p>
-                        <p><i class="fa fa-arrow-right"></i>Software Development</p>
-                        <p><i class="fa fa-arrow-right"></i>Fashion Design (Arts)</p>
-                        <p><i class="fa fa-arrow-right"></i>Web Development (php)</p>
-                        <div class="hover-pricing-text">
-                            <p><i class="fa fa-arrow-right"></i>Game Design & DV</p>
-                            <p><i class="fa fa-arrow-right"></i>Computer Hardware</p>
-                        </div>
-                        <a href="#" class="btn price-btn">make plan <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  PRICING PART END ======-->
+	<!--================ Start Team Area =================-->
+	<section class="section_gap team-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h2>Meet Our Experienced Team</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+							aliqua enim minim veniam quis nostrud.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<!-- single-team-member -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img class="img-fluid" src="{% static 'homeapp/img/team/team1.jpg' %}" alt="">
+						</div>
+						<div class="author_decs">
+							<h5>Ethel Davis</h5>
+							<p class="profession">Senior Barrister at law</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-team-member -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img class="img-fluid" src="{% static 'homeapp/img/team/team2.jpg' %}" alt="">
+						</div>
+						<div class="author_decs">
+							<h5>Ethel Davis</h5>
+							<p class="profession">Senior Barrister at law</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-team-member -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single_member">
+						<div class="author">
+							<img class="img-fluid" src="{% static 'homeapp/img/team/team3.jpg' %}" alt="">
+						</div>
+						<div class="author_decs">
+							<h5>Ethel Davis</h5>
+							<p class="profession">Senior Barrister at law</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Team Area =================-->
 
-    <!--======  BLOG PART START ======-->
-    <section class="blog-area pb-140" id="Blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 pb-80">
-                    <div class="section-title blog-title">
-                        <p class="section-para"><span></span>News & blog</p>
-                        <h1>Latest Articles For 
-                            New Project</h1>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-8 text-right">
-                    <a href="#" class="btn blog-btn">view all news <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-blog-area">
-                        <div class="single-blog-img">
-                            <img src="../../static/homeapp/assets/images/blog/1.jpg" alt="">
-                        </div>
-                        <div class="single-blog-content">
-                            <p><i class="far fa-calendar-alt"></i>25 Dec 2019</p>
-                            <p class="styled-para">Inspiring Desktop Wallpap
-                                Makes November Even More 
-                                Colorful (2019 Edition)</p>
-                            <a href="#" class="blog-read-more">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-blog-area">
-                        <div class="single-blog-img">
-                            <img src="../../static/homeapp/assets/images/blog/2.jpg" alt="">
-                        </div>
-                        <div class="single-blog-content">
-                            <p><i class="far fa-calendar-alt"></i>25 Dec 2019</p>
-                            <p class="styled-para">We’ve Got A Lil’ Announ To 
-                                Make Rachel Andrew Is Smas
-                                HingMag’s New Editor</p>
-                            <a href="#" class="blog-read-more">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-blog-area">
-                        <div class="single-blog-img">
-                            <img src="../../static/homeapp/assets/images/blog/3.jpg" alt="">
-                        </div>
-                        <div class="single-blog-content">
-                            <p><i class="far fa-calendar-alt"></i>25 Dec 2019</p>
-                            <p class="styled-para">Quick Wins For Improving 
-                                Performance And Security
-                                Of  Your Website</p>
-                            <a href="#" class="blog-read-more">Raed More <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  BLOG PART END ======-->
+	<!--================ Start CTA Area =================-->
+	<div class="cta-area section_gap overlay">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<h1>Get to Know Project Estimate?</h1>
+					<p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s
+						exciting to think about setting up your own viewing station whether that is on the deck</p>
+					<a href="#" class="primary-btn">Get Free Estimate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================ End CTA Area =================-->
 
-    <!--======  CONTACT-WITH-FOOTER PART START ======-->
-    <section class="contact-with-footer-area contact-bg pt-100" id="Contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3 text-center pb-80">
-                    <div class="section-title contact-title">
-                        <span><img src="../../static/homeapp/assets/images/contact-text.png" alt=""></span>
-                        <p class="section-para"><span></span>Message Us</p>
-                        <h1>Don't Hesitate To Contact 
-                            With Us</h1>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-form-area">
-                        <form action="#">
-                            <div class="single-contact-field">
-                                <input type="text" placeholder="Your Name">
-                                <span class="far fa-user"></span>
-                            </div>
-                            
-                            <div class="single-contact-field">
-                                <input type="email" placeholder="Your email">
-                                <span class="fas fa-envelope-open-text"></span>
-                            </div>
-                            
-                            <div class="single-contact-field">
-                                <input type="text" placeholder="Your phone">
-                                <span class="fas fa-phone"></span>
-                            </div>
-                            
-                            <div class="single-contact-field textarea">
-                                <textarea name="#" id="#" cols="30" rows="10" placeholder="Your Message"></textarea>
-                                <span class="fas fa-pencil-alt"></span>
-                                <a href="#" class="btn contact-btn">send message <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-address-area">
-                        <span><i class="fa fa-arrow-right"></i>+012 (345) 77 999</span>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-address-area">
-                        <span><i class="fa fa-arrow-right"></i>support@gmail.com</span>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-address-area">
-                        <span><i class="fa fa-arrow-right"></i>55 New Sodor Road, USA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p>&copy; 2020 Livvic. All Rights Reserved</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="footer-links">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--======  CONTACT-WITH-FOOTER PART END ======-->
+	<!--================ Start Blog Area =================-->
+	<section class="section_gap blog_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7">
+					<div class="main_title">
+						<h2>Latest From Our Blog Posts</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt labore dolore magna
+							aliqua enim minim veniam quis nostrud.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<!-- single-blog -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-blog">
+						<div class="blog-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog1.jpg' %}" alt="">
+						</div>
+						<div class="blog-details">
+							<div class="blog-meta">
+								<span>25 june, 2018 | By Mark Wiens</span>
+							</div>
+							<h5><a href="#">Addiction When Gambling <br>
+									Becomes A Problem</a></h5>
+							<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in
+								front of their desktops.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-blog -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-blog">
+						<div class="blog-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog2.jpg' %}" alt="">
+						</div>
+						<div class="blog-details">
+							<div class="blog-meta">
+								<span>25 june, 2018 | By Mark Wiens</span>
+							</div>
+							<h5><a href="#">Addiction When Gambling <br>
+									Becomes A Problem</a></h5>
+							<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in
+								front of their desktops.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single-blog -->
+				<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="single-blog">
+						<div class="blog-thumb">
+							<img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog3.jpg' %}" alt="">
+						</div>
+						<div class="blog-details">
+							<div class="blog-meta">
+								<span>25 june, 2018 | By Mark Wiens</span>
+							</div>
+							<h5><a href="#">Addiction When Gambling <br>
+									Becomes A Problem</a></h5>
+							<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in
+								front of their desktops.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Blog Area =================-->
 
-    <!--======  SCROLL-TO-TOP PART START ======-->
-    <div class="scroll-to-top">
-        <span id="return-to-top"><i class="fa fa-arrow-up"></i></span>
-    </div>
-    <!--======  SCROLL-TO-TOP PART END ======-->
+	<!--================  start footer Area =================-->
+	<footer class="footer-area">
+		<div class="footer_top section_gap_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">About Lawful</h5>
+							<p class="about-text">The world has become so fast placed that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are used more to </p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5 class="footer_title">Navigation Links</h5>
+							<div class="row">
+								<div class="col-5">
+									<ul class="list">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">Features</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Portfolio</a></li>
+									</ul>
+								</div>
+								<div class="col-5">
+									<ul class="list">
+										<li><a href="#">Team</a></li>
+										<li><a href="#">Pricing</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="single-footer-widget">
+							<h5>Newsletter</h5>
+							<p>For business professionals caught between high OEM price and mediocre print and graphic output, </p>
+							<div class="footer-newsletter" id="mc_embed_signup">	
+								<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+								 method="get" class="form-inline">
+									<div class="d-flex flex-row">
+										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+										 required="" type="email">
+										<button class="click-btn btn btn-default"><span class="lnr lnr-location" aria-hidden="true"></span></button>
+										<div style="position: absolute; left: -5000px;">
+											<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+										</div>
+									</div>
+									<div class="info"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="single-footer-widget mail-chimp">
+							<h5 class="mb-20">Instragram Feed</h5>
+							<ul class="instafeed d-flex flex-wrap">
+								<li><img src="{% static 'homeapp/img/i1.jpg' %}" alt=""></li>
+								<li><img src="{% static 'homeapp/img/i2.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i3.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i4.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i5.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i6.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i7.jpg' %}"  alt=""></li>
+								<li><img src="{% static 'homeapp/img/i8.jpg' %}"  alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					</div>
+					<div class="col-lg-6 col-md-12 text-right">
+						<div class="social-icons">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area =================-->
 
-
-
-
-
-   
-
-    <!--====== jquery js ======-->
-    <script src="../../static/homeapp/assets/js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="../../static/homeapp/assets/js/vendor/jquery-1.12.4.min.js"></script>
-
-    <!--====== Bootstrap js ======-->
-    <script src="../../static/homeapp/assets/js/bootstrap.min.js"></script>
-    <script src="../../static/homeapp/assets/js/popper.min.js"></script>
-
-    <!--====== Slick js ======-->
-    <script src="../../static/homeapp/assets/js/slick.min.js"></script>
-
-    <!--====== Slick js ======-->
-    <script src="../../static/homeapp/assets/js/slick-menu.min.js"></script>
-
-    <!--====== counterup js ======-->
-    <script src="../../static/homeapp/assets/js/jquery.counterup.min.js"></script>
-
-    <!--====== Magnific Popup js ======-->
-    <script src="../../static/homeapp/assets/js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== onepage-nav Popup js ======-->
-    <script src="../../static/homeapp/assets/js/jquery.nav.js"></script>
-
-    <!--====== Main js ======-->
-    <script src="../../static/homeapp/assets/js/main.js"></script>
-
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="{% static 'homeapp/js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'homeapp/js/popper.js' %}"></script>
+	<script src="{% static 'homeapp/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'homeapp/js/stellar.js' %}"></script>
+	<script src="{% static 'homeapp/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'homeapp/vendors/lightbox/simpleLightbox.min.js' %}"></script>
+	<script src="{% static 'homeapp/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'homeapp/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'homeapp/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'homeapp/vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'homeapp/vendors/counter-up/jquery.counterup.js' %}"></script>
+	<script src="{% static 'homeapp/js/mail-script.js' %}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE' %}"></script>
+	<script src="{% static 'homeapp/js/gmaps.min.js' %}"></script>
+	<script src="{% static 'homeapp/js/theme.js' %}'"></script>
 </body>
 
 </html>
