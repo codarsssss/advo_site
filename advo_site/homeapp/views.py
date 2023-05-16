@@ -37,3 +37,108 @@ def about_view(request: HttpRequest):
         'title': 'О нас'
     }
     return render(request, 'homeapp/about.html', context=context)
+
+
+def zashchita_view(request: HttpRequest):
+    context = {
+        'title': 'Защита при уголовном преследовании'
+    }
+    return render(request, 'homeapp/zashchita.html', context=context)
+
+
+def business_view(request: HttpRequest):
+    context = {
+        'title': 'Уголовно-правовая защита бизнеса'
+    }
+    return render(request, 'homeapp/business.html', context=context)
+
+
+def antikorruptsionnoe_view(request: HttpRequest):
+    context = {
+        'title': 'Антикоррупционное просвещение'
+    }
+    return render(request, 'homeapp/antikorruptsionnoe.html', context=context)
+
+
+def semeynoe_view(request: HttpRequest):
+    context = {
+        'title': 'Семейное право'
+    }
+    return render(request, 'homeapp/semeynoe.html', context=context)
+
+
+def zemelnoe_view(request: HttpRequest):
+    context = {
+        'title': 'Земельное право'
+    }
+    return render(request, 'homeapp/zemelnoe.html', context=context)
+
+
+def reputatsii_view(request: HttpRequest):
+    context = {
+        'title': 'Защита деловой репутации'
+    }
+    return render(request, 'homeapp/reputatsii.html', context=context)
+
+
+def konsalting_view(request: HttpRequest):
+    context = {
+        'title': 'Стратегический консалтинг'
+    }
+    return render(request, 'homeapp/konsalting.html', context=context)
+
+
+def meditsinskoe_view(request: HttpRequest):
+    context = {
+        'title': 'Медицинское право'
+    }
+    return render(request, 'homeapp/meditsinskoe.html', context=context)
+
+
+def arbitrazhnaya_view(request: HttpRequest):
+    context = {
+        'Арбитражная практика'
+    }
+    return render(request, 'homeapp/arbitrazhnaya.html', context=context)
+
+
+def sanktsionnaya_view(request: HttpRequest):
+    context = {
+        'title': 'Санкционная практика'
+    }
+    return render(request, 'homeapp/sanktsionnaya.html', context=context)
+
+
+def rabotaem_view(request: HttpRequest):
+    context = {
+        'title': 'Как мы работаем'
+    }
+    return render(request, 'homeapp/rabotaem.html', context=context)
+
+
+def polnomochiya_view(request: HttpRequest):
+    context = {
+        'title': 'Полномочия адвоката'
+    }
+    return render(request, 'homeapp/polnomochiya.html', context=context)
+
+
+def tayna_view(request: HttpRequest):
+    context = {
+        'title': 'Адвокатская тайна'
+    }
+    return render(request, 'homeapp/tayna.html', context=context)
+
+
+def soglashenie_view(request: HttpRequest):
+    context = {
+        'title': 'Соглашение и ордер'
+    }
+    return render(request, 'homeapp/soglashenie.html', context=context)
+
+
+def varianty_view(request: HttpRequest):
+    context = {
+        'title': 'Варианты вознагрождения'
+    }
+    return render(request, 'homeapp/varianty.html', context=context)

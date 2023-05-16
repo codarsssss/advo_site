@@ -53,15 +53,16 @@
 							<li class="nav-item submenu dropdown"><a href="/" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Практики</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="/">Защита от уголовного преследования</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Уголовно-правовая защита бизнеса</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Антикоррупционное просвещение</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Земельное право</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Защита деловой репутации</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Стратегический консалтинг</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Медицинское право</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Арбитражная практика</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Санкционная практика</a></li>
+									<li class="nav-item"><a class="nav-link" href="{% url 'homeapp:zashchita' %}">Защита от уголовного преследования</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:business' %}">Уголовно-правовая защита бизнеса</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционное просвещение</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:semeynoe' %}">Семейное право</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:zemelnoe' %}">Земельное право</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:reputatsii' %}">Защита деловой репутации</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:konsalting' %}">Стратегический консалтинг</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:meditsinskoe' %}">Медицинское право</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная практика</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a></li>
 								</ul>
 							<li class="nav-item"><a class="nav-link" href="{% url 'homeapp:team' %}">Команда</a></li>
 							<li class="nav-item"><a class="nav-link" href="{% url 'homeapp:cases' %}">Кейсы</a></li>
@@ -70,11 +71,11 @@
                             <li class="nav-item submenu dropdown"><a href="/" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Порядок работы</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="reserve/elements.html">Как мы работаем</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Полномочия адвоката</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Адвокатская тайна</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Соглашение и ордер</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="reserve/elements.html">Варианты вознагрождения</a></li>
+									<li class="nav-item"><a class="nav-link" href="{% url 'homeapp:rabotaem' %}">Как мы работаем</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:polnomochiya' %}">Полномочия адвоката</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:tayna' %}">Адвокатская тайна</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:soglashenie' %}">Соглашение и ордер</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{% url 'homeapp:varianty' %}">Варианты вознагрождения</a></li>
 								</ul>
 						</ul>
 						<ul class="nav navbar-nav ml-auto">
