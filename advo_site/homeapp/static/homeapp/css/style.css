@@ -320,6 +320,7 @@ button:focus {
   transition: background 0.4s, all 0.3s linear; }
   .header_area .header_contacts {
     /*background-color: red;*/
+    display: flex;
   }
   .header_area .navbar {
     background: transparent;

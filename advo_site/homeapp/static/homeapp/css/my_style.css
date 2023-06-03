@@ -1,0 +1,35 @@
+.header_area .container {
+    margin: auto;
+    align-items: center;
+
+}
+
+.header_contacts {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.search_form {
+    position: relative;
+}
+
+.search_form input{
+    padding-left: 80px !important;
+}
+
+.search_form button {
+    width: 30px !important;
+    height: 30px !important;
+    background: none;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+.search_form button img {
+     width: 100%;
+ }
+
+
+
