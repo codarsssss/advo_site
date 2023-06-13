@@ -4,25 +4,86 @@
 
 {% block content %}
 
-	<!--================ Start Home Banner Area =================-->
-	<section class="home_banner_area overlay" style="background-image: url('{% static 'homeapp/img/service/common-banner.jpg' %}');">
-		<div class="banner_inner" >
-			<div class="container">
-				<div class="row fullscreen d-flex align-items-center justify-content-center" >
-					<div class="banner_content">
-						<h2>
-							Элегантное<br>юридическое обслуживание
-						</h2>
-						<p>сопровождение пространство для выстраивания бизнеса без уголовно-правовых рисков.</p>
-						<a class="primary-btn text-uppercase" href="#">Get Free Quote</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<!--================ Start Home Banner Area =================-->
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade my_carousel" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'homeapp/img/1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <button type="button" class="btn btn-primary btn__footer" data-bs-toggle="modal"
+                                                         data-bs-target="#exampleModal">Получить консультацию</button>
+        <p>Московская коллегия адвокатов «Партнер Групп»<br>-Ключ к устранению нарушений в уголовном деле.
+Пространство для выстраивания бизнеса без уголовно-правовых рисков.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'homeapp/img/2.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <button type="button" class="btn btn-primary btn__footer" data-bs-toggle="modal"
+                                                         data-bs-target="#exampleModal">Получить консультацию</button>
+        <p>Московская коллегия адвокатов «Партнер Групп»<br>-Ключ к устранению нарушений в уголовном деле.
+Пространство для выстраивания бизнеса без уголовно-правовых рисков.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'homeapp/img/3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <button type="button" class="btn btn-primary btn__footer" data-bs-toggle="modal"
+                                                         data-bs-target="#exampleModal">Получить консультацию</button>
+        <p>Московская коллегия адвокатов «Партнер Групп»<br>-Ключ к устранению нарушений в уголовном деле.
+Пространство для выстраивания бизнеса без уголовно-правовых рисков.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+
 	<!--================ End Home Banner Area =================-->
 
 	<!--================ Start Features Area =================-->
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Ангелина Константинова</strong>
+              <h3 class="mb-0">Председатель Московской коллегии адвокатов «Партнер Групп» </h3>
+              <div class="mb-1 text-body-secondary"></div>
+              <p class="card-text mb-auto">Адвокаты нашей коллегии Посвящают себя Достижению справедливости и защите прав и Свобод своих доверителей.
+Стремимся к тому, чтобы наши Доверители были состязательно представлены в Суде и получили Наилучший результат в соответствии с законом.
+Соблюдаем этику и Высокопрофессиональные стандарты, которые Гарантируют справедливую и Эффективную защиту прав и свобод на всех уровнях правовой системы.
+МКА «Партнер групп» объединяет  ведущих адвокатов, обладающих Уникальным опытом ведения уголовных дел на Всех стадиях уголовного процесса.
+Защиту своих прав и интересов адвокатам коллегии Доверяют как частные лица, так и компании.
+Базовая специализация коллегии, защита по должностным и коррупционным преступлениям, так и в сфере экономики.
+ Успешная Практика более 18 лет
+ Кейсов по защите более 12 млрд.руб. </p>
+{#              <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">#}
+{#                Continue reading#}
+{#              </a>#}
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="{% static 'homeapp/img/angelina-photo.png' %}">
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 	<section class="features_area" id="features_counter">
 		<div class="container">
 			<div class="row counter_wrapper">
