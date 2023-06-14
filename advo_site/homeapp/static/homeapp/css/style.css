@@ -7,7 +7,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: #000;
-    background-color: #fff;
+    background-color: rgba(235,239,234,0.30);
     min-width: 320px;
 }
 
@@ -22,10 +22,10 @@ body {
     border-color: #2b3455;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+/*img {*/
+/*    max-width: 100%;*/
+/*    !*height: max-content;*!*/
+/*}*/
 
 section {
     padding: 50px 0;
@@ -55,13 +55,15 @@ nav img {
 /*    display: block;*/
 /*    width: 100%;*/
 /*    background-color: #2b3455;*/
-/*    height: 1px;*/
+/*    height: 2px;*/
 /*    transition: all .3s;*/
-/*    transform: scale(0);*/
+/*    opacity: 0;*/
+/*    overflow: hidden;*/
+/*    !*transform: scale(0);*!*/
 /*}*/
 
 /*.top-menu li a:hover::after {*/
-/*    transform: scale(1);*/
+/*    !*transform: scale(1);*!*/
 /*}*/
 
 /*Header end*/
@@ -84,6 +86,7 @@ footer img {
 
 footer .nav-link {
     color: white;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 21) + 21px);
 }
 
 footer .nav-link:hover {
@@ -97,6 +100,10 @@ footer p {
     font-size: 14px;
 }
 
+.last-chld-footer-icon {
+    text-align: right;
+}
+
 .btn__footer {
     background: #fceabb;
     background: -moz-radial-gradient(center, ellipse cover,  #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
@@ -104,14 +111,15 @@ footer p {
     background: radial-gradient(ellipse at center,  #fceabb 0%,#fccd4d 50%,#f8b500 91%,#fbdf93 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 );
 
-    padding: 30px 50px;
+    /*padding: 30px 50px;*/
     color: #2b3455;
     margin:  30px 0;
-    font-size: 24px;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 12) + 12px);
     font-style: normal;
-    font-weight: 800;
-
+    font-weight: 600;
 }
+
+
 
 .footer__text {
     font-size: 18px;
@@ -139,4 +147,19 @@ footer p {
 
 .my_carousel .carousel-item img {
     object-fit: cover;
+}
+
+#container-index {
+    margin-top: 30px;
+}
+
+.index-top-talk:hover {
+    background-color: rgba(202,206,201,0.40);
+}
+
+.bg-logo {
+    height: 600px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
