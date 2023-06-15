@@ -163,3 +163,47 @@ footer p {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.container-ch-bg {
+      /*max-width: 500px;*/
+      /*margin-left: auto;*/
+      /*margin-right: auto;*/
+    }
+
+    @keyframes bg-сhange {
+      from {
+        background-image: url('../img/bg-logo.png');
+      }
+
+      25% {
+        background-image: url('../img/bg-bl-2.png');
+      }
+
+      50% {
+        background-image: url('../img/bg-bl-3.png');
+      }
+
+      75% {
+        background-image: url('../img/bg-bl-4.png');
+      }
+
+
+      to {
+        background-image: url('../img/bg-bl-1.png');
+      }
+    }
+
+    #bg {
+      /*position: relative;*/
+      /*padding-top: 75%;*/
+      /*background-size: cover;*/
+      animation: bg-сhange 25s infinite;
+    }
+
+.icon-bg {
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (80 - 80) + 80px);;
+}
+
+#mission {
+    border: 2px solid gray;
+}
