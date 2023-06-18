@@ -348,3 +348,27 @@ h2{
 
 }
 }
+
+.video-play-button {
+    max-width: 80%;
+}
+.video-play-button img {
+    width: 100%;
+}
+
+.navbar .nav-link {
+    white-space: nowrap;
+}
+
+/*@media (min-width: 1230px) {*/
+/*    .navbar-expand-lg .navbar-toggler {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1135px){*/
+/*.navbar-expand-lg .navbar-collapse {*/
+/*    display: flex!important;*/
+/*    flex-basis: auto;*/
+/*}*/
+/*}*/

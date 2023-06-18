@@ -14,16 +14,20 @@
 {#    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
 {#    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>#}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% static 'homeapp/js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'homeapp/css/style.css' %}">
+    <style></style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-xl bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'homeapp:index' %}"><img class="big" src="{% static 'homeapp/img/logo-main.png' %}"
-                                                                      alt="logo"></a>
-        <a class="navbar-brand" href="{% url 'homeapp:index' %}"><img class="smal" src="{% static 'homeapp/img/bg-logo.png' %}"
-                                                                      alt="logo"></a>
+        <a class="navbar-brand" href="{% url 'homeapp:index' %}">
+            <picture>
+                <source srcset="{% static 'homeapp/img/bg-logo.png' %}" media="(max-width: 1500px)">
+                <img src="{% static 'homeapp/img/logo-main.png' %}" alt="">
+            </picture>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
