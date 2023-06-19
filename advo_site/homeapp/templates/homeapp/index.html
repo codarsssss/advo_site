@@ -5,7 +5,8 @@
 {% block content %}
 
     <!--================ Start Home Banner Area =================-->
-    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade my_carousel" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade my_carousel" data-bs-ride="carousel"
+         xmlns="http://www.w3.org/1999/html">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="{% static 'homeapp/img/1.jpg' %}" class="d-block w-100" alt="...">
@@ -179,33 +180,43 @@
                             <!-- single success -->
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
-                                    <h5>Road to Success</h5>
-                                    <p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore
-                                        magna.</p>
+                                    <h5>Выбор адвоката</h5>
+                                    <p>найти подходящего адвоката с учетом опыта, специализации и рекомендаций</p>
                                 </div>
                             </div>
                             <!-- single success -->
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
-                                    <h5>Road to Success</h5>
-                                    <p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore
-                                        magna.</p>
+                                    <h5>Консультация</h5>
+                                    <p>обсудить ваше дело, мнение адвоката о решении и стоимость услуг.</p>
                                 </div>
                             </div>
                             <!-- single success -->
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
-                                    <h5>Road to Success</h5>
-                                    <p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore
-                                        magna.</p>
+                                    <h5>Заключение договора</h5>
+                                    <p>оформить договор об оказании услуг с условиями сотрудничества и ответственностью сторон.</p>
                                 </div>
                             </div>
                             <!-- single success -->
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
-                                    <h5>Road to Success</h5>
-                                    <p>Lorem ipsum dolor sit amet, sed eiusmod tempor incididunt labore dolore
-                                        magna.</p>
+                                    <h5>Изучение дела</h5>
+                                    <p>адвокат подготавливает доказательства и взаимодействует с участниками дела.</p>
+                                </div>
+                            </div>
+                            <!-- single success -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-success">
+                                    <h5>Процесс разрешения спора</h5>
+                                    <p>адвокат представляет ваши интересы в суде или через альтернативные механизмы разрешения споров.</p>
+                                </div>
+                            </div>
+                            <!-- single success -->
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-success">
+                                    <h5>Завершение дела</h5>
+                                    <p>исполнение решения или соглашения, представление финального отчета и оплата услуг.</p>
                                 </div>
                             </div>
                         </div>
@@ -214,7 +225,7 @@
                 <div class="col-lg-6">
                     <a id="play-home-video" class="video-play-button"
                        href="https://www.youtube.com/watch?v=QFq6PiZ1BQ8"><img
-                            src="{% static 'homeapp/img/video.png' %}"></a>
+                            src="{% static 'homeapp/img/femida.png' %}"></a>
                 </div>
             </div>
         </div>
@@ -222,66 +233,148 @@
     <!-- end about -->
     <!--================ End video Area =================-->
 
-    <!--================ Start service Area =================-->
-    <section class="service-area section_gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="main_title">
-                        <h1>Services Offered By Us</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                            labore dolore magna
-                            aliqua enim minim veniam quis nostrud.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!-- single service -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/service/service1.jpg' %}" alt="">
-                        </div>
-                        <div class="service-details">
-                            <h5><a href="#">Get to Know Project Estimate?</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                                labore dolore magna
-                                aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/service/service2.jpg' %}" alt="">
-                        </div>
-                        <div class="service-details">
-                            <h5><a href="#">Get to Know Project Estimate?</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                                labore dolore magna
-                                aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single service -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-service">
-                        <div class="service-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/service/service3.jpg' %}" alt="">
-                        </div>
-                        <div class="service-details">
-                            <h5><a href="#">Get to Know Project Estimate?</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                                labore dolore magna
-                                aliqua enim minim veniam quis nostrud. Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
+<div class="container">
+    <h1>Этапы работы</h1>
+<div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                    Подбор и выбор адвоката
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    На этом этапе вам необходимо определиться с адвокатом, который <strong>способен решить вашу правовую
+                    проблему.</strong> При выборе адвоката важно учитывать его опыт и специализацию.
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Встреча и консультация с адвокатом
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    На данном этапе происходит знакомство с адвокатом и обсуждается ваше дело. Необходимо предоставить
+                    всю доступную информацию о вашей ситуации, задать вопросы и выслушать мнение адвоката о перспективах
+                    и возможных решениях вашей проблемы. Если адвокат готов взять ваше дело, обсуждается стоимость его
+                    услуг и детали сотрудничества.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Заключение договора
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    После того как вы выбрали адвоката и решились на сотрудничество, нужно заключить договор об оказании
+                    услуг. В договоре указываются условия сотрудничества, стоимость услуг адвоката, порядок
+                    предоставления отчетов о проделанной работе, а также ответственность сторон.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                    Изучение дела адвокатом и сбор информации
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    На этом этапе адвокат и его команда изучают документы по вашему делу, собирают доказательства и
+                    информацию, необходимую для успешного разрешения правовой проблемы. Адвокат может
+                    взаимодействовать с другими лицами, участвующими в деле, проводить переговоры и заниматься
+                    другими действиями для подготовки дела к разбирательству.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                    Проведение судебного процесса или альтернативных способов разрешения спора (если применимо)
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    В зависимости от ситуации, адвокат ведет дело в суде или с использованием альтернативных
+                    способов разрешения спора (например, переговоры или медиация). В процессе судебного
+                    разбирательства адвокат защищает ваши интересы, представляет доказательства и выступает перед
+                    судом.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                    Завершение дела и окончание сотрудничества
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    После того как дело завершено и получено решение суда или достигнуто соглашение, адвокат
+                    помогает вам в выполнении решения или соглашения, а также при необходимости проводит
+                    апелляционные процедуры. По окончании всех правовых процедур адвокат представляет вам финальный
+                    отчет и делается оплата за его услуги. В конце сотрудничества стороны могут обсуждать
+                    возможность дальнейшего сотрудничества или поддержки по другим правовым вопросам.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col justify-content-between p-lg-4">
+                <h3>Абонентское обслуживание</h3>
+                <p>Оплата за абонентское обслуживание может быть осуществлена ежемесячно или ежегодно. Стоимость
+                    обслуживания может варьироваться в зависимости от объема услуг, которые будут предоставлены
+                    адвокатом.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 justify-content-between">
+                <img src="{% static 'homeapp/img/service/service1.jpg' %}">
+                <h5>Личный адвокат</h5>
+                <p>Заключив соглашение, доверитель получает квалифицированную юридическую помощь от группы адвокатов
+                     МКА «Партнер групп» по уголовным делам, административным делам 24/7.</p>
+            </div>
+            <div class="col-4 justify-content-between">
+                <img src="{% static 'homeapp/img/service/service1.jpg' %}">
+                <h5>Семейный адвокат</h5>
+                <p>Абонентское обслуживание адвокатом для всей семьи - это услуга, которая позволяет обеспечить
+                    юридическую защиту группе лиц, состоящей из нескольких членов семьи. Это может включать супругов,
+                    детей, родителей и других близких родственников.</p>
+
+            </div>
+            <div class="col-4 justify-content-between">
+                <img src="{% static 'homeapp/img/service/service1.jpg' %}">
+                <h5>Сопровождение бизнеса</h5>
+                <p>В своей деятельности МКА «Партнер групп» оказывает услуги компаниям на комплексной основе. Заключая
+                    соглашение о юридическом сопровождении бизнеса, вы избавляете себя от расходов, связанных с
+                    содержанием целого юридического департамента.</p>
+
+            </div>
+        </div>
+    </div>
     </section>
-    <!--================ End service Area =================-->
+
+
+
+
 
     <!--================ Start service-2 Area =================-->
     <section class="service-area-2">
@@ -347,6 +440,30 @@
     </section>
     <!--================ End service-2 Area =================-->
 
+{#    <section>#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-12">#}
+{#                    <div class="swiper-container mySwiper">#}
+{#                        <div class="swiper-wrapper">#}
+{#                            <div class="swiper-slide">Slide 1</div>#}
+{#                            <div class="swiper-slide">Slide 2</div>#}
+{#                            <div class="swiper-slide">Slide 3</div>#}
+{#                            <div class="swiper-slide">Slide 4</div>#}
+{#                            <div class="swiper-slide">Slide 5</div>#}
+{#                            <div class="swiper-slide">Slide 6</div>#}
+{#                            <div class="swiper-slide">Slide 7</div>#}
+{#                            <div class="swiper-slide">Slide 8</div>#}
+{#                            <div class="swiper-slide">Slide 9</div>#}
+{#                        </div>#}
+{#                        <div class="swiper-pagination"></div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
+
 
     <!--================ Start Team Area =================-->
     <section class="section_gap team-area">
@@ -403,103 +520,32 @@
     </section>
     <!--================ End Team Area =================-->
 
-    <!--================ Start CTA Area =================-->
+    <!--================ презентация =================-->
     <div class="cta-area section_gap overlay">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <h1>Get to Know Project Estimate?</h1>
-                    <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first
-                        telescope. It’s
-                        exciting to think about setting up your own viewing station whether that is on the deck</p>
-                    <a href="#" class="primary-btn">Get Free Estimate</a>
+                    <h1>Ознакомиться с презентацией<br> МКА "Парнер Групп"</h1>
+                    <p>Предлагаем посмотреть презенацию которую Лина с Томой нарисовали и тогды вы поймете что с ними можно иметь дело.</p>
+                    <a href="#" class="btn btn-dark">Скачать презентацию PDF</a>
                 </div>
             </div>
         </div>
     </div>
-    <!--================ End CTA Area =================-->
+    <!--================ презентация =================-->
 
-    <!--================ Start Blog Area =================-->
-    <section class="section_gap blog_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="main_title">
-                        <h2>Latest From Our Blog Posts</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                            labore dolore magna
-                            aliqua enim minim veniam quis nostrud.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!-- single-blog -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-blog">
-                        <div class="blog-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog1.jpg' %}" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta">
-                                <span>25 june, 2018 | By Mark Wiens</span>
-                            </div>
-                            <h5><a href="#">Addiction When Gambling <br>
-                                Becomes A Problem</a></h5>
-                            <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk
-                                jockeys spend hours in
-                                front of their desktops.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-blog -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-blog">
-                        <div class="blog-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog2.jpg' %}" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta">
-                                <span>25 june, 2018 | By Mark Wiens</span>
-                            </div>
-                            <h5><a href="#">Addiction When Gambling <br>
-                                Becomes A Problem</a></h5>
-                            <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk
-                                jockeys spend hours in
-                                front of their desktops.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-blog -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-blog">
-                        <div class="blog-thumb">
-                            <img class="img-fluid" src="{% static 'homeapp/img/blog/h-blog3.jpg' %}" alt="">
-                        </div>
-                        <div class="blog-details">
-                            <div class="blog-meta">
-                                <span>25 june, 2018 | By Mark Wiens</span>
-                            </div>
-                            <h5><a href="#">Addiction When Gambling <br>
-                                Becomes A Problem</a></h5>
-                            <p>Computers have become ubiquitous in almost every facet of our lives. At work, desk
-                                jockeys spend hours in
-                                front of their desktops.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ End Blog Area =================-->
+
 
         {#    slider#}
     <div class="container">
         <h2>Нам доверяют</h2>
+{#        <h5>Частные лица и компании разных отраслей. Многие из них сотрудничают с нами на долгосрочной основе, доверяя#}
+{#            нам свои дела и бизнес.</h5>#}
         <section class="customer-logos slider">
             <div class="slide"><img src="{% static 'homeapp/img/partners/1.png' %}"></div>
             <div class="slide"><img src="{% static 'homeapp/img/partners/2.png' %}"></div>
             <div class="slide"><img src="{% static 'homeapp/img/partners/3.jpg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/partners/4.jpg' %}"></div>
+            <div class="slide"><img src="{% static 'homeapp/img/partners/4.png' %}"></div>
             <div class="slide"><img src="{% static 'homeapp/img/partners/5.png' %}"></div>
             <div class="slide"><img src="{% static 'homeapp/img/partners/6.png' %}"></div>
             <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg">
