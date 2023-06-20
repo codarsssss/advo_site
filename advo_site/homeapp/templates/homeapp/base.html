@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=
     Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-{#    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
-{#    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>#}
+    {#    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
+    {#    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>#}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% static 'homeapp/js/main.js' %}"></script>
@@ -155,18 +155,16 @@
                                                            href="{% url 'homeapp:about' %}">О нас</a></li>
                     </ul>
                 </div>
-{#                <div class="col-md-3 col-6">#}
-{##}
-{#                </div>#}
-                <div class="col-md-4 col-6">
+
+                <div class="col-md-4 col-6 requisites">
                     <ul class="list-unstyled">
-                        <p class="footer__text">Получить консультацию и пошаговый план действий </p>
+                        <p class="footer__text mb-3">Получить консультацию и пошаговый план действий </p>
                         <li class="nav-item"><p>Почта</p><a class="nav-link" aria-current="page"
                                                             href="mailto:info@mkapartner.ru">info@mkapartner.ru</a></li>
                         <li class="nav-item"><p>Телефон</p><a class="nav-link" aria-current="page"
                                                               href="tel:+79160050999">+79160050999</a></li>
-                        <li class="nav-item"><p>Телефон</p><a class="nav-link" aria-current="page"
-                                                              href="https://yandex.ru/maps/org/mfk_bashnya_federatsiya/177194224888/?ll=37.537434%2C55.748374&mode=search&sll=37.537384%2C55.749615&sspn=0.007290%2C0.002321&text=%D0%B3.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9F%D1%80%D0%B5%D1%81%D0%BD%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2C%20%D0%B4%D0%BE%D0%BC%2012%2C%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%C2%AB%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F%C2%BB%2C%20%D0%B1%D0%B0%D1%88%D0%BD%D1%8F%20%C2%AB%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%C2%BB%2C%2045%20%D1%8D%D1%82%D0%B0%D0%B6%2C%20%D0%BE%D1%84%D0%B8%D1%81%2042.&utm_source=share&z=16.34">г.
+                        <li class="nav-item"><p>Адрес</p><a class="nav-link" aria-current="page"
+                                                            href="https://yandex.ru/maps/org/mfk_bashnya_federatsiya/177194224888/?ll=37.537434%2C55.748374&mode=search&sll=37.537384%2C55.749615&sspn=0.007290%2C0.002321&text=%D0%B3.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9F%D1%80%D0%B5%D1%81%D0%BD%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F%2C%20%D0%B4%D0%BE%D0%BC%2012%2C%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%C2%AB%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F%C2%BB%2C%20%D0%B1%D0%B0%D1%88%D0%BD%D1%8F%20%C2%AB%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%C2%BB%2C%2045%20%D1%8D%D1%82%D0%B0%D0%B6%2C%20%D0%BE%D1%84%D0%B8%D1%81%2042.&utm_source=share&z=16.34">г.
                             Москва, <br>Комплекс «Федерация», башня «Запад», 45 этаж, офис 42.</a></li>
 
                     </ul>
@@ -179,11 +177,7 @@
                                     data-bs-target="#exampleModal">Получить консультацию
                             </button>
                         </div>
-                        <div class="row">
-
-{#                            <div class="col-sm-2 col-xs-2">#}
-{##}
-{#                            </div>#}
+                        <div class="row pt-4">
                             <div class="col text-center">
                                 <a class="nav-link footer__nav-link" aria-current="page" href="https://t.me/arsssss"><i
                                         class="fa-brands fa-telegram fa-2xl" style="color: white;"></i></a>
@@ -193,46 +187,17 @@
                                    href="{% url 'homeapp:cases' %}"><i class="fa-brands fa-instagram fa-2xl"
                                                                        style="color: white;"></i></a>
                             </div>
-{#                            <div class="col-sm-2 col-xs-2"></div>#}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Заказ обратного звонка</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input"
-                                               aria-describedby="inputGroup-sizing-lg">
-                                    </div>
-                                    <div class="input-group input-group-lg">
-                                        <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>
-                                        <input type="text" class="form-control telmask" maxlength="12"
-                                               aria-label="Sizing example input"
-                                               aria-describedby="inputGroup-sizing-lg">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Оставить
-                                            заявку
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                <p>Copyright © 2023 Московская колления адвокатов "Партнер Групп". При использовании любой информации,
+                    оставляйте ссылку на сайт</p>
+                <a href="https://t.me/arsssss" style="color: grey">Сайт разработан @codarsssss</a>
 
-                        </div>
-                    </div>
-                </div>
             </div>
+
         </div>
 
     </section>
@@ -246,73 +211,73 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-      var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+            el: ".swiper-pagination",
+            clickable: true,
         },
         breakpoints: {
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
+            "@0.00": {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            "@0.75": {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            "@1.00": {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            "@1.50": {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
         },
-      });
-    </script>
+    });
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-    $('.slider').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+    $('.team-slider').slick({
+        dots: true,
         infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 </script>
 <script>
     const input = document.body.querySelector('.telmask');

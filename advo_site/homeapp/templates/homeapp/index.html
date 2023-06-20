@@ -77,7 +77,7 @@
             </div>
             <div class="col-md-6">
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative index-top-talk h-100">
-                    <div class="col p-4 d-flex flex-column position-static" >
+                    <div class="col p-4 d-flex flex-column position-static">
                         <h3 class="mb-0">Иван Иванов</h3>
                         <div class="mb-1 text-body-secondary">Заместитель председателя<br> «Партнер Групп»</div>
                         <p class="card-text mb-auto">Cпециализация - защита по должностным и коррупционным преступлениям
@@ -121,9 +121,10 @@
             </div>
         </div>
         <div class="row container" style="margin-left: auto; margin-right: auto">
-            <div class="col " >
+            <div class="col ">
                 <p class="text-center p-5 border rounded overflow-hidden flex-md-row mb-4 shadow index-top-talk "
-                   id="mission" style="color: black; background-color: #fff; border-radius: 60px!important;">Миссия МКА «Партнер Групп» заключается в защите интересов своих
+                   id="mission" style="color: black; background-color: #fff; border-radius: 60px!important;">Миссия МКА
+                    «Партнер Групп» заключается в защите интересов своих
                     клиентов
                     перед органами всех ветвей власти.
                     Адвокаты нашей коллегии посвящают себя достижению справедливости и защите прав и свобод своих
@@ -141,8 +142,9 @@
                 <div class="justify-content-center align-items-center d-flex rl-pos">
                     <a class="video-play-button"
                        href="https://www.youtube.com/watch?v=QFq6PiZ1BQ8"><img
-                            src="{% static 'homeapp/img/notebook-photo.jpg' %}"><i class="fa-regular fa-circle-play fa-beat fa-2xl"></i>
-{#                        <i class="fa-solid fa-circle-play fa-2xl"></i>#}
+                            src="{% static 'homeapp/img/notebook-photo.jpg' %}"><i
+                            class="fa-regular fa-circle-play fa-beat fa-2xl"></i>
+                        {#                        <i class="fa-solid fa-circle-play fa-2xl"></i>#}
                     </a>
                 </div>
             </div>
@@ -165,7 +167,43 @@
                 </div>
             </div>
         </div>
+    <div class="row">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Заказ обратного звонка</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-lg">
+                                    </div>
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>
+                                        <input type="text" class="form-control telmask" maxlength="12"
+                                               aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-lg">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Оставить
+                                            заявку
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
+
 
 
 
@@ -195,7 +233,8 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
                                     <h5>Заключение договора</h5>
-                                    <p>оформить договор об оказании услуг с условиями сотрудничества и ответственностью сторон.</p>
+                                    <p>оформить договор об оказании услуг с условиями сотрудничества и ответственностью
+                                        сторон.</p>
                                 </div>
                             </div>
                             <!-- single success -->
@@ -209,14 +248,16 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
                                     <h5>Процесс разрешения спора</h5>
-                                    <p>адвокат представляет ваши интересы в суде или через альтернативные механизмы разрешения споров.</p>
+                                    <p>адвокат представляет ваши интересы в суде или через альтернативные механизмы
+                                        разрешения споров.</p>
                                 </div>
                             </div>
                             <!-- single success -->
                             <div class="col-lg-6 col-md-6">
                                 <div class="single-success">
                                     <h5>Завершение дела</h5>
-                                    <p>исполнение решения или соглашения, представление финального отчета и оплата услуг.</p>
+                                    <p>исполнение решения или соглашения, представление финального отчета и оплата
+                                        услуг.</p>
                                 </div>
                             </div>
                         </div>
@@ -233,106 +274,112 @@
     <!-- end about -->
     <!--================ End video Area =================-->
 
-<div class="container">
-    <h1>Этапы работы</h1>
-<div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
-                    Подбор и выбор адвоката
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    На этом этапе вам необходимо определиться с адвокатом, который <strong>способен решить вашу правовую
-                    проблему.</strong> При выборе адвоката важно учитывать его опыт и специализацию.
+    <div class="container">
+        <h1>Этапы работы</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                        Подбор и выбор адвоката
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        На этом этапе вам необходимо определиться с адвокатом, который <strong>способен решить вашу
+                        правовую
+                        проблему.</strong> При выборе адвоката важно учитывать его опыт и специализацию.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Встреча и консультация с адвокатом
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    На данном этапе происходит знакомство с адвокатом и обсуждается ваше дело. Необходимо предоставить
-                    всю доступную информацию о вашей ситуации, задать вопросы и выслушать мнение адвоката о перспективах
-                    и возможных решениях вашей проблемы. Если адвокат готов взять ваше дело, обсуждается стоимость его
-                    услуг и детали сотрудничества.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Встреча и консультация с адвокатом
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        На данном этапе происходит знакомство с адвокатом и обсуждается ваше дело. Необходимо
+                        предоставить
+                        всю доступную информацию о вашей ситуации, задать вопросы и выслушать мнение адвоката о
+                        перспективах
+                        и возможных решениях вашей проблемы. Если адвокат готов взять ваше дело, обсуждается стоимость
+                        его
+                        услуг и детали сотрудничества.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Заключение договора
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    После того как вы выбрали адвоката и решились на сотрудничество, нужно заключить договор об оказании
-                    услуг. В договоре указываются условия сотрудничества, стоимость услуг адвоката, порядок
-                    предоставления отчетов о проделанной работе, а также ответственность сторон.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Заключение договора
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        После того как вы выбрали адвоката и решились на сотрудничество, нужно заключить договор об
+                        оказании
+                        услуг. В договоре указываются условия сотрудничества, стоимость услуг адвоката, порядок
+                        предоставления отчетов о проделанной работе, а также ответственность сторон.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                    Изучение дела адвокатом и сбор информации
-                </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    На этом этапе адвокат и его команда изучают документы по вашему делу, собирают доказательства и
-                    информацию, необходимую для успешного разрешения правовой проблемы. Адвокат может
-                    взаимодействовать с другими лицами, участвующими в деле, проводить переговоры и заниматься
-                    другими действиями для подготовки дела к разбирательству.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                        Изучение дела адвокатом и сбор информации
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        На этом этапе адвокат и его команда изучают документы по вашему делу, собирают доказательства и
+                        информацию, необходимую для успешного разрешения правовой проблемы. Адвокат может
+                        взаимодействовать с другими лицами, участвующими в деле, проводить переговоры и заниматься
+                        другими действиями для подготовки дела к разбирательству.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
-                    Проведение судебного процесса или альтернативных способов разрешения спора (если применимо)
-                </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    В зависимости от ситуации, адвокат ведет дело в суде или с использованием альтернативных
-                    способов разрешения спора (например, переговоры или медиация). В процессе судебного
-                    разбирательства адвокат защищает ваши интересы, представляет доказательства и выступает перед
-                    судом.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                        Проведение судебного процесса или альтернативных способов разрешения спора (если применимо)
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        В зависимости от ситуации, адвокат ведет дело в суде или с использованием альтернативных
+                        способов разрешения спора (например, переговоры или медиация). В процессе судебного
+                        разбирательства адвокат защищает ваши интересы, представляет доказательства и выступает перед
+                        судом.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
-                    Завершение дела и окончание сотрудничества
-                </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    После того как дело завершено и получено решение суда или достигнуто соглашение, адвокат
-                    помогает вам в выполнении решения или соглашения, а также при необходимости проводит
-                    апелляционные процедуры. По окончании всех правовых процедур адвокат представляет вам финальный
-                    отчет и делается оплата за его услуги. В конце сотрудничества стороны могут обсуждать
-                    возможность дальнейшего сотрудничества или поддержки по другим правовым вопросам.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                        Завершение дела и окончание сотрудничества
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        После того как дело завершено и получено решение суда или достигнуто соглашение, адвокат
+                        помогает вам в выполнении решения или соглашения, а также при необходимости проводит
+                        апелляционные процедуры. По окончании всех правовых процедур адвокат представляет вам финальный
+                        отчет и делается оплата за его услуги. В конце сотрудничества стороны могут обсуждать
+                        возможность дальнейшего сотрудничества или поддержки по другим правовым вопросам.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
-</div>
 
 
     <section>
@@ -379,6 +426,7 @@
 
 
     <!--================ Start service-2 Area =================-->
+    {#    <section class="service-area-2" style="background-color: rgba(0, 90, 255, 0.05);">#}
     <section class="service-area-2">
         <div class="container">
             <div class="row align-items-center justify-content-center">
@@ -442,162 +490,101 @@
     </section>
     <!--================ End service-2 Area =================-->
 
+
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="swiper-container mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
-                        </div>
-                        <div class="swiper-pagination"></div>
+                <div class="col justify-content-center">
+                    <h1 class="mb-3">Партнёры</h1>
+                    <p class="mb-5">Понзнацомтечть с нашими внешними партнерами бла-бла-бла и тут ещё какой-то текст
+                        что-то про что-то тили-тили трали вали Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Autem, itaque?</p>
+                </div>
+            </div>
+
+            <div class="row team-slider">
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="details">
+                        <img class="rounded" src="{% static 'homeapp/img/girl.jpeg' %}">
+                        <h5 class="text-center mt-3 fw-bold">Екатерина Цалкина</h5>
+                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
+                            <li class="list-group-item">право интеллектуальной собственности</li>
+                            <li class="list-group-item">юридическое сопровождение международных сделок</li>
+                            <li class="list-group-item">юридическое сопровождение IT-компаний</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container team-slider">
-        <h2>Нам доверяют</h2>
-{#        <h5>Частные лица и компании разных отраслей. Многие из них сотрудничают с нами на долгосрочной основе, доверяя#}
-{#            нам свои дела и бизнес.</h5>#}
-        <section class="customer-logos slick-slider">
-            <div class="slick-slide"><img src="{% static 'homeapp/img/girl.jpeg' %}">Иванова Ивана</div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-            <div class="slide"><img src="{% static 'homeapp/img/girl.jpeg' %}"></div>
-        </section>
 
-    </div>
-
-    <section>
-        <div class="container">
-            <div class="row slider">
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2>heading</h2>
-                        <p>lorem10</p>
-                        <a href="">read more</a><a href="">read more</a><a href="">read more</a><a href="">read more</a><a
-                            href="">read more</a><a href="">read more</a><a href="">read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--================ Start Team Area =================-->
-    <section class="section_gap team-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="main_title">
-                        <h2>Meet Our Experienced Team</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt
-                            labore dolore magna
-                            aliqua enim minim veniam quis nostrud.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!-- single-team-member -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single_member">
-                        <div class="author">
-                            <img class="img-fluid" src="{% static 'homeapp/img/team/team1.jpg' %}" alt="">
-                        </div>
-                        <div class="author_decs">
-                            <h5>Ethel Davis</h5>
-                            <p class="profession">Senior Barrister at law</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-team-member -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single_member">
-                        <div class="author">
-                            <img class="img-fluid" src="{% static 'homeapp/img/team/team2.jpg' %}" alt="">
-                        </div>
-                        <div class="author_decs">
-                            <h5>Ethel Davis</h5>
-                            <p class="profession">Senior Barrister at law</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- single-team-member -->
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single_member">
-                        <div class="author">
-                            <img class="img-fluid" src="{% static 'homeapp/img/team/team3.jpg' %}" alt="">
-                        </div>
-                        <div class="author_decs">
-                            <h5>Ethel Davis</h5>
-                            <p class="profession">Senior Barrister at law</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ End Team Area =================-->
 
     <!--================ презентация =================-->
     <div class="cta-area section_gap overlay">
@@ -605,7 +592,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <h1>Ознакомиться с презентацией<br> МКА "Парнер Групп"</h1>
-                    <p>Предлагаем посмотреть презенацию которую Лина с Томой нарисовали и тогды вы поймете что с ними можно иметь дело.</p>
+                    <p>Предлагаем посмотреть презенацию которую Лина с Томой нарисовали и тогды вы поймете что с ними
+                        можно иметь дело.</p>
                     <a href="#" class="btn btn-dark">Скачать презентацию PDF</a>
                 </div>
             </div>
@@ -615,11 +603,11 @@
 
 
 
-        {#    slider#}
+    {#    slider#}
     <div class="container">
         <h2>Нам доверяют</h2>
-{#        <h5>Частные лица и компании разных отраслей. Многие из них сотрудничают с нами на долгосрочной основе, доверяя#}
-{#            нам свои дела и бизнес.</h5>#}
+        {#        <h5>Частные лица и компании разных отраслей. Многие из них сотрудничают с нами на долгосрочной основе, доверяя#}
+        {#            нам свои дела и бизнес.</h5>#}
         <section class="customer-logos slider">
             <div class="slide"><img src="{% static 'homeapp/img/partners/1.png' %}"></div>
             <div class="slide"><img src="{% static 'homeapp/img/partners/2.png' %}"></div>

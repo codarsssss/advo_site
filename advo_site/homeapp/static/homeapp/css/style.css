@@ -78,8 +78,9 @@ nav img {
     padding-top: 20px;
 }
 
-footer {
+.footer {
     background-color: #2b3455;
+    padding-bottom: 3px;
 
 }
 
@@ -92,6 +93,10 @@ footer .nav-link {
     color: white;
     word-break: break-all;
     font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 14) + 14px);
+}
+
+.requisites a {
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (18 - 14) + 14px);
 }
 
 footer .nav-link:hover {
@@ -211,9 +216,9 @@ footer p {
 
 .container-ch-bg p:nth-child(2) {
     hyphens: auto;
-    word-break: break-all;
+    /*word-break: break-all;*/
 
-    font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 16) + 16px);
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (20 - 16) + 16px);
 }
 
 #mission {
@@ -413,4 +418,10 @@ h2{
     display: block;
     margin: 0 auto;
     width: 100%;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #2b3455!important;
+    font-size: calc( (100vw - 320px)/(1280 - 320) * (36 - 18) + 18px)!important;
+
 }
