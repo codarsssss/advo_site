@@ -1,0 +1,13 @@
+:root {
+    --stick_size: calc( (100vw - 320px)/(1280 - 320) * (36 - 28) + 28px);
+    --stick_position: calc(50% - var(--stick_size));
+
+    / colors */
+    --main_color_one: #643FFF;
+    --main_color_two: #3100FF;
+    --color_description: #888B93;
+    --color_mail: #EFECFF;
+    --color_border_mail: #E8EAEB;
+    --white: #fff;
+    --black: #000;
+}

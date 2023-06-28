@@ -1,3 +1,6 @@
+@import url(veriables.css);
+@import url(fonts.css);
+
 /** {*/
 /*    outline: 1px red solid;*/
 /*}*/
@@ -7,8 +10,8 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: calc( (100vw - 320px)/(768 - 320) * (18 - 16) + 16px);
     font-weight: 400;
     color: #000;
     background-color: rgba(235,239,234,0.30);
@@ -420,8 +423,25 @@ h2{
     width: 100%;
 }
 
+.slick-prev,
+.slick-next {
+    top: -45px !important;
+    width: var(--stick_size) !important;
+}
+
+.slick-prev {
+    left: var(--stick_position) !important;
+}
+
+.slick-next {
+    right: var(--stick_position) !important;
+}
+
 .slick-prev:before, .slick-next:before {
     color: #2b3455!important;
-    font-size: calc( (100vw - 320px)/(1280 - 320) * (36 - 18) + 18px)!important;
+    font-size: var(--stick_size) !important;
+}
 
+.work_e {
+    border: 3px #2b3455;
 }
