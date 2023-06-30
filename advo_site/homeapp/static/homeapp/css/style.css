@@ -442,6 +442,13 @@ h2{
     font-size: var(--stick_size) !important;
 }
 
-.work_e {
-    border: 3px #2b3455;
+/*.work_e {*/
+/*    border: solid;*/
+/*    border-radius: 10px;*/
+/*    border-bottom-color: #2b3455;*/
+/*    color: #2b3455;*/
+/*}*/
+
+.work_e p:first-child {
+    border-bottom: solid;
 }
