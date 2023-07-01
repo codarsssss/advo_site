@@ -59,7 +59,7 @@
     <div class="container p-5" id="container-index">
         <div class="row mb-2">
             <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative index-top-talk h-100">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative index-top-talk ">
                     <div class="col p-4 d-flex flex-column position-static">
                         <h3 class="mb-0">Ангелина Юрьевна Константинова</h3>
                         <div class="mb-1 text-body-secondary">Адвокат, Председатель МКА «Партнер групп»
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative index-top-talk h-100">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative index-top-talk">
                     <div class="col p-4 d-flex flex-column position-static">
                         <h3 class="mb-0">Егор Николаевич Бидюк</h3>
                         <div class="mb-1 text-body-secondary">Адвокат, руководитель МКА «Партнер групп»</div>
@@ -392,13 +392,13 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-12 justify-content-between">
                     <img class="m-0-auto" src="{% static 'homeapp/img/personal.jpg' %}">
-                    <h5>Личный адвокат</h5>
+                    <h3 class="pt-3">Личный адвокат</h3>
                     <p>Заключив соглашение, доверитель получает квалифицированную юридическую помощь от группы адвокатов
                          МКА «Партнер групп» по уголовным делам, административным делам 24/7.</p>
                 </div>
                 <div class="col-xl-4 col-lg-12 justify-content-between">
                     <img class="m-0-auto" src="{% static 'homeapp/img/family.jpg' %}">
-                    <h5>Семейный адвокат</h5>
+                    <h3 class="pt-3">Семейный адвокат</h3>
                     <p>Абонентское обслуживание адвокатом для всей семьи - это услуга, которая позволяет обеспечить
                         юридическую защиту группе лиц, состоящей из нескольких членов семьи. Это может включать
                         супругов,
@@ -407,7 +407,7 @@
                 </div>
                 <div class="col-xl-4 col-lg-12 justify-content-between">
                     <img class="m-0-auto" src="{% static 'homeapp/img/business.jpg' %}">
-                    <h5>Сопровождение бизнеса</h5>
+                    <h3 class="pt-3">Сопровождение бизнеса</h3>
                     <p>В своей деятельности МКА «Партнер групп» оказывает услуги компаниям на комплексной основе.
                         Заключая
                         соглашение о юридическом сопровождении бизнеса, вы избавляете себя от расходов, связанных с
@@ -430,9 +430,11 @@
                 <div class="col-lg-6">
                     <div class="service-2-left">
                         <div class="get-know">
-                            <p class="df-color">Get to Know Project Estimate?</p>
-                            <h1>Get to Know Project Estimate?</h1>
-                            <p>Федеральный закон N 63-ФЗ «Об адвокатской деятельности и адвокатуре в Российской
+                            <p class="df-color">Почему необходим именно адвокат?</p>
+                            <h3>Адвокат является профессиональным юридическим консультантом
+                                и защитником, наделённым законом специальными полномочиями для осуществления достаточной
+                                и эффективной правовой защиты граждан и организаций!</h3>
+                            <p>Федеральный закон N 63-ФЗ «Об адвокатской деятельности и адвокатуре в Российской
                                 Федерации».</p>
                         </div>
                         <div class="author-lacture">
@@ -445,10 +447,10 @@
                                 процессе реализации их правовых интересов.</p>
                             <div class="author-title">
                                 <div class="thumb"><img src="{% static 'homeapp/img/about-author.png' %}" alt=""></div>
-                                <div class="a-desc">
-                                    <h6>Marvel Maison</h6>
-                                    <p>Chief Executive, Amazon</p>
-                                </div>
+{#                                <div class="a-desc">#}
+{#                                    <h6>Marvel Maison</h6>#}
+{#                                    <p>Chief Executive, Amazon</p>#}
+{#                                </div>#}
                             </div>
                         </div>
                     </div>
@@ -459,20 +461,20 @@
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="left-image">
                                     <div class="s-img"><img class="img-fluid"
-                                                            src="{% static 'homeapp/img/service/service4.jpg' %}"
+                                                            src="{% static 'homeapp/img/service/service1.jpg' %}"
                                                             alt=""></div>
-                                    <div class="s-img"><img class="img-fluid"
-                                                            src="{% static 'homeapp/img/service/service5.jpg' %}"
+                                    <div class="s-img pt-5"><img class="img-fluid"
+                                                            src="{% static 'homeapp/img/service/service2.jpg' %}"
                                                             alt=""></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="right-image">
                                     <div class="s-img"><img class="img-fluid"
-                                                            src="{% static 'homeapp/img/service/service6.jpg' %}"
+                                                            src="{% static 'homeapp/img/service/service3.jpg' %}"
                                                             alt=""></div>
-                                    <div class="s-img"><img class="img-fluid"
-                                                            src="{% static 'homeapp/img/service/service7.jpg' %}"
+                                    <div class="s-img pt-5"><img class="img-fluid"
+                                                            src="{% static 'homeapp/img/service/service4.jpg' %}"
                                                             alt=""></div>
                                 </div>
                             </div>
