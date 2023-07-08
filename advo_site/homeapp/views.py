@@ -142,3 +142,112 @@ def varianty_view(request: HttpRequest):
         'title': 'Варианты вознагрождения'
     }
     return render(request, 'homeapp/varianty.html', context=context)
+
+
+def case_1(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/cases/1.html', context=context)
+
+
+
+def case_2(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_3(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_4(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+
+def case_5(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+
+def case_6(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_7(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_8(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_9(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_10(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_11(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_12(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_13(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_14(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+
+
+def case_15(request: HttpRequest):
+    context = {
+        'title': 'Оправдательный приговор'
+    }
+    return render(request, 'homeapp/1.html', context=context)
+

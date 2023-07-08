@@ -38,14 +38,6 @@ section {
     padding: 50px 0;
 }
 
-/*Header*/
-
-/*.navbar-light, .navbar-nav, .nav-item, */
-/*.nav-link {*/
-/*    border-radius: 5px;*/
-/*    border: 1px solid #2b3455;*/
-
-/*}*/
 
 nav img {
     height: 130px;
@@ -57,25 +49,6 @@ nav img {
     text-decoration: underline;
 }
 
-/*.top-menu li a::after {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    width: 100%;*/
-/*    background-color: #2b3455;*/
-/*    height: 2px;*/
-/*    transition: all .3s;*/
-/*    opacity: 0;*/
-/*    overflow: hidden;*/
-/*    !*transform: scale(0);*!*/
-/*}*/
-
-/*.top-menu li a:hover::after {*/
-/*    !*transform: scale(1);*!*/
-/*}*/
-
-/*Header end*/
-
-/*footer*/
 
 .footer {
     padding-top: 20px;
@@ -123,8 +96,6 @@ footer p {
     background: -webkit-radial-gradient(center, ellipse cover,  #fceabb 0%,#fccd4d 50%,#f8b500 91%,#fbdf93 100%);
     background: radial-gradient(ellipse at center,  #fceabb 0%,#fccd4d 50%,#f8b500 91%,#fbdf93 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 );
-
-    /*padding: 30px 50px;*/
     color: #2b3455;
     margin:  30px 0;
     font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 12) + 12px);
@@ -147,7 +118,6 @@ footer p {
     font-size: 24px
 }
 
-/*footer*/
 
 .my_carousel {
     padding: 0;
