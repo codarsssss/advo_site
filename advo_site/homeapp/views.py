@@ -150,104 +150,101 @@ def case_1(request: HttpRequest):
     }
     return render(request, 'homeapp/cases/1.html', context=context)
 
-
-
 def case_2(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Особо тяжкое преступление'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/2.html', context=context)
 
 
 def case_3(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Оправдательный приговор мошенничество, легализация'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/3.html', context=context)
 
 
 def case_4(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Получение взятки'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/4.html', context=context)
 
 
 
 def case_5(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Вердикт присяжных заседателей не виновен в убийстве'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/5.html', context=context)
 
 
 
 def case_6(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'ч. 4 ст. 159 УК РФ'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/6.html', context=context)
 
 
 def case_7(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Хищение сотрудником на рабочем месте'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/7.html', context=context)
 
 
 def case_8(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Банкротство физических лиц'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/8.html', context=context)
 
 
 def case_9(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Потерпевшие ч. 4 ст. 159 УК РФ'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/9.html', context=context)
 
 
 def case_10(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Особо тяжкое преступление'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/10.html', context=context)
 
 
 def case_11(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Деловая репутация'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/11.html', context=context)
 
 
 def case_12(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Злоупотребление должностными полномочиями'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/12.html', context=context)
 
 
 def case_13(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Превышение должностных полномочий-компромисс'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/13.html', context=context)
 
 
 def case_14(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Застройщик'
     }
-    return render(request, 'homeapp/1.html', context=context)
+    return render(request, 'homeapp/cases/14.html', context=context)
 
 
 def case_15(request: HttpRequest):
     context = {
-        'title': 'Оправдательный приговор'
+        'title': 'Суд отклонил незаконные требования прокуратуры'
     }
-    return render(request, 'homeapp/1.html', context=context)
-
+    return render(request, 'homeapp/cases/15.html', context=context)
