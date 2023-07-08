@@ -132,9 +132,44 @@
 {% block content %}
 {% endblock %}
 
-<footer>
+<footer class="mt-5">
     <section class="footer">
         <div class="container">
+            <div class="row">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Заказ обратного звонка</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-lg">
+                                    </div>
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>
+                                        <input type="text" class="form-control telmask" maxlength="12"
+                                               aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-lg">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Оставить
+                                            заявку
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row"><h4>
                 <a class="navbar-brand" href="{% url 'homeapp:index' %}"><img
                         src="{% static 'homeapp/img/logo_white.png' %}" alt="logo"></a>
