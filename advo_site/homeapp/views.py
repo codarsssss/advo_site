@@ -113,35 +113,35 @@ def rabotaem_view(request: HttpRequest):
     context = {
         'title': 'Как мы работаем'
     }
-    return render(request, 'homeapp/rabotaem.html', context=context)
+    return render(request, 'homeapp/procedure/rabotaem.html', context=context)
 
 
 def polnomochiya_view(request: HttpRequest):
     context = {
         'title': 'Полномочия адвоката'
     }
-    return render(request, 'homeapp/polnomochiya.html', context=context)
+    return render(request, 'homeapp/procedure/polnomochiya.html', context=context)
 
 
 def tayna_view(request: HttpRequest):
     context = {
         'title': 'Адвокатская тайна'
     }
-    return render(request, 'homeapp/tayna.html', context=context)
+    return render(request, 'homeapp/procedure/tayna.html', context=context)
 
 
 def soglashenie_view(request: HttpRequest):
     context = {
         'title': 'Соглашение и ордер'
     }
-    return render(request, 'homeapp/soglashenie.html', context=context)
+    return render(request, 'homeapp/procedure/soglashenie.html', context=context)
 
 
 def varianty_view(request: HttpRequest):
     context = {
         'title': 'Варианты вознагрождения'
     }
-    return render(request, 'homeapp/varianty.html', context=context)
+    return render(request, 'homeapp/procedure/varianty.html', context=context)
 
 
 def case_1(request: HttpRequest):
