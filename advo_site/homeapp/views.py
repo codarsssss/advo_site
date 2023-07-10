@@ -43,49 +43,63 @@ def zashchita_view(request: HttpRequest):
     context = {
         'title': 'Защита при уголовном преследовании'
     }
-    return render(request, 'homeapp/zashchita.html', context=context)
+    return render(request, 'homeapp/practices/zashchita.html', context=context)
 
 
 def business_view(request: HttpRequest):
     context = {
         'title': 'Уголовно-правовая защита бизнеса'
     }
-    return render(request, 'homeapp/business.html', context=context)
+    return render(request, 'homeapp/practices/business.html', context=context)
 
 
 def antikorruptsionnoe_view(request: HttpRequest):
     context = {
-        'title': 'Антикоррупционное просвещение'
+        'title': 'Антикоррупционный комплайнс'
     }
-    return render(request, 'homeapp/antikorruptsionnoe.html', context=context)
+    return render(request, 'homeapp/practices/korporativnaya.html', context=context)
 
 
-def semeynoe_view(request: HttpRequest):
+def semeynaya_view(request: HttpRequest):
     context = {
-        'title': 'Семейное право'
+        'title': 'Семейная практика'
     }
-    return render(request, 'homeapp/semeynoe.html', context=context)
+    return render(request, 'homeapp/practices/semeynaya.html', context=context)
 
 
-def zemelnoe_view(request: HttpRequest):
+def zemelnaya_view(request: HttpRequest):
     context = {
-        'title': 'Земельное право'
+        'title': 'Земельная практика'
     }
-    return render(request, 'homeapp/zemelnoe.html', context=context)
+    return render(request, 'homeapp/practices/zemelnaya.html', context=context)
 
 
-def reputatsii_view(request: HttpRequest):
+def nalogovaya_view(request: HttpRequest):
     context = {
-        'title': 'Защита деловой репутации'
+        'title': 'Налоговая практика'
     }
-    return render(request, 'homeapp/reputatsii.html', context=context)
+    return render(request, 'homeapp/practices/nalogovaya.html', context=context)
 
 
-def konsalting_view(request: HttpRequest):
+def mediatsiya_view(request: HttpRequest):
     context = {
-        'title': 'Стратегический консалтинг'
+        'title': 'Медиация'
     }
-    return render(request, 'homeapp/konsalting.html', context=context)
+    return render(request, 'homeapp/practices/mediatsiya.html', context=context)
+
+
+def it_ip_praktika_view(request: HttpRequest):
+    context = {
+        'title': ' IT/ IP практика'
+    }
+    return render(request, 'homeapp/practices/it_ip_praktika.html', context=context)
+
+
+def korporativnaya_view(request: HttpRequest):
+    context = {
+        'title': 'Корпоративная практика'
+    }
+    return render(request, 'homeapp/practices/korporativnaya.html', context=context)
 
 
 def meditsinskoe_view(request: HttpRequest):
@@ -97,9 +111,9 @@ def meditsinskoe_view(request: HttpRequest):
 
 def arbitrazhnaya_view(request: HttpRequest):
     context = {
-        'Арбитражная практика'
+        'title': 'Арбитражная практика'
     }
-    return render(request, 'homeapp/arbitrazhnaya.html', context=context)
+    return render(request, 'homeapp/practices/arbitrazhnaya.html', context=context)
 
 
 def sanktsionnaya_view(request: HttpRequest):

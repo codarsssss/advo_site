@@ -1,0 +1,84 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="container">
+        <h1>Защита при уголовном преследовании</h1>
+
+
+        <div class="row">
+            <p class="fw-bold">Виды оказываемых услуг:</p>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item m-2">Консультация</li>
+                <li class="list-group-item m-2">Абонентское комплексное обслуживание адвокатом</li>
+                <ul>
+                    <li>подозреваемый</li>
+                    <li>обвиняемый</li>
+                    <li>подсудимый</li>
+                    <li>совершили преступление, но пока не задержаны</li>
+                </ul>
+                <li class="list-group-item m-2">Против вас совершили преступление : комплексный подход для инициирования
+                    расследования
+                </li>
+                <li class="list-group-item m-2">Защита по экономическим преступлениям: мошенничество, присвоение или растрата, злоупотребление полномочиями</li>
+                <li class="list-group-item m-2">Должностные и коррупционные преступления: взяточничество, коммерческий подкуп, присвоение или растрата, превышение или злоупотребление полномочиями, халатность, служебный подлог, нецелевое расходование средств государственной </li>
+                <li class="list-group-item m-2">Налоговые преступления</li>
+                <li class="list-group-item m-2">Преднамеренное банкротство</li>
+                <li class="list-group-item m-2">В сфере незаконного оборота наркотических средств</li>
+                <li class="list-group-item m-2">Причинение вреда различной степени тяжести</li>
+                <li class="list-group-item m-2">Преступления рассматриваемые судом присяжных</li>
+                <li class="list-group-item m-2">Сопровождение в следственных действиях</li>
+                <ul>
+                    <li>обыск</li>
+                    <li>опросй</li>
+                    <li>допросй</li>
+                    <li>очная ставка</li>
+                    <li>выемка</li>
+                </ul>
+            </ul>
+            <div class="row">
+                <p class=" h3 p-4 ">Вы можете скачать памятки:</p>
+            </div>
+            <div class="row  pt-4  justify-content-between">
+
+                <div class="col-4 justify-content-between">
+                    <a class="text-decoration-none" href="{% url 'homeapp:case_1' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">памятка подозреваемого, обвиняемого, свидетеля</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4 justify-content-between">
+                    <a class="text-decoration-none" href="{% url 'homeapp:case_2' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">памятка обыск</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4 justify-content-between">
+                    <a class="text-decoration-none" href="{% url 'homeapp:case_3' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка при оперативно розыскных мероприятиях</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
