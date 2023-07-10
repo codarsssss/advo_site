@@ -106,7 +106,7 @@ def meditsinskoe_view(request: HttpRequest):
     context = {
         'title': 'Медицинское право'
     }
-    return render(request, 'homeapp/meditsinskoe.html', context=context)
+    return render(request, 'homeapp/practices/meditsinskoe.html', context=context)
 
 
 def arbitrazhnaya_view(request: HttpRequest):
@@ -120,7 +120,7 @@ def sanktsionnaya_view(request: HttpRequest):
     context = {
         'title': 'Санкционная практика'
     }
-    return render(request, 'homeapp/sanktsionnaya.html', context=context)
+    return render(request, 'homeapp/practices/sanktsionnaya.html', context=context)
 
 
 def rabotaem_view(request: HttpRequest):
