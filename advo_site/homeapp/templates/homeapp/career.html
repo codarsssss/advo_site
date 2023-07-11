@@ -37,18 +37,19 @@
 {#            </form>#}
 {#        </div>#}
             <div class="row">
-                <form class="job-form" action="">
+                <form method="POST" class="job-form" action="">
+                    {% csrf_token %}
                     <div class="form-group">
-                        <label  for="name" class="form-label">ФИО</label>
-                        <input type="text" name="name" class="form-control">
+                        <label  for="fio" class="form-label">ФИО</label>
+                        <input type="text" name="fio" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="date" class="form-label">Год рождения</label>
-                        <input type="date" name="date" class="form-control">
+                        <label for="birthday" class="form-label">Год рождения</label>
+                        <input type="date" name="birthday" class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-label text-muted">желаемая позиция</label>
-                        <select class="form-control">
+                        <select name="want_to" class="form-control">
                             <option>-- выбрать --</option>
                             <option>Прохождение практики</option>
                             <option>Стажировка</option>
@@ -62,24 +63,24 @@
                         <input type="text" name="education" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label  for="education" class="form-label">Укажите компании в которых вы работали, и период работы</label>
-                        <input type="text" name="education" class="form-control">
+                        <label  for="experience" class="form-label">Укажите компании в которых вы работали, и период работы</label>
+                        <input type="text" name="experience" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label  for="email" class="form-label">E-mail</label>
-                        <input type="email" name="email" class="form-control">
+                        <label  for="mail" class="form-label">E-mail</label>
+                        <input type="email" name="mail" class="form-control">
                     </div>
                     <div class="form-group">
-                         <label  for="latter" class="form-label">Сопроводительное письмо</label>
-                        <textarea class="form-control" name="letter" cols="40" rows="3"></textarea>
+                         <label  for="covering" class="form-label">Сопроводительное письмо</label>
+                        <textarea class="form-control" name="covering" cols="40" rows="3"></textarea>
                     </div>
                     <div class="form-group">
-                        <label  for="file" class="form-label">Резюме (не обязательно)</label>
-                        <input type="file" name="file" class="form-control">
+                        <label  for="resume" class="form-label">Резюме (не обязательно)</label>
+                        <input type="file" name="resume" class="form-control">
                     </div>
                      <div class="form-group form-check form-switch my-3">
                         <input type="checkbox" name="check-box" class="form-check-input">
-                        <label  for="check-box" class="form-check-label">Согласие с <a href="#">политикой конфиденциальности</a></label>
+                        <label name="agree"  for="check-box" class="form-check-label">Согласие с <a href="#">политикой конфиденциальности</a></label>
                     </div>
 
                          <button type="submit" class="btn btn-primary">Отправить</button>

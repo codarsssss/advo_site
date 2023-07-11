@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
-import time
-import datetime
+from .forms import ConsultationForm, WorkerForm
 
 
 def home_index(request: HttpRequest):
     context = {
         'title': 'Главная страница'
     }
+    if request.method == "POST":
+        form = ConsultationForm(request.POST)
+        if form.is_valid():
+            form.save()
     return render(request, 'homeapp/index.html', context=context)
 
 
@@ -29,6 +32,11 @@ def career_view(request: HttpRequest):
     context = {
         'title': 'Карьера'
     }
+
+    if request.method == "POST":
+        form = WorkerForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
     return render(request, 'homeapp/career.html', context=context)
 
 

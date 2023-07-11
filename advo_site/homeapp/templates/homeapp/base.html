@@ -113,11 +113,11 @@
 
             <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0  mt-lg-0 justify-content-center icon-nav pt-1">
                 <li class="nav-item p-3">
-                    <a class="nav-link" aria-current="page" href="https://t.me/arsssss"><i
+                    <a class="nav-link" aria-current="page" href="https://t.me/angelina_KPG"><i
                             class="fa-brands fa-telegram fa-2xl" style="color: #2b3455;"></i></a></li>
                 </li>
                 <li class="nav-item p-3">
-                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:cases' %}"><i
+                    <a class="nav-link" aria-current="page" href="https://www.instagram.com/advocate_konstantinova_pg?utm_source=qr"><i
                             class="fa-brands fa-instagram fa-2xl" style="color: #2b3455;"></i></a></li>
                 </li>
             </ul>
@@ -142,20 +142,21 @@
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form>
+                                <form method="POST">
+                                    {% csrf_token %}
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>
-                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                        <input name="username" type="text" class="form-control" aria-label="Sizing example input"
                                                aria-describedby="inputGroup-sizing-lg">
                                     </div>
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>
-                                        <input type="text" class="form-control telmask" maxlength="12"
+                                        <input name="number" type="text" class="form-control telmask" maxlength="12"
                                                aria-label="Sizing example input"
                                                aria-describedby="inputGroup-sizing-lg">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Оставить
+                                        <button  type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Оставить
                                             заявку
                                         </button>
                                     </div>
@@ -260,12 +261,12 @@
                         </div>
                         <div class="row mx-auto">
                             <div class="col text-center">
-                                <a class="nav-link footer__nav-link" aria-current="page" href="https://t.me/arsssss"><i
+                                <a class="nav-link footer__nav-link" aria-current="page" href="https://t.me/angelina_KPG"><i
                                         class="fa-brands fa-telegram fa-2xl" style="color: white;"></i></a>
                             </div>
                             <div class="col text-center">
                                 <a class="nav-link footer__nav-link" aria-current="page"
-                                   href="{% url 'homeapp:cases' %}"><i class="fa-brands fa-instagram fa-2xl"
+                                   href="https://www.instagram.com/advocate_konstantinova_pg?utm_source=qr"><i class="fa-brands fa-instagram fa-2xl"
                                                                        style="color: white;"></i></a>
                             </div>
                         </div>
@@ -291,34 +292,6 @@
 <script src="https://kit.fontawesome.com/f8895a3494.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            "@0.00": {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-            "@0.75": {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            "@1.00": {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            "@1.50": {
-                slidesPerView: 4,
-                spaceBetween: 50,
-            },
-        },
-    });
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
@@ -354,9 +327,6 @@
                     slidesToScroll: 1
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 </script>
