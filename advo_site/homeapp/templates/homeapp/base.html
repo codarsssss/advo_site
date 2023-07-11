@@ -31,7 +31,7 @@
         <a class="navbar-brand" href="{% url 'homeapp:index' %}">
             <picture>
                 <source srcset="{% static 'homeapp/img/bg-logo.png' %}" media="(max-width: 1500px)">
-                <img src="{% static 'homeapp/img/logo-main.png' %}" alt="">
+                <img src="{% static 'homeapp/img/logo-main.png' %}" class="me-2" alt="">
             </picture>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -111,12 +111,12 @@
                 <button class="btn btn-outline-success" type="submit">Найти</button>
             </form>
 
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+            <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0  mt-lg-0 justify-content-center icon-nav pt-1">
+                <li class="nav-item p-3">
                     <a class="nav-link" aria-current="page" href="https://t.me/arsssss"><i
                             class="fa-brands fa-telegram fa-2xl" style="color: #2b3455;"></i></a></li>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item p-3">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:cases' %}"><i
                             class="fa-brands fa-instagram fa-2xl" style="color: #2b3455;"></i></a></li>
                 </li>

@@ -421,3 +421,7 @@ h2 {
 .work_e p:first-child {
     border-bottom: solid;
 }
+
+.icon-nav i {
+    font-size: 48px !important;
+}
