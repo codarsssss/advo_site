@@ -173,10 +173,61 @@
             <div class="row">
                 <div class="col-md-4 col-6 ">
                     <ul class="list-unstyled">
-                        <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                           href="{% url 'homeapp:team' %}">Практики</a></li>
-                        <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                           href="{% url 'homeapp:cases' %}">Порядок работы</a></li>
+                        <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Практики
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'homeapp:zashchita' %}">Защита от уголовного
+                            преследования</a></li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:business' %}">Уголовно-правовая защита
+                            бизнеса</a></li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционный
+                            комплайнс</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная практика</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:korporativnaya' %}">Корпоративная
+                            практика</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}"> IT/ IP практика</a>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:meditsinskoe' %}">Медицинская практика</a></li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:semeynaya' %}">Семейная практика</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
+
+                    </ul>
+                </li>
+                        <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Порядок работы
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'homeapp:rabotaem' %}">Как мы работаем</a></li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:polnomochiya' %}">Полномочия адвоката</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:tayna' %}">Адвокатская тайна</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:soglashenie' %}">Соглашение и ордер</a></li>
+                        <li><a class="dropdown-item" href="{% url 'homeapp:varianty' %}">Варианты вознагрождения</a>
+                        </li>
+                    </ul>
+                </li>
                         <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
                                                            href="{% url 'homeapp:team' %}">Команда</a></li>
                         <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
