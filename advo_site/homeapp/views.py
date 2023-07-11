@@ -32,13 +32,6 @@ def career_view(request: HttpRequest):
     return render(request, 'homeapp/career.html', context=context)
 
 
-def about_view(request: HttpRequest):
-    context = {
-        'title': 'О нас'
-    }
-    return render(request, 'homeapp/about.html', context=context)
-
-
 def zashchita_view(request: HttpRequest):
     context = {
         'title': 'Защита при уголовном преследовании'

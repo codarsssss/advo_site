@@ -10,10 +10,6 @@
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {#    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=#}
-    {#    Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">#}
-    {#    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
-    {#    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>#}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% static 'homeapp/js/main.js' %}"></script>
@@ -78,7 +74,7 @@
                         <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a>
                         <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a>
                         <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -108,9 +104,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:about' %}">О нас</a></li>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -190,8 +183,6 @@
                                                            href="{% url 'homeapp:cases' %}">Кейсы</a></li>
                         <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
                                                            href="{% url 'homeapp:career' %}">Карьера</a></li>
-                        <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                           href="{% url 'homeapp:about' %}">О нас</a></li>
                     </ul>
                 </div>
 
