@@ -23,9 +23,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
           integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'homeapp/img/bg-logo.ico' %}"/>
     <style></style>
 </head>
 <body>
+
+    {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <div class="alert alert-success alert-dismissible fade show {{ message.tags }}" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% else %}
+            <div class="alert alert-danger text-center alert-dismissible" role="alert">
+                {{ message.tags }}
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+
+
 <nav class="navbar navbar-expand-xl bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'homeapp:index' %}">
@@ -124,6 +142,9 @@
         </div>
     </div>
 </nav>
+
+
+
 
 {% block content %}
 {% endblock %}

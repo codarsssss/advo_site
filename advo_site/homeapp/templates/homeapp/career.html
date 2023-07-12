@@ -15,7 +15,7 @@
                     безвыходных ситуаций.
                     Мы всегда рады новым блистательным членам команды, даже если у нас нет открытых вакансий в данный
                     момент, мы готовы рассмотреть каждого кандидата!</p>
-                    <a href="#" class="btn btn-dark">Прислать резюме</a>
+{#                    <a href="#" class="btn btn-dark">Прислать резюме</a>#}
                 </div>
             </div>
 {#        <div class="row">#}
@@ -37,30 +37,30 @@
 {#            </form>#}
 {#        </div>#}
             <div class="row">
-                <form method="POST" class="job-form" action="">
+                <form method="POST" class="job-form" enctype="multipart/form-data" prefix="form" id="form">
                     {% csrf_token %}
                     <div class="form-group">
                         <label  for="fio" class="form-label">ФИО</label>
-                        <input type="text" name="fio" class="form-control">
+                        <input type="text" name="fio" class="form-control" required autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="birthday" class="form-label">Год рождения</label>
-                        <input type="date" name="birthday" class="form-control">
+                        <input type="date" name="birthday" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label class="form-label text-muted">желаемая позиция</label>
-                        <select name="want_to" class="form-control">
-                            <option>-- выбрать --</option>
-                            <option>Прохождение практики</option>
-                            <option>Стажировка</option>
-                            <option>Помощник юриста</option>
-                            <option>Юрист</option>
-                            <option>Адвокат</option>
+                        <select name="want_to" required class="form-control">
+                            <option value="option">-- выбрать --</option>
+                            <option value="option_1">Прохождение практики</option>
+                            <option value="option_2">Стажировка</option>
+                            <option value="option_3">Помощник юриста</option>
+                            <option value="option_4">Юрист</option>
+                            <option value="option_5">Адвокат</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label  for="education" class="form-label">Место учебы</label>
-                        <input type="text" name="education" class="form-control">
+                        <input type="text" name="education" required class="form-control">
                     </div>
                     <div class="form-group">
                         <label  for="experience" class="form-label">Укажите компании в которых вы работали, и период работы</label>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="form-group">
                         <label  for="mail" class="form-label">E-mail</label>
-                        <input type="email" name="mail" class="form-control">
+                        <input type="email" name="mail" required class="form-control">
                     </div>
                     <div class="form-group">
                          <label  for="covering" class="form-label">Сопроводительное письмо</label>
@@ -79,13 +79,13 @@
                         <input type="file" name="resume" class="form-control">
                     </div>
                      <div class="form-group form-check form-switch my-3">
-                        <input type="checkbox" name="check-box" class="form-check-input">
-                        <label name="agree"  for="check-box" class="form-check-label">Согласие с <a href="#">политикой конфиденциальности</a></label>
+
+                        <input type="checkbox" name="agree" required class="form-check-input">
+                        <label for="agree" class="form-check-label">Согласие с <a href="#">политикой конфиденциальности</a></label>
+
                     </div>
 
-                         <button type="submit" class="btn btn-primary">Отправить</button>
-
-
+                        <button type="submit" class="btn btn-primary">Отправить</button>
                 </form>
             </div>
         </div>
