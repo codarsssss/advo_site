@@ -9,20 +9,24 @@ def handle_form(request, form_class):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            messages.success(request, "DONE!")
+            messages.success(request, "Форма отправленна! Скоро мы с Вами свяжемся")
+            request.session['username'] = request.POST.get('username')
             return True
         else:
             form = form_class()
-            messages.error(request, "DONE!")
+            messages.error(request, "Произошла ошибка! Проверьте введеные данные или свяжитесь одним из альтернативных способов")
             return False
 
 
 def home_index(request: HttpRequest):
-    context = {
-        'title': 'Главная страница'
-    }
+
     if handle_form(request, ConsultationForm):
         return redirect('/')
+
+    context = {
+        'title': 'Главная страница',
+        'user': request.session.get('username')
+    }
 
     return render(request, 'homeapp/index.html', context=context)
 
@@ -76,20 +80,28 @@ def career_view(request: HttpRequest):
 
 
 def zashchita_view(request: HttpRequest):
-    context = {
-        'title': 'Защита при уголовном преследовании'
-    }
+
     if handle_form(request, ConsultationForm):
-        return redirect('/zashcita/')
+        return redirect('/zashchita-pri-ugolovnom-presledovanii/')
+
+    context = {
+        'title': 'Защита при уголовном преследовании',
+        'user': request.session.get('username')
+    }
+
     return render(request, 'homeapp/practices/zashchita.html', context=context)
 
 
 def business_view(request: HttpRequest):
-    context = {
-        'title': 'Уголовно-правовая защита бизнеса'
-    }
+
     if handle_form(request, ConsultationForm):
-        return redirect('/business/')
+        return redirect('/ugolovno-pravovaya-zashchita-biznesa/')
+    context = {
+        'title': 'Уголовно-правовая защита бизнеса',
+        'user': request.session.get('username')
+
+    }
+
     return render(request, 'homeapp/practices/business.html', context=context)
 
 
@@ -362,3 +374,12 @@ def case_15(request: HttpRequest):
     if handle_form(request, ConsultationForm):
         return redirect('/cases/15/')
     return render(request, 'homeapp/cases/15.html', context=context)
+
+
+def privicy_view(request: HttpRequest):
+    context = {
+        'title': 'Политика конфиденциальности'
+    }
+    if handle_form(request, ConsultationForm):
+        return redirect('/privicy/')
+    return render(request, 'homeapp/privicy.html', context=context)

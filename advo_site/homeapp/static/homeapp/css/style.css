@@ -21,7 +21,7 @@ body {
 .btn {
     background-color: #2b3455;
     color: white;
-    font-size: calc((100vw - 320px) / (768 - 320) * (20 - 16) + 16px);
+    font-size: calc((100vw - 320px) / (768 - 320) * (20 - 18) + 18px);
 }
 
 .btn:hover {
@@ -424,4 +424,5 @@ h2 {
 
 .icon-nav i {
     font-size: 48px !important;
+
 }

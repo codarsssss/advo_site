@@ -586,10 +586,23 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    {% if user != None %}
                     <h1>Ознакомиться с презентацией<br> МКА "Парнер Групп"</h1>
-                    <p>Предлагаем посмотреть презенацию которую Лина с Томой нарисовали и тогды вы поймете что с ними
-                        можно иметь дело.</p>
-                    <a href="{% static 'homeapp/docs/Партнер групп .pdf' %}" class="btn btn-dark">Скачать презентацию PDF</a>
+                    <p>Приглашаем вас ознакомиться с презентацией компании МКА "Партнер групп" и узнать о наших успешных проектах и специализации.</p>
+                    <a href="{% static 'homeapp/docs/Партнер групп .pdf' %}" class="btn btn-dark">Скачать презентацию
+                        PDF</a>
+                    {% else %}
+                        <h1>Ознакомиться с презентацией<br> МКА "Парнер Групп"</h1>
+                        <p>Приглашаем вас ознакомиться с презентацией компании МКА "Партнер групп" и узнать о наших успешных проектах и специализации.</p>
+                        <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#downloadModal">Скачать презентацию
+                        PDF</a>
+{#                    <button type="button" class="btn btn-primary btn__footer" data-bs-toggle="modal"#}
+{#                                    data-bs-target="#exampleModal">Получить консультацию#}
+{#                            </button>#}
+
+                        </button>
+                    {% endif %}
                 </div>
             </div>
         </div>
