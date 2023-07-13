@@ -1,0 +1,41 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+{% if page_obj %}
+    <h2>Результаты поиска</h2>
+    <ul style="list-style: none;">
+        {% for result in page_obj %}
+        <li>
+        <a href="{{ result.1 }}">{{ result|last }}</a>
+        <p>{{ result.0 }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Ничего не найдено.</p>
+{% endif %}
+
+
+
+<nav class="center-block" aria-label="Page navigation example" style="display: flex; justify-content: center;">
+    <ul class="pagination">
+
+        {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="{{ page_obj.previous_page_number }}">Назад</a></li>
+        {% endif %}
+
+        {% for i in page_obj.paginator.page_range %}
+        <li class="page-item"><a class="page-link" href="{{ i }}">{{ i }}</a></li>
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="{{ page_obj.next_page_number }}">Далее</a></li>
+        {% endif %}
+
+    </ul>
+  </nav>
+
+{% endblock %}
