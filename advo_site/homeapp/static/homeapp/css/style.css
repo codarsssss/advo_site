@@ -28,7 +28,7 @@ body {
     background: white;
     color: #2b3455;
     border-color: #2b3455;
-    font-size: calc((100vw - 320px) / (768 - 320) * (20 - 16) + 16px);
+    font-size: calc((100vw - 320px) / (768 - 320) * (20 - 18) + 18px);
 }
 
 /*img {*/
