@@ -152,24 +152,23 @@ footer p {
 
 @keyframes bg-сhange {
     from {
-        background-image: url('../img/bg-logo.png');
-
+        background-image: url('/static/homeapp/img/bg-logo.png');
     }
 
     25% {
-        background-image: url('../img/bg-bl-2.png');
+        background-image: url('/static/homeapp/img/bg-bl-2.png');
     }
 
     50% {
-        background-image: url('../img/bg-bl-3.png');
+        background-image: url('/static/homeapp/img/bg-bl-3.png');
     }
 
     75% {
-        background-image: url('../img/bg-bl-4.png');
+        background-image: url('/static/homeapp/img/bg-bl-4.png');
     }
 
     to {
-        background-image: url('../img/bg-bl-1.png');
+        background-image: url('/static/homeapp/img/bg-bl-1.png');
     }
 }
 
