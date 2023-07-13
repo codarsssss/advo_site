@@ -31,10 +31,6 @@ body {
     font-size: calc((100vw - 320px) / (768 - 320) * (20 - 18) + 18px);
 }
 
-/*img {*/
-/*    max-width: 100%;*/
-/*    !*height: max-content;*!*/
-/*}*/
 
 section {
     padding: 50px 0;
@@ -425,4 +421,9 @@ h2 {
 .icon-nav i {
     font-size: 48px !important;
 
+}
+
+.developer_link {
+    font-size: calc((100vw - 320px) / (768 - 320) * (16 - 14) + 14px);
+    color: white;
 }
