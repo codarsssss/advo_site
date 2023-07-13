@@ -45,14 +45,14 @@
             <div class="row  pt-4  justify-content-between">
 
 
-                <div class="col justify-content-between mt-3">
+                <div class="col  mt-3">
                     {% if user != None %}
-                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка обвиняемому по уголовному делу.docx' %}">
+                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка подозреваемому по уголовному делу.docx' %}">
                         <div class="">
                             <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
                                                                style="color: #36355f;"></i></p>
                             <div class="card-body">
-                                <p class="card-text text-center h4 p-3">Памятка подозреваемого, обвиняемого, свидетеля</p>
+                                <p class="card-text text-center h4 p-3">Памятка подозреваемому по уголовному делу</p>
                             </div>
                         </div>
                     </a>
@@ -63,14 +63,62 @@
                                 <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
                                                                    style="color: #36355f;"></i></p>
                                 <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка подозреваемого, обвиняемого, свидетеля</p>
+                                    <p class="card-text text-center h4 p-3">Памятка подозреваемому по уголовному делу</p>
                                 </div>
                             </div>
                         </a>
                     {% endif %}
 
                 </div>
-                <div class="col justify-content-between mt-4">
+                <div class="col  mt-4">
+                    {% if user != None %}
+                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка обвиняемому по уголовному делу.docx' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка обвиняемому по уголовному делу</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% else %}
+                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
+                                    data-bs-target="#downloadModal">
+                            <div class="">
+                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                                   style="color: #36355f;"></i></p>
+                                <div class="card-body">
+                                    <p class="card-text text-center h4 p-3">Памятка обвиняемому по уголовному делу</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="col  mt-4">
+                    {% if user != None %}
+                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка свидетелю по уголовному делу.docx' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка свидетелю по уголовному делу</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% else %}
+                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
+                                    data-bs-target="#downloadModal">
+                            <div class="">
+                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                                   style="color: #36355f;"></i></p>
+                                <div class="card-body">
+                                    <p class="card-text text-center h4 p-3">Памятка свидетелю по уголовному делу</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
+                </div>
+            <div class="col mt-4">
                     {% if user != None %}
                     <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка обыск.docx' %}">
                         <div class="">
@@ -89,30 +137,6 @@
                                                                    style="color: #36355f;"></i></p>
                                 <div class="card-body">
                                     <p class="card-text text-center h4 p-3">Памятка обыск</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% endif %}
-                </div>
-                <div class="col justify-content-between mt-4">
-                    {% if user != None %}
-                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Памятка обвиняемому по уголовному делу.docx' %}">
-                        <div class="">
-                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                               style="color: #36355f;"></i></p>
-                            <div class="card-body">
-                                <p class="card-text text-center h4 p-3">Памятка при оперативно розыскных мероприятиях</p>
-                            </div>
-                        </div>
-                    </a>
-                    {% else %}
-                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
-                                    data-bs-target="#downloadModal">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка при оперативно розыскных мероприятиях</p>
                                 </div>
                             </div>
                         </a>

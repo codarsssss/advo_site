@@ -425,5 +425,5 @@ h2 {
 
 .developer_link {
     font-size: calc((100vw - 320px) / (768 - 320) * (16 - 14) + 14px);
-    color: white;
+    color: white;/
 }
