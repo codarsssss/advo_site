@@ -132,4 +132,6 @@ dmypy.json
 
 resume/*
 
-secret.py
+secret.*
+
+!.gitignore
