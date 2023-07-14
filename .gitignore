@@ -134,4 +134,4 @@ resume/*
 
 !media
 
-for show media in git.*
+#for show media in git.*
