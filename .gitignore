@@ -130,7 +130,7 @@ dmypy.json
 
 .idea/
 
-resume/*
+media/resume/*
 
 secret.*
 
