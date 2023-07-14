@@ -131,5 +131,3 @@ dmypy.json
 .idea/
 
 resume/*
-
-!media
