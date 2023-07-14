@@ -133,3 +133,5 @@ dmypy.json
 resume/*
 
 !media
+
+for show media in git
