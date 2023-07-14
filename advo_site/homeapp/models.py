@@ -15,6 +15,7 @@ class Consultation(models.Model):
 
     class Meta:
         ordering = ['-date_application']
+        verbose_name_plural = "Заявки"
 
     def __str__(self):
         return self.username
