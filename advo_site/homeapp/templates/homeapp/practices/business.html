@@ -27,100 +27,113 @@
                 </ul>
             </ul>
             <div class="row">
-                <p class=" h3 p-4 ">как определить есть ли у вас уголовно -правовые риски в бизнесе:</p>
-            </div>
-            <div class="row  pt-4  justify-content-between">
+                <p class=" h3 p-4 ">Некоторые признаки бизнеса, связанные с повышенными уголовными рисками, могут
+                    включать:</p>
 
-                <div class="col justify-content-between">
-                    {% if user != None %}
-                        <a class="text-decoration-none"
-                           href="{% static 'homeapp/docs/Чек- лист признаки бизнеса с повышенными уголовными рисками.docx' %}">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Чек- лист признаки бизнеса с повышенными
-                                        уголовными рисками</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% else %}
-                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
-                           data-bs-target="#downloadModal">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Чек- лист признаки бизнеса с повышенными
-                                        уголовными рисками</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% endif %}
+                <div class="col-12  col-md-6 col-xl-3 mt-4 ">
+                    <img src="{% static 'homeapp/img/Group 1.svg' %}" alt="">
+                    <p>Если деятельность компании осуществляется в условиях высокой конкуренции. Чем больше конкурентов,
+                        тем выше вероятность, что кто-то из них захочет использовать уголовно-правовые методы для того,
+                        чтобы устранить конкурирующий бизнес.</p></div>
+                <div class="col-12 col-md-6 col-xl-3 mt-4 ">
+                    <img src="{% static 'homeapp/img/Group 2.svg' %}" alt="">
+                    <p>Сложная организационная структура. Чем больше собственников, учредителей и акционеров, тем выше
+                        вероятность, что кто-то из них обратиться в правоохранительные органы по поводу нарушения своих
+                        прав.</p></div>
+                <div class="col-12 col-md-6 col-xl-3 mt-4 ">
+                    <img src="{% static 'homeapp/img/Group 3.svg' %}" alt="">
+                    <p>Большое количество сотрудников с доступом к конфиденциальной информации. Любое конфликтное
+                        увольнение в такой ситуации - уголовный риск для бизнеса.</p></div>
+                <div class="col-12 col-md-6 col-xl-3 mt-4 ">
+                    <img src="{% static 'homeapp/img/Group 4.svg' %}" alt="">
+                    <p>Высокая прибыль бизнеса. Чем больше можно заработать в нише, тем больше желающих ее занять и
+                        вытеснить конкурентов.</p></div>
 
+                <div class="row">
+                    <div class="col-12 col-md-6 col-xl-6 mt-4 ">
+                        <img src="{% static 'homeapp/img/Group 5.svg' %}" alt="">
+                        <p>Работа с госзакупками. В этой сфере действует большое количество проверяющих и контролирующих
+                            органов, бюджетные средства хорошо защищаются государством.</p></div>
+                    <div class="col-12 col-md-6 col-xl-6 mt-4 ">
+                        <img src="{% static 'homeapp/img/Group 6.svg' %}" alt="">
+                        <p>Уголовно- правовые риски кроются в полной релокации — прекращении деятельности, продаже
+                            имущества, выводе капитала за границу.</p></div>
                 </div>
-
-            </div>
-            <div class="row">
-                <p class=" h3 p-4 ">Вы можете скачать памятки:</p>
-            </div>
-            <div class="row  pt-4  justify-content-between">
-                <div class="col justify-content-between">
-                    {% if user != None %}
-                        <a class="text-decoration-none"
-                           href="{% static 'homeapp/docs/Памятка: обыск, осмотр.docx' %}">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка: обыск, осмотр</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% else %}
-                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
-                           data-bs-target="#downloadModal">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка: обыск, осмотр</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% endif %}
-
-                </div>
-            <div class="col justify-content-between">
-                    {% if user != None %}
-                        <a class="text-decoration-none"
-                           href="{% static 'homeapp/docs/Памятка мин. рисков.docx' %}">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% else %}
-                        <a class="text-decoration-none" href="№" data-bs-toggle="modal"
-                           data-bs-target="#downloadModal">
-                            <div class="">
-                                <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
-                                                                   style="color: #36355f;"></i></p>
-                                <div class="card-body">
-                                    <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% endif %}
-
+                <div class="row mt-5">
+                    <div class="col">
+                        <p>Риски возбуждения уголовного дела, которые возникают из-за действий предпринимателя, действий
+                            его партнеров и сотрудников, — это внутренние риски, которыми можно и нужно управлять.<br>Риски
+                            возбуждения уголовного дела, которые возникают из-за действий предпринимателя, действий его
+                            партнеров и сотрудников, — это внутренние риски, которыми можно и нужно управлять.<br>Как
+                            выявить и снизить уголовные риски, чтобы компания не стала объектом внимания
+                            правоохранителей? Есть ряд универсальных профилактических действий, которые позволят
+                            бизнесменам минимизировать риски. Более детальные рекомендации зависят от каждого
+                            конкретного случаях. МКА «Правовой консалтинг «Партнер групп» проведет правовой аудит в
+                            компании, для исключения уголовного преследования.</p>
+                    </div>
                 </div>
             </div>
-
-
         </div>
+        <div class="row">
+            <p class=" h3 p-4 ">Вы можете скачать памятки:</p>
+        </div>
+        <div class="row  pt-4  justify-content-between">
+            <div class="col justify-content-between">
+                {% if user != None %}
+                    <a class="text-decoration-none"
+                       href="{% static 'homeapp/docs/Памятка: обыск, осмотр.docx' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка: обыск, осмотр</p>
+                            </div>
+                        </div>
+                    </a>
+                {% else %}
+                    <a class="text-decoration-none" href="№" data-bs-toggle="modal"
+                       data-bs-target="#downloadModal">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка: обыск, осмотр</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endif %}
+
+            </div>
+            <div class="col justify-content-between">
+                {% if user != None %}
+                    <a class="text-decoration-none"
+                       href="{% static 'homeapp/docs/Памятка мин. рисков.docx' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
+                            </div>
+                        </div>
+                    </a>
+                {% else %}
+                    <a class="text-decoration-none" href="№" data-bs-toggle="modal"
+                       data-bs-target="#downloadModal">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endif %}
+
+            </div>
+        </div>
+
+
+    </div>
     </div>
 
 
