@@ -183,7 +183,6 @@ def zemelnaya_view(request: HttpRequest):
         'user': request.session.get('username')
     }
 
-
     return render(request, 'homeapp/practices/zemelnaya.html', context=context)
 
 
@@ -227,6 +226,7 @@ def it_ip_praktika_view(request: HttpRequest):
     }
     if handle_form(request, ConsultationForm):
         return redirect('/it-ip-praktika/')
+
     return render(request, 'homeapp/practices/it_ip_praktika.html', context=context)
 
 
@@ -242,6 +242,7 @@ def korporativnaya_view(request: HttpRequest):
     }
     if handle_form(request, ConsultationForm):
         return redirect('/korporativnaya/')
+
     return render(request, 'homeapp/practices/korporativnaya.html', context=context)
 
 
@@ -266,6 +267,7 @@ def arbitrazhnaya_view(request: HttpRequest):
     }
     if handle_form(request, ConsultationForm):
         return redirect('/arbitrazhnaya/')
+
     return render(request, 'homeapp/practices/arbitrazhnaya.html', context=context)
 
 
@@ -323,6 +325,7 @@ def tayna_view(request: HttpRequest):
     }
     if handle_form(request, ConsultationForm):
         return redirect('/tayna/')
+
     return render(request, 'homeapp/procedure/tayna.html', context=context)
 
 

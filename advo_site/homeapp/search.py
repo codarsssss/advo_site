@@ -4,11 +4,16 @@ import re
 import lxml
 from lxml import html
 
+from advo_site.settings import ALLOWED_HOSTS, DEBUG
+
 
 def search(user_input):
-    # НЕ ЗАБЫТЬ ПЕРЕКЛЮЧИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    # BASE_URL = ALLOWED_HOSTS[0]
-    BASE_URL = 'http://127.0.0.1:8000'
+
+    if DEBUG:
+        BASE_URL = 'http://127.0.0.1:8000'
+    else:
+        BASE_URL = ALLOWED_HOSTS[0]
+
     search_result = []
     if user_input:
         urls = [
