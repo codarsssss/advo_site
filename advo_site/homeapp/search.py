@@ -4,7 +4,7 @@ import re
 import lxml
 from lxml import html
 
-from advo_site.settings import ALLOWED_HOSTS, DEBUG
+from settings import ALLOWED_HOSTS, DEBUG
 
 
 def search(user_input):
@@ -12,7 +12,7 @@ def search(user_input):
     if DEBUG:
         BASE_URL = 'http://127.0.0.1:8000'
     else:
-        BASE_URL = ALLOWED_HOSTS[0]
+        BASE_URL = 'https://' + ALLOWED_HOSTS[0]
 
     search_result = []
     if user_input:
@@ -38,21 +38,21 @@ def search(user_input):
             BASE_URL + '/advokatskaya-tayna/',
             BASE_URL + '/soglashenie-i-order/',
             BASE_URL + '/varianty-voznagrozhdeniya/',
-            BASE_URL + '/cases/1',
-            BASE_URL + '/cases/2',
-            BASE_URL + '/cases/3',
-            BASE_URL + '/cases/4',
-            BASE_URL + '/cases/5',
-            BASE_URL + '/cases/6',
-            BASE_URL + '/cases/7',
-            BASE_URL + '/cases/8',
-            BASE_URL + '/cases/9',
-            BASE_URL + '/cases/10',
-            BASE_URL + '/cases/11',
-            BASE_URL + '/cases/12',
-            BASE_URL + '/cases/13',
-            BASE_URL + '/cases/14',
-            BASE_URL + '/cases/15',
+            BASE_URL + '/cases/1/',
+            BASE_URL + '/cases/2/',
+            BASE_URL + '/cases/3/',
+            BASE_URL + '/cases/4/',
+            BASE_URL + '/cases/5/',
+            BASE_URL + '/cases/6/',
+            BASE_URL + '/cases/7/',
+            BASE_URL + '/cases/8/',
+            BASE_URL + '/cases/9/',
+            BASE_URL + '/cases/10/',
+            BASE_URL + '/cases/11/',
+            BASE_URL + '/cases/12/',
+            BASE_URL + '/cases/13/',
+            BASE_URL + '/cases/14/',
+            BASE_URL + '/cases/15/',
             BASE_URL + '/privicy/'
         ]
         for url in urls:
