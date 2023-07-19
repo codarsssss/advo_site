@@ -136,4 +136,4 @@ secret.*
 
 !.gitignore
 
-resume/*
+.resume/*
