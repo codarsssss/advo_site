@@ -3,8 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import lxml
 from lxml import html
-
-from settings import ALLOWED_HOSTS, DEBUG
+from advo_site.settings import ALLOWED_HOSTS, DEBUG
 
 
 def search(user_input):

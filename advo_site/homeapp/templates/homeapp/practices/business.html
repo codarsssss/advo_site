@@ -62,14 +62,14 @@
                 <div class="row mt-5">
                     <div class="col">
                         <p>Риски возбуждения уголовного дела, которые возникают из-за действий предпринимателя, действий
-                            его партнеров и сотрудников, — это внутренние риски, которыми можно и нужно управлять.<br>Риски
-                            возбуждения уголовного дела, которые возникают из-за действий предпринимателя, действий его
-                            партнеров и сотрудников, — это внутренние риски, которыми можно и нужно управлять.<br>Как
-                            выявить и снизить уголовные риски, чтобы компания не стала объектом внимания
-                            правоохранителей? Есть ряд универсальных профилактических действий, которые позволят
-                            бизнесменам минимизировать риски. Более детальные рекомендации зависят от каждого
-                            конкретного случаях. МКА «Правовой консалтинг «Партнер групп» проведет правовой аудит в
-                            компании, для исключения уголовного преследования.</p>
+                            его партнеров и сотрудников, — это внутренние риски, которыми можно и нужно управлять.<br>
+                            Как выявить и снизить уголовные риски, чтобы компания не стала объектом внимания
+                            правоохранителей?<br>
+                            Есть ряд универсальных профилактических действий, которые позволят бизнесменам
+                            минимизировать риски.<br>
+                            Более детальные рекомендации зависят от каждого конкретного случаях.<br>
+                            МКА «Партнер групп» проведет правовой аудит в компании, для исключения уголовного
+                            преследования..</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
             <p class=" h3 p-4 ">Вы можете скачать памятки:</p>
         </div>
         <div class="row  pt-4  justify-content-between">
-            <div class="col justify-content-between">
+            <div class="col justify-content-between p-2">
                 {% if user != None %}
                     <a class="text-decoration-none"
                        href="{% static 'homeapp/docs/Памятка: обыск, осмотр.docx' %}">
@@ -91,7 +91,7 @@
                         </div>
                     </a>
                 {% else %}
-                    <a class="text-decoration-none" href="№" data-bs-toggle="modal"
+                    <a class="text-decoration-none" href="#" data-bs-toggle="modal"
                        data-bs-target="#downloadModal">
                         <div class="">
                             <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
@@ -104,7 +104,7 @@
                 {% endif %}
 
             </div>
-            <div class="col justify-content-between">
+            <div class="col justify-content-between p-2">
                 {% if user != None %}
                     <a class="text-decoration-none"
                        href="{% static 'homeapp/docs/Памятка мин. рисков.docx' %}">
@@ -112,7 +112,7 @@
                             <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
                                                                style="color: #36355f;"></i></p>
                             <div class="card-body">
-                                <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
+                                <p class="card-text text-center h4 p-3">Минимизировать уголовные риски</p>
                             </div>
                         </div>
                     </a>
@@ -123,7 +123,7 @@
                             <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-2xl"
                                                                style="color: #36355f;"></i></p>
                             <div class="card-body">
-                                <p class="card-text text-center h4 p-3">Памятка мин. рисков</p>
+                                <p class="card-text text-center h4 p-3">Минимизировать уголовные риски</p>
                             </div>
                         </div>
                     </a>
@@ -131,7 +131,6 @@
 
             </div>
         </div>
-    </div>
     </div>
 
 {% endblock %}

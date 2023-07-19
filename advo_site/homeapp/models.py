@@ -1,6 +1,11 @@
 from django.db import models
+from transliterate import slugify
 
-# Create your models here.
+
+def translit_filename(instance, filename):
+    file_extension = filename.split('.')[-1]
+    filename = slugify(filename)
+    return 'resume/{}.{}'.format(filename[:-4], file_extension)
 
 
 class Consultation(models.Model):
@@ -50,7 +55,7 @@ class Worker(models.Model):
                                 default=None,
                                 verbose_name='Сопроводительное письмо')
 
-    resume = models.FileField(blank=True, upload_to='resume/',
+    resume = models.FileField(blank=True, upload_to=translit_filename,
                               verbose_name='Резюме')
 
     agree = models.BooleanField(verbose_name='Согласие с политикой')
