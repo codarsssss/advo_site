@@ -128,7 +128,7 @@
             </ul>
             <form class="d-flex" role="search"  method="POST">
                 {% csrf_token %}
-                <input class="form-control me-2" name="search_input" type="search" placeholder="поиск по сайту" aria-label="Search">
+                <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск по сайту" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Найти</button>
             </form>
 
