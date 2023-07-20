@@ -22,7 +22,7 @@ def handle_form(request, form_class):
     form = form_class(request.POST)
     if form.is_valid():
         form.save()
-        messages.success(request, "Форма отправленна! Скоро мы с Вами свяжемся")
+        messages.success(request, "Скоро мы с Вами свяжемся для консультации")
         request.session['username'] = request.POST.get('username')
         return True
     else:
@@ -90,7 +90,7 @@ def career_view(request: HttpRequest):
 
         if form.is_valid():
             form.save()
-            messages.success(request, 'Мы получили ваш запрос. Скоро перезвоним!')
+            messages.success(request, 'Форма отправленна! Скоро мы с Вами свяжемся')
             return redirect('/career/')
 
         elif form_1.is_valid():

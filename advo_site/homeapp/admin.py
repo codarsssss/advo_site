@@ -16,4 +16,4 @@ class WorkerAdmin(admin.ModelAdmin):
     list_display = ['fio', 'want_to', 'mail', 'status']
     list_filter = ['fio', 'want_to', 'status']
     search_fields = ['fio', 'want_to', 'date', 'status']
-    readonly_fields = ['fio', 'want_to', 'mail']
+    readonly_fields = ['fio', 'want_to', 'mail', 'fieldname_download']

@@ -1,5 +1,6 @@
 from django.db import models
 from transliterate import slugify
+from django.utils.safestring import mark_safe
 
 
 def translit_filename(instance, filename):
@@ -70,6 +71,13 @@ class Worker(models.Model):
     class Meta:
         ordering = ['-date']
         verbose_name_plural = "Резюме"
+
+    def fieldname_download(self):
+
+        return mark_safe('<a href="/media/{0}" download>{1}</a>'.format(
+            self.resume, self.resume))
+
+    fieldname_download.short_description = 'Download Fieldname'
 
     def str(self):
         return self.fio
