@@ -41,5 +41,6 @@ urlpatterns = [
     path('cases/14/', case_14, name='case_14'),
     path('cases/15/', case_15, name='case_15'),
     path('privicy/', privicy_view, name='privicy'),
-    path('search/<int:page_number>', search_view, name='search')
+    path('search/<int:page_number>', search_view, name='search'),
+    path('download/<path:file_path>', download_resume, name='download')
 ]

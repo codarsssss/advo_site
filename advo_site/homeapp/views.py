@@ -1,10 +1,19 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
+import os
+from django.conf import settings
+
+
+def download_resume(request, file_path):
+    file_full_path = os.path.join(settings.MEDIA_ROOT, file_path)
+    if os.path.exists(file_full_path):
+        return FileResponse(open(file_full_path, 'rb'))
+    raise Http404('Такого файла не существует :(')
 
 
 def search_form(request, user_input):
