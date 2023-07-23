@@ -5,8 +5,8 @@ from django.utils.safestring import mark_safe
 
 def translit_filename(instance, filename):
     file_extension = filename.split('.')[-1]
-    filename = slugify(filename)
-    return 'resume/{}.{}'.format(filename[:-4], file_extension)
+    filename = slugify(instance.fio)
+    return 'resume/{}.{}'.format(filename, file_extension)
 
 
 class Consultation(models.Model):
