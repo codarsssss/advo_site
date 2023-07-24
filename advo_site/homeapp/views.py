@@ -1,3 +1,5 @@
+import os
+import asyncio
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
@@ -5,8 +7,8 @@ from django.contrib import messages
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
-import os
 from django.conf import settings
+from .notification_bot import send_telegram_message
 
 
 def download_resume(request, file_path):
@@ -30,6 +32,7 @@ def search_form(request, user_input):
 def handle_form(request, form_class):
     form = form_class(request.POST)
     if form.is_valid():
+        asyncio.run(send_telegram_message(f'{form.instance.username}-{form.instance.number}'))
         form.save()
         messages.success(request, "Скоро мы с Вами свяжемся для консультации")
         request.session['username'] = request.POST.get('username')
@@ -99,11 +102,13 @@ def career_view(request: HttpRequest):
 
         if form.is_valid():
             form.save()
+            asyncio.run(send_telegram_message(f'Поступило резюме от {form.instance.fio}'))
             messages.success(request, 'Форма отправленна! Скоро мы с Вами свяжемся')
             return redirect('/career/')
 
         elif form_1.is_valid():
             form_1.save()
+            asyncio.run(send_telegram_message(f'{form_1.instance.username}-{form_1.instance.number}'))
             messages.success(request, 'Мы получили ваш запрос. Скоро перезвоним!')
             return redirect('/career/')
 
@@ -170,7 +175,7 @@ def antikorruptsionnoe_view(request: HttpRequest):
 def semeynaya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/semeynaya/')
+            return redirect('/semeynaya-praktikapraktika/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -184,7 +189,7 @@ def semeynaya_view(request: HttpRequest):
 def zemelnaya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/zemelnaya/')
+            return redirect('/zemelnaya-praktika/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -198,7 +203,7 @@ def zemelnaya_view(request: HttpRequest):
 def nalogovaya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/nalogovaya/')
+            return redirect('/nalogovaya-praktika/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -242,7 +247,7 @@ def it_ip_praktika_view(request: HttpRequest):
 def korporativnaya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/korporativnaya/')
+            return redirect('/korporativnaya-praktika/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -258,7 +263,7 @@ def korporativnaya_view(request: HttpRequest):
 def meditsinskoe_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/meditsinskoe/')
+            return redirect('/meditsinskoe-pravo/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -275,7 +280,7 @@ def arbitrazhnaya_view(request: HttpRequest):
         'user': request.session.get('username')
     }
     if handle_form(request, ConsultationForm):
-        return redirect('/arbitrazhnaya/')
+        return redirect('/arbitrazhnaya-praktika/')
 
     return render(request, 'homeapp/practices/arbitrazhnaya.html', context=context)
 
@@ -283,7 +288,7 @@ def arbitrazhnaya_view(request: HttpRequest):
 def sanktsionnaya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/sanktsionnaya/')
+            return redirect('/sanktsionnaya-praktika/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -297,7 +302,7 @@ def sanktsionnaya_view(request: HttpRequest):
 def rabotaem_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/rabotaem/')
+            return redirect('/kak-my-rabotaem/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -311,7 +316,7 @@ def rabotaem_view(request: HttpRequest):
 def polnomochiya_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/polnomochiya/')
+            return redirect('/polnomochiya-advokata/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -325,7 +330,7 @@ def polnomochiya_view(request: HttpRequest):
 def tayna_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/polnomochiya/')
+            return redirect('/advokatskaya-tayna/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -333,7 +338,7 @@ def tayna_view(request: HttpRequest):
         'user': request.session.get('username')
     }
     if handle_form(request, ConsultationForm):
-        return redirect('/tayna/')
+        return redirect('/advokatskaya-tayna/')
 
     return render(request, 'homeapp/procedure/tayna.html', context=context)
 
@@ -341,7 +346,7 @@ def tayna_view(request: HttpRequest):
 def soglashenie_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/soglashenie/')
+            return redirect('/soglashenie-i-order/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -355,7 +360,7 @@ def soglashenie_view(request: HttpRequest):
 def varianty_view(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/varianty/')
+            return redirect('/varianty-voznagrozhdeniya/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
