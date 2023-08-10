@@ -65,6 +65,7 @@ def team_view(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
 
+
     context = {
         'title': 'Команда',
         'user': request.session.get('username')
