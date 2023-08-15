@@ -1,7 +1,10 @@
+from django.contrib.auth.models import User, Group
 from django.contrib import admin
-from .models import Consultation, Worker
+from .forms import NewsForm
+from .models import Consultation, Worker, News
 from django.urls import reverse
 from django.utils.html import format_html
+
 
 
 @admin.register(Consultation)
@@ -28,3 +31,20 @@ class WorkerAdmin(admin.ModelAdmin):
         return '-'
 
     download_resume.short_description = 'Резюме'
+
+
+class NewsAdmin(admin.ModelAdmin):
+    form = NewsForm
+    list_display = ['title', 'slug', 'create_datetime', 'status']
+    # Этот атрибут нужен для того, чтобы поле slug создавалось
+    # автоматически. Работает только в админке!!!
+    prepopulated_fields = {'slug': ('title',)}
+    list_filter = ['status', 'create_datetime']
+    search_fields = ['title', 'slug', 'text']
+    ordering = ['status', '-create_datetime']
+    readonly_fields = ['create_datetime']
+
+
+admin.site.unregister(User)
+admin.site.unregister(Group)
+admin.site.register(News, NewsAdmin)

@@ -1,5 +1,7 @@
 from django import forms
-from .models import Consultation, Worker
+from tinymce.widgets import TinyMCE
+
+from .models import Consultation, Worker, News
 
 
 class ConsultationForm(forms.ModelForm):
@@ -17,3 +19,10 @@ class WorkerForm(forms.ModelForm):
         model = Worker
         fields = ['fio', 'birthday', 'want_to', 'education', 'experience',
                   'mail', 'covering', 'agree', 'resume']
+
+
+class NewsForm(forms.ModelForm):
+    text = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 10}))
+    class Meta:
+        model = News
+        fields = '__all__'

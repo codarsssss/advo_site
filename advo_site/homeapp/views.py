@@ -1,9 +1,11 @@
 import os
 import asyncio
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
+
+from .models import News
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
@@ -43,6 +45,7 @@ def handle_form(request, form_class):
 
 
 def home_index(request: HttpRequest):
+    news = News.published.all()  # Все новости, у которых status = Published
 
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
@@ -52,10 +55,22 @@ def home_index(request: HttpRequest):
 
     context = {
         'title': 'Главная страница',
-        'user': request.session.get('username')
+        'user': request.session.get('username'),
+        'News': news
     }
 
     return render(request, 'homeapp/index.html', context=context)
+
+
+def news_detail(request, slug):
+    news_obj = get_object_or_404(News, slug=slug)
+
+    context = {
+        'title': 'Новости',
+        'news_obj': news_obj
+    }
+
+    return render(request, 'homeapp/news_detail.html', context=context)
 
 
 def team_view(request: HttpRequest):

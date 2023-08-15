@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.query import QuerySet
 from transliterate import slugify
 from django.utils.safestring import mark_safe
 
@@ -74,3 +75,35 @@ class Worker(models.Model):
 
     def str(self):
         return self.fio
+
+
+class NewsPublishedManager(models.Manager):
+    def get_queryset(self) -> QuerySet:
+        return super().get_queryset().filter(
+            status=News.Status.PUBLISHED)
+
+
+# Модель новостей
+class News(models.Model):
+    class Status(models.TextChoices):
+        NOT_PUBLISHED = 'Нет', 'Не опубликована'
+        PUBLISHED = 'Да', 'Опубликована'
+
+    title = models.CharField(max_length=255, verbose_name='Заголовок')
+    slug = models.SlugField(verbose_name='Слаг поста')
+    text = models.TextField(verbose_name='Текст новости')
+    status = models.CharField(verbose_name='Статус', max_length=3,
+                              choices=Status.choices, default=Status.NOT_PUBLISHED)
+    create_datetime = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+
+    objects = models.Manager()  # Менеджер, применяемый по умолчанию
+    published = NewsPublishedManager()  # Конкретно-прикладной менеджер
+
+    class Meta:
+        ordering = ['-create_datetime']
+
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+
+    def __str__(self):
+        return self.title

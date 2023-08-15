@@ -345,7 +345,8 @@
             <div class="row">
                 <div class="col justify-content-between p-lg-4">
                     <h1>Абонентское обслуживание</h1>
-                    <p class=" mt-5">Оплата за абонентское обслуживание может быть осуществлена ежемесячно или ежегодно. Стоимость
+                    <p class=" mt-5">Оплата за абонентское обслуживание может быть осуществлена ежемесячно или ежегодно.
+                        Стоимость
                         обслуживания может варьироваться в зависимости от объема услуг, которые будут предоставлены
                         адвокатом.</p>
                 </div>
@@ -579,5 +580,28 @@
         </section>
     </div>
     {#slider#}
-
+    {% if News %}
+        <section class="news container">
+            <div class="news_feed_header">
+                <h1>Новости и публикации</h1>
+            </div>
+            <div class="news_feed_content swiper mySlider mt-5">
+                <div class="news_content_wrapper swiper-wrapper">
+                    {% for news in News %}
+                        <a class="swiper-slide" href="/news_{{ news.slug }}">
+                            <div class="news_item">
+                                <div class="news_item_header ">
+                                    <p class="text-end">{{ news.create_datetime }}</p>
+                                    <h1>{{ news.title }}</h1>
+                                </div>
+                                <div class="news_item_content">
+                                    <p>{{ news.text|safe }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    {% endif %}
 {% endblock %}

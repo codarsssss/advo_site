@@ -4,3 +4,4 @@ from django.apps import AppConfig
 class HomeappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'homeapp'
+    verbose_name = 'МКА «Партнер Групп»'
