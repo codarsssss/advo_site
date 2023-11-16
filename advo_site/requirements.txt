@@ -9,6 +9,7 @@ beautifulsoup4==4.12.2
 certifi==2023.5.7
 charset-normalizer==3.2.0
 Django==4.2
+django-tinymce==3.6.1
 frozenlist==1.4.0
 idna==3.4
 lxml==4.9.3
@@ -21,5 +22,6 @@ six==1.16.0
 soupsieve==2.4.1
 sqlparse==0.4.3
 transliterate==1.10.2
+tzdata==2023.3
 urllib3==2.0.3
 yarl==1.9.2
