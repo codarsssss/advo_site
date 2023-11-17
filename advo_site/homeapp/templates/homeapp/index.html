@@ -51,44 +51,6 @@
         </button>
     </div>
 
-    <div class="container mt-5" id="container-index">
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm  position-relative index-top-talk">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <h3 class="mb-0">Ангелина Юрьевна Константинова</h3>
-                        <div class="mb-1 text-body-secondary">Адвокат, Председатель МКА «Партнер групп»
-                        </div>
-                        <p class="card-text mb-auto">
-                            Практика более 18 лет.<br>
-                            Кейсов по защите более 12 млрд.руб.</p>
-                    </div>
-                    <div class="col-auto d-none d-xl-block">
-                        <img src="{% static 'homeapp/img/angelina.jpg' %}">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm  position-relative index-top-talk">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <h3 class="mb-0">Егор Николаевич Бидюк</h3>
-                        <div class="mb-1 text-body-secondary">Адвокат, Первый заместитель председателя МКА «Партнер
-                            групп»
-                        </div>
-                        <p class="card-text mb-auto">
-                            Практика более 15 лет.<br>
-                            Кейсов по защите более 18 млрд.руб. </p>
-                    </div>
-                    <div class="col-auto d-none d-xl-block">
-                        <img src="{% static 'homeapp/img/egor.jpg' %}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
     <div class="container-fluid container-ch-bg" id="bg">
 
         <div class="row p-5">
@@ -434,7 +396,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col justify-content-center">
-                    <h1 class="mb-3">Внешние партнеры</h1>
+                    <h1 class="mb-3">Партнеры коллегии</h1>
                     <p class="mb-5">Наша команда - адвокаты и юристы с высоким уровнем экспертизы: выпускники лучших
                         вузов и специалисты с опытом работы в правоохранительных органах, готовы оказать помощь в самых
                         сложных ситуациях.</p>
@@ -442,104 +404,22 @@
             </div>
 
             <div class="row team-slider mt-5">
+                {% for partner in partners %}
                 <div class="col-md-12">
                     <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/2.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Чебучакова Татьяна Юрьевна</h5>
+                        <img class="rounded" src="{{ partner.photo.url }}" alt="{{ partner.name }}">
+                        <h5 class="text-center mt-3 fw-bold">{{ partner.name }}</h5>
                         <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Адвокат, Арбитражный упраляющий</li>
-                            <li class="list-group-item">Эксперт по защите от субсидиарной ответственности, оспаривание
-                                сделок
-                            </li>
-                            <li class="list-group-item">Сопровождение процедур банкротства и любых споров в деле о
-                                банкротстве
-                            </li>
+
+                            <li class="list-group-item">{{ partner.min_context1 }}</li>
+                            <li class="list-group-item">{{ partner.min_context2 }}</li>
+                            <li class="list-group-item">{{ partner.min_context3 }}</li>
+                            <li class="list-group-item">{{ partner.min_context4 }}</li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/3.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Максимов Евгений Юрьевич</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Адвокат, Корпоративная практика, уголовное право</li>
-                            <li class="list-group-item">Эксперт по защите юридических лиц в суде по корпоративным
-                                делам
-                            </li>
-                            <li class="list-group-item">Арбитражные споры в области недвижимости, ценных бумаг</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/4.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Пидиксеева Олеся Вячеславовна</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Юрист IT/IP</li>
-                            <li class="list-group-item">аудит интеллектуальной собственности</li>
-                            <li class="list-group-item">разработка и правовая экспертиза договоров, сопровождение
-                                сделок
-                            </li>
-                            <li class="list-group-item">регистрация объектов интеллектуальной собственности</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/5.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Алексеева Олесия Викторовна</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Руководитель медицинской практики</li>
-                            <li class="list-group-item">Юридическое сопровождение медицинского бизнеса</li>
-                            <li class="list-group-item">Юридическое сопровождение биотехнологий, генно-инженерной
-                                деятельности в сельском хозяйстве
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/6.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Бигвава Наталья Анатольевна</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Юрист, наследственное планирование, медиатор, семейное право
-                            </li>
-                            <li class="list-group-item">Эксперт в области наследственного права.
-                            </li>
-                            <li class="list-group-item">Оспаривание завещаний, наследственных
-                                договоров, фактическое принятие наследства.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/7.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Цалкина Екатерина Александровна</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Юрист IT, IP практики</li>
-                            <li class="list-group-item">право интеллектуальной собственности</li>
-                            <li class="list-group-item">Юридическое сопровождение международных сделок</li>
-                            <li class="list-group-item">сопровождение IT-компаний</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="details">
-                        <img class="rounded" src="{% static 'homeapp/img/team/8.jpg' %}">
-                        <h5 class="text-center mt-3 fw-bold">Максимова Ирина Валерьевна</h5>
-                        <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
-                            <li class="list-group-item">Адвокат, практика семейное право
-                            </li>
-                            <li class="list-group-item">Раздел имущества, вопросы связанные с воспитанием и проживанием
-                                детей, взыскание и расчет алиментов
-                            </li>
-                            <li class="list-group-item">Выселение, снятие с регистрационного учета, определение порядка
-                                пользования жилым помещением
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>

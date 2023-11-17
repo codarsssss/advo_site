@@ -138,3 +138,4 @@ secret.*
 
 .resume/*
 /advo_site/homeapp/migrations/*
+/advo_site/media/partners/*

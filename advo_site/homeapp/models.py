@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.query import QuerySet
 from transliterate import slugify
 from django.utils.safestring import mark_safe
+from django.urls import reverse
 
 
 def translit_filename(instance, filename):
@@ -107,3 +108,23 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=50, verbose_name='Фамилия Имя Отчество')
+    min_context1 = models.TextField(verbose_name='Краткое описание для первой страницы')
+    min_context2 = models.TextField(blank=True, verbose_name='Дополнительное поле короткого писания')
+    min_context3 = models.TextField(blank=True, verbose_name='Дополнительное поле короткого писания')
+    min_context4 = models.TextField(blank=True, verbose_name='Дополнительное поле короткого писания')
+    context = models.TextField(verbose_name='Полное описание')
+    photo = models.ImageField(verbose_name='Фото', upload_to='partners/')
+    time_create = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['time_create']
+
+        verbose_name = 'Партнера'
+        verbose_name_plural = 'Партнеры'
+
+    def __str__(self):
+        return self.name

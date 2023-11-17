@@ -5,7 +5,7 @@ from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
 
-from .models import News
+from .models import News, Partner
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
@@ -46,6 +46,7 @@ def handle_form(request, form_class):
 
 def home_index(request: HttpRequest):
     news = News.published.all()  # Все новости, у которых status = Published
+    partners = Partner.objects.all()
 
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
@@ -56,7 +57,8 @@ def home_index(request: HttpRequest):
     context = {
         'title': 'Главная страница',
         'user': request.session.get('username'),
-        'News': news
+        'News': news,
+        'partners': partners,
     }
 
     return render(request, 'homeapp/index.html', context=context)
@@ -74,6 +76,7 @@ def news_detail(request, slug):
 
 
 def team_view(request: HttpRequest):
+    partners = Partner.objects.all()
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
             return redirect('/team/')
@@ -83,7 +86,8 @@ def team_view(request: HttpRequest):
 
     context = {
         'title': 'Команда',
-        'user': request.session.get('username')
+        'user': request.session.get('username'),
+        'partners': partners,
     }
 
 

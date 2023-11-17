@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from django.contrib import admin
-from .forms import NewsForm
-from .models import Consultation, Worker, News
+from .forms import NewsForm, PartnerForm
+from .models import Consultation, Worker, News, Partner
 from django.urls import reverse
 from django.utils.html import format_html
 
@@ -43,6 +43,12 @@ class NewsAdmin(admin.ModelAdmin):
     search_fields = ['title', 'slug', 'text']
     ordering = ['status', '-create_datetime']
     readonly_fields = ['create_datetime']
+
+
+@admin.register(Partner)
+class PartnerAdmin(admin.ModelAdmin):
+    form = PartnerForm
+    list_display = ['name',]
 
 
 admin.site.unregister(User)
