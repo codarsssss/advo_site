@@ -76,7 +76,7 @@ def news_detail(request, slug):
 
 
 def team_view(request: HttpRequest):
-    partners = Partner.objects.all()
+    partners = Partner.objects.all().order_by('time_create')
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
             return redirect('/team/')

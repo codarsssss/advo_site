@@ -121,7 +121,7 @@ class Partner(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['time_create']
+        ordering = ['-time_create']
 
         verbose_name = 'Партнера'
         verbose_name_plural = 'Партнеры'
