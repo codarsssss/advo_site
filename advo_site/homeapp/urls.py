@@ -25,6 +25,7 @@ urlpatterns = [
     path('advokatskaya-tayna/', tayna_view, name='tayna'),
     path('soglashenie-i-order/', soglashenie_view, name='soglashenie'),
     path('varianty-voznagrozhdeniya/', varianty_view, name='varianty'),
+    path('ulyanovsk', ulyanovsk_view, name='ulyanovsk'),
     path('cases/1/', case_1, name='case_1'),
     path('cases/2/', case_2, name='case_2'),
     path('cases/3/', case_3, name='case_3'),

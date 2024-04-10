@@ -1,0 +1,146 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+    <div class="container-fluid container-ch-bg">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1>Добро пожаловать в филиал МКА 'Партнер Групп' в
+                    Ульяновске! </h1>
+                <p>Мы гордимся качественными услугами, внимательным подходом к
+                    каждому клиенту, ответственностью и профессионализмом. Наш
+                    комфортабельный офис всегда открыт для вас, чтобы сделать
+                    ваше общение с нами приятным и удобным. Мы ценим ваше
+                    доверие и готовы помочь вам в любых вопросах. Добро
+                    пожаловать в нашу дружелюбную семью!</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-ch-bg" id="bg">
+
+        {#        <div class="row p-5">#}
+        {#            <div class="col ">#}
+        {#                <p class="text-center icon-bg pt-4" style="color: #2b3455"><i class="fa-solid fa-pen-nib fa-2xl"></i>#}
+        {#                </p>#}
+        {#                <p class="text-center pt-4 p-4" style="color: #2b3455">Экспертное правовое сопровождение#}
+        {#                </p>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <p class="text-center icon-bg pt-4" style="color: #2b3455"><i#}
+        {#                        class="fa-solid fa-people-arrows fa-2xl"></i>#}
+        {#                </p>#}
+        {#                <p class="text-center pt-4 p-4" style="color: #2b3455">Индивидуальный подход к клиенту#}
+        {#                </p>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <p class="text-center icon-bg pt-4" style="color: #2b3455"><i class="fa-solid fa-handshake fa-2xl"></i>#}
+        {#                </p>#}
+        {#                <p class="text-center pt-4 p-4" style="color: #2b3455">Строим отношения на репутации и доверии#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class="row container mb-5" style="margin-left: auto; margin-right: auto">#}
+        {#            <div class="col ">#}
+        {#                <p class="text-center p-3 p-md-5 p-sm-4 border rounded overflow-hidden flex-md-row mb-4 shadow index-top-talk "#}
+        {#                   id="mission" style="color: #2b3455; background-color: white; border-radius: 60px!important;">Миссия МКА Партнер Групп заключается в предоставлении высококачественных юридических услуг, основанных на глубоком понимании потребностей и целей клиентов, с использованием инновационных подходов и экспертизы для достижения оптимальных результатов и установления долгосрочных партнерских отношений. </p>#}
+        {#            </div>#}
+        {#        </div>#}
+
+
+        <div class="row p-4 pb-5">
+            <div class="col-xxl-6 col-md-12">
+                <div class="justify-content-center align-items-center d-flex rl-pos">
+                    <a class="video-play-button"
+                       href="https://youtu.be/Oc0EPsOAkAI"><img
+                            src="{% static 'homeapp/img/notebook-photo.jpg' %}"><i
+                            class="fa-regular fa-circle-play fa-beat fa-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xxl-6">
+
+{#                <p>МКА «Партнер Групп» не только решит Ваши проблемы, но и#}
+{#                    предотвратит новые.</p>#}
+
+                <div class="right-bottom-area">
+                    <h1>Наши услуги:</h1>
+                    <div class="author-lacture">
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Защита по уголовным делам любой сложности на предварительном следствии и в суде.</li>
+
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Юридические консультации по различным областям права, включая гражданское, семейное, трудовое и налоговое право.</li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Представительство интересов клиентов в суде и других государственных органах.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Разработка и проверка договоров, соглашений и других юридических документов.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Помощь в решении споров между сторонами, в том числе ведение переговоров и медиации.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Представление интересов клиентов в арбитражных судах.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Помощь в оспаривании незаконных действий государственных органов.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Помощь в получении лицензий, разрешений и других документов.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Консультации по вопросам наследства и имущественных споров.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Помощь в регистрации бизнеса, в том числе ООО, ИП и других организационно-правовых форм.
+                            </li>
+                            <li class="list-group-item m-2" style="background: #2b3455; color: white">Представление интересов клиентов при заключении сделок купли-продажи, аренды и других сделок с недвижимостью.
+                            </li>
+{#                            <ul>#}
+{#                                <li>Предупреждение и предотвращение уголовного#}
+{#                                    преследования#}
+{#                                </li>#}
+{#                                <li>Сопровождение в следственных действиях в#}
+{#                                    компании#}
+{#                                </li>#}
+{##}
+{#                            </ul>#}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    {#            <div class="row mt-5">#}
+    {#                 {% for partner in partners %}#}
+    {#            {% if partner.id|divisibleby:2 %}#}
+    {#                <div class="row mt-5 ">#}
+    {#            <div class="col-lg-8 mt-4">#}
+    {#                <h2>{{ partner.name }}</h2>#}
+    {#                <p>{{ partner.context|linebreaksbr }}</p>#}
+    {#            </div>#}
+    {#            <div class="col-lg-4 order-first order-lg-last">#}
+    {#                <img class="rounded w-100" src="{{ partner.photo.url }}" alt="{{ partner.name }}">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#            {% else %}#}
+    {#                <div class="row mt-5">#}
+    {#            <div class="col-lg-4">#}
+    {#                <img class="rounded w-100" src="{{ partner.photo.url }}" alt="{{ partner.name }}">#}
+    {#            </div>#}
+    {#            <div class="col-lg-8 mt-4">#}
+    {#                <h2>{{ partner.name }}</h2>#}
+    {#                <p>{{ partner.context|linebreaksbr }}</p>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#            {% endif %}#}
+    {#        {% endfor %}#}
+    {#            </div>#}
+    {#        </div>#}
+
+
+
+
+{% endblock %}
