@@ -566,3 +566,12 @@ h2 {
     /*border-bottom-left-radius: 20px;*/
     /*border-bottom-right-radius: 20px;*/
 }
+
+.list_of_news {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list_of_news li {
+    padding: 5px 0; /* Добавляет небольшое пространство между строками */
+}
