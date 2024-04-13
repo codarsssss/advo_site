@@ -156,4 +156,5 @@ class Partner(models.Model):
         verbose_name_plural = "Партнеры"
 
     def __str__(self):
-        return f"{self.name}: {self.work_place}"
+        return f"{self.name}"
+        # return f"{self.name}: {self.work_place}"

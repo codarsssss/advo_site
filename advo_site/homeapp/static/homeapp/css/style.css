@@ -101,6 +101,19 @@ footer p {
     font-weight: 600;
 }
 
+.btn__carousel {
+    background: #bbc4fc;
+    background: -moz-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f800df 91%, #fbdf93 100%);
+    background: radial-gradient(ellipse at center, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1);
+    color: #2b3455;
+    margin: 10px 0;
+    /*font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 12) + 12px);*/
+    font-style: normal;
+    font-weight: 600;
+}
+
 
 /* .btn__footer {
     background: #fceabb;
@@ -574,4 +587,67 @@ h2 {
 
 .list_of_news li {
     padding: 5px 0; /* Добавляет небольшое пространство между строками */
+}
+
+.icon-nav {
+    position: relative; /* Определяет, что позиционирование дочерних элементов будет относительно этого блока */
+    display: inline-block; /* Это делает контейнер только таким большим, как его содержимое */
+}
+
+.hidden-menu {
+    display: none; /* Скрывает меню по умолчанию */
+    position: absolute; /* Позиционирует меню относительно ближайшего родительского элемента с position: relative */
+    background-color: #fff; /* Фоновый цвет меню */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Добавляет тень для визуального эффекта */
+    min-width: 160px; /* Минимальная ширина меню */
+    z-index: 1; /* Устанавливает меню поверх других элементов */
+}
+
+#menu-trigger:hover .hidden-menu,
+.hidden-menu:hover {
+    display: block; /* Показывает меню при наведении */
+}
+
+.hidden-menu ul {
+    list-style-type: none; /* Убирает стандартные маркеры списка */
+    margin: 0;
+    padding: 0;
+}
+
+.hidden-menu li a {
+    color: black; /* Цвет текста ссылок */
+    padding: 12px 16px; /* Паддинги для каждой ссылки */
+    text-decoration: none; /* Убирает подчеркивание текста */
+    display: block; /* Заставляет ссылки заполнять весь доступный горизонтальный пространство */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.hidden-menu li a:hover {
+    background-color: #ddd; /* Цвет фона для ссылок при наведении */
+}
+
+.navbar-nav {
+    display: flex; /* Удостоверьтесь, что это flex контейнер, если list-group-horizontal не управляет этим */
+    gap: 10px; /* Управляет расстоянием между элементами списка */
+}
+
+.nav-item {
+    margin-right: 5px; /* Уменьшает правый маржин каждого элемента списка */
+    margin-left: 5px; /* Уменьшает левый маржин каждого элемента списка */
+}
+
+/* Увеличение ширины выпадающего списка */
+.dropdown-menu-search {
+    min-width: 400px; /* Или вы можете задать конкретную ширину, например 300px */
+}
+
+/* Стилизация элемента с классом .dropdown-search, чтобы он занимал всю ширину выпадающего списка */
+.dropdown-search .form-search {
+    width: 100%; /* Форма поиска будет занимать всю ширину .dropdown-menu */
+}
+
+/* Дополнительные стили для поля ввода, если необходимо увеличить размер текста или высоту поля ввода */
+.dropdown-search .form-control {
+    font-size: 1rem; /* Можно увеличить, если нужно */
+    height: auto; /* Или установите конкретную высоту, например 40px */
 }

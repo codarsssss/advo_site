@@ -137,8 +137,19 @@
                         </li>
                     </ul>
                 </li>
-                
-                <li class="nav-item">
+
+                <li class="dropdown-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        О компании
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
+                        <li><a class="nav-link" aria-current="page" href="{% url 'homeapp:cases' %}">Кейсы</a></li>
+                        <li><a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
+                    </ul>                   
+                </li>
+                {% comment %} <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
                 </li>
                 <li class="nav-item">
@@ -146,7 +157,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
-                </li>
+                </li> {% endcomment %}
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -160,13 +171,45 @@
 
                     </ul>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-search fa-5xl"></i> <!-- Иконка лупы -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-search" aria-labelledby="navbarDropdown">
+                        <li class="dropdown-search">
+                            <form class="d-flex p-2 form-search" role="search" method="POST">
+                                {% csrf_token %}
+                                <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Найти</button>
+                            </form>
+                            
+                        </li>
+                    </ul>
+                </li>                   
+
             </ul>
             
-            <form class="d-flex" role="search"  method="POST">
+            {% comment %} <form class="d-flex" role="search"  method="POST">
                 {% csrf_token %}
-                <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск по сайту" aria-label="Search">
+                <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Найти</button>
-            </form>
+            </form>         {% endcomment %}
+
+            {% comment %} <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-search fa-5xl"></i> <!-- Иконка лупы -->
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                        <form class="d-flex p-2" role="search" method="POST">
+                            {% csrf_token %}
+                            <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Найти</button>
+                        </form>
+                    </li>
+                </ul>
+            </div> {% endcomment %}
 
             <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0 mt-lg-0 justify-content-center icon-nav pt-1">
                 <li class="nav-item p-3">
@@ -177,6 +220,11 @@
                     <a class="nav-link" aria-current="page" href="https://t.me/angelina_KPG"><i
                             class="fa-brands fa-telegram fa-3xl" style="color: #2b3455;"></i></a></li>
                 </li>
+                {% comment %} <li class="nav-item p-3">
+                    <a class="nav-link" aria-current="page" href="mailto:info@mkapartner.ru">
+                        <i class="fa-solid fa-envelope fa-3xl" style="color: #2b3455;"></i>
+                    </a>
+                </li> {% endcomment %}
                 <li class="nav-item p-3">
                     <a class="nav-link" aria-current="page"
                        href="https://www.instagram.com/advocate_konstantinova_pg?utm_source=qr"><i
@@ -429,7 +477,7 @@
 
         </div>
         <div class="row mt-5 border border-end-0 border-bottom-0 border-start-0 p-3">
-            <p>Copyright © 2023 Московская колления адвокатов "Партнер Групп". При использовании любой информации,
+            <p>Copyright © 2024 Московская колления адвокатов "Партнер Групп". При использовании любой информации,
                 оставляйте ссылку на сайт. <a href="{% url 'homeapp:privicy' %}">Политика конфиденциальности</a></p>
             <a href="https://t.me/arsssss" class="developer_link" >Сайт разработан @codarsssss</a>
 
