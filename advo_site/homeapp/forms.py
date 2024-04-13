@@ -31,4 +31,4 @@ class NewsForm(forms.ModelForm):
 class PartnerForm(forms.ModelForm):
     class Meta:
         model = Partner
-        fields = ['name', 'min_context1', 'min_context2', 'min_context3', 'min_context4', 'context', 'photo']
+        fields = ['name', 'work_place', 'min_context1', 'min_context2', 'min_context3', 'min_context4', 'context', 'photo']
