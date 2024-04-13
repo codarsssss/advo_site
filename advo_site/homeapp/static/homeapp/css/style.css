@@ -89,6 +89,20 @@ footer p {
 }
 
 .btn__footer {
+    background: #bbc4fc;
+    background: -moz-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f800df 91%, #fbdf93 100%);
+    background: radial-gradient(ellipse at center, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1);
+    color: #2b3455;
+    margin: 30px 0;
+    /*font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 12) + 12px);*/
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+/* .btn__footer {
     background: #fceabb;
     background: -moz-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
     background: -webkit-radial-gradient(center, ellipse cover, #fceabb 0%, #fccd4d 50%, #f8b500 91%, #fbdf93 100%);
@@ -99,7 +113,7 @@ footer p {
     /*font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 12) + 12px);*/
     font-style: normal;
     font-weight: 600;
-}
+} */
 
 
 .footer__text {

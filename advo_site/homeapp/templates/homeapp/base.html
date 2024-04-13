@@ -43,8 +43,13 @@
           integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'homeapp/img/bg-logo.ico' %}"/>
-
-
+    <style>
+        @media (max-width: 930px) {
+            #carouselExampleAutoplaying {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -61,9 +66,6 @@
     {% endif %}
 {% endfor %}
 
-
-
-
 <nav class="navbar navbar-expand-xl bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'homeapp:index' %}">
@@ -79,53 +81,44 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Услуги
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Физичесским
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'homeapp:zashchita' %}">Защита от уголовного
-                            преследования</a></li>
+                        <li class="dropdown-submenu dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Физическим лицам
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'homeapp:zashchita' %}">Защита от уголовного преследования</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a></li>                                
+                                <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}">IT/IP практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:meditsinskoe' %}">Медицинская практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:semeynaya' %}">Семейная практика</a></li>                                
+                                <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Юридическим лицам
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'homeapp:business' %}">Уголовно-правовая защита бизнеса</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционный комплайнс</a></li>                                
+                                <li><a class="dropdown-item" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:korporativnaya' %}">Корпоративная практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a></li>                                
+                                <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}">IT/IP практика</a></li>                                
+                                <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a></li>
+                                <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:zashchita' %}">Защита от уголовного
-                            преследования</a></li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:business' %}">Уголовно-правовая защита
-                            бизнеса</a></li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционный
-                            комплайнс</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная практика</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:korporativnaya' %}">Корпоративная
-                            практика</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}"> IT/ IP практика</a>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:meditsinskoe' %}">Медицинская практика</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:semeynaya' %}">Семейная практика</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
+                </li>              
 
-                    </ul>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
@@ -144,7 +137,7 @@
                         </li>
                     </ul>
                 </li>
-                {#          спросить у преподавателя про aria-current и active#}
+                
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
                 </li>
@@ -154,7 +147,8 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
                 </li>
-                 <li class="nav-item dropdown">
+
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Филиалы
@@ -167,13 +161,14 @@
                     </ul>
                 </li>
             </ul>
+            
             <form class="d-flex" role="search"  method="POST">
                 {% csrf_token %}
                 <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск по сайту" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Найти</button>
             </form>
 
-            <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0  mt-lg-0 justify-content-center icon-nav pt-1">
+            <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0 mt-lg-0 justify-content-center icon-nav pt-1">
                 <li class="nav-item p-3">
                     <a class="nav-link" aria-current="page" href="tel:+79160050999"><i
                             class="fa-solid fa-square-phone fa-shake fa-5xl" style="color: #2b3455;"></i></a></li>
@@ -566,6 +561,36 @@
         }
     })
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var submenus = document.querySelectorAll('.dropdown-submenu .dropdown-toggle');
+        submenus.forEach(function (submenu) {
+            var dropdownContent = submenu.nextElementSibling; // Получаем подменю, связанное с каждым элементом
+
+            // Слушатель для открытия подменю по клику
+            submenu.addEventListener('click', function (event) {
+                event.stopPropagation(); // Предотвращаем всплытие события
+                // Переключаем видимость подменю
+                dropdownContent.style.display = (dropdownContent.style.display === 'block' ? 'none' : 'block');
+            });
+        });
+
+        // Слушатель для закрытия всех подменю, если клик произошел вне подменю
+        document.addEventListener('click', function () {
+            var openDropdowns = document.querySelectorAll('.dropdown-submenu .dropdown-menu');
+            openDropdowns.forEach(function (openDropdown) {
+                if (openDropdown.style.display === 'block') {
+                    openDropdown.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
 <script src="{% static 'homeapp/js/main.js' %}"></script>
 <script src="{% static 'homeapp/js/slider.js' %}"></script>
 </body>
