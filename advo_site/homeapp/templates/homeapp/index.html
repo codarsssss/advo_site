@@ -474,20 +474,25 @@
                                 
                             </div>
                         </div>
-                    {% endif %}
-                    
-                    <!-- Остальные новости -->
-                    <div class="col-md-6">
-                        <ul class="list_of_news">
-                            {% for news in News|slice:"1:6" %}
-                                <li>
-                                    <div class="news_item_content">
-                                    <p>{{ news.create_datetime }} - <a href="/news_{{ news.slug }}">{{ news.title }}</a></p>
+                        
+                        <!-- Остальные новости -->
+                        <div class="col-md-6">
+                            <ul class="list_of_news">
+                                {% for news in News|slice:"1:6" %}
+                                <li class="news-line">
+                                    <div class="news_item_content line">
+                                        <p>{{ news.create_datetime|date:"d-m-Y H:i:s" }} - <a href="/news_{{ news.slug }}">{{ news.title }}</a></p>
                                     </div>
+                                    {% comment %} <div class="news_item_content line" 
+                                    style="background-color: rgba(0, 90, 255, 0.05);
+                                    border-radius: 5px;">
+                                        <p>{{ news.create_datetime }} - <a href="/news_{{ news.slug }}">{{ news.title }}</a></p>
+                                    </div> {% endcomment %}
                                 </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                                {% endfor %}
+                            </ul>
+                        </div>                        
+                    {% endif %}
                 </div>
             </div>
                 

@@ -551,8 +551,8 @@ h2 {
 
 .news_item {
     background-color: rgba(0, 90, 255, 0.05);
-    padding: 20px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .news_feed_header {
@@ -570,14 +570,22 @@ h2 {
 .news_content_wrapper a {
     text-decoration: none;
     color: black;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .news_item_content {
-    max-height: 200px;
+    max-height: 100px;
     overflow: hidden;
     /*border-bottom-left-radius: 20px;*/
     /*border-bottom-right-radius: 20px;*/
+}
+
+.line {
+    background-color: rgba(0, 90, 255, 0.05); /* Цвет фона - светло-серый, вы можете выбрать любой цвет */
+    margin-bottom: 10px; /* Добавляет небольшой отступ снизу для каждой строки */
+    padding: 10px; /* Добавляет внутренние отступы для некоторого пространства вокруг текста */
+    border-radius: 5px; /* Слегка закругляет углы для более современного вида */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень для лучшего визуального разделения */
 }
 
 .list_of_news {
