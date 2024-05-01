@@ -123,7 +123,7 @@ class News(models.Model):
 class Partner(models.Model):
     WORK_PLACE_CHOICES = (
         ('moscow', 'Head office: Moscow'),
-        ('ulyanonsk', 'Ulyanovsk branch')
+        ('ulyanovsk', 'Ulyanovsk branch')
     )
 
     name = models.CharField(max_length=50, verbose_name="Фамилия Имя Отчество")

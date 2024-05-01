@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tinymce',
     'homeapp.apps.HomeappConfig',
+    'staff',
 ]
 
 MIDDLEWARE = [

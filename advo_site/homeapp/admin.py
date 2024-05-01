@@ -51,6 +51,6 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = ['name',]
 
 
-admin.site.unregister(User)
-admin.site.unregister(Group)
+# admin.site.unregister(User)
+# admin.site.unregister(Group)
 admin.site.register(News, NewsAdmin)

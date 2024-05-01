@@ -46,7 +46,7 @@ def handle_form(request, form_class):
 
 def home_index(request: HttpRequest):
     news = News.published.all()  # Все новости, у которых status = Published
-    partners = Partner.objects.all()
+    partners = Partner.objects.filter(work_place='moscow')
 
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
@@ -76,7 +76,7 @@ def news_detail(request, slug):
 
 
 def team_view(request: HttpRequest):
-    partners = Partner.objects.all().order_by('time_create')
+    partners = Partner.objects.filter(work_place='moscow')
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
             return redirect('/team/')
@@ -636,19 +636,17 @@ def search_view(request: HttpRequest, page_number):
 
 
 def ulyanovsk_view(request: HttpRequest):
-    partners = Partner.objects.all().order_by('time_create')
+    partners = Partner.objects.filter(work_place='ulyanovsk')
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
             return redirect('/team/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
 
-
     context = {
-        'title': 'Команда',
+        'title': 'Ульяновск',
         'user': request.session.get('username'),
         'partners': partners,
     }
-
 
     return render(request, 'homeapp/filials/ulyanovsk.html', context=context)

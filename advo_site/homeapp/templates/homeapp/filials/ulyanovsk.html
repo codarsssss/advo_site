@@ -1,29 +1,23 @@
 {% extends 'homeapp/base.html' %}
 {% load static %}
 
-
 {% block content %}
-
-
 
     <div class="container-fluid container-ch-bg">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h1>Добро пожаловать в филиал МКА 'Партнер Групп' в
-                    Ульяновске! </h1>
-                <p>Мы гордимся качественными услугами, внимательным подходом к
-                    каждому клиенту, ответственностью и профессионализмом. Наш
-                    комфортабельный офис всегда открыт для вас, чтобы сделать
-                    ваше общение с нами приятным и удобным. Мы ценим ваше
-                    доверие и готовы помочь вам в любых вопросах. Добро
-                    пожаловать в нашу дружелюбную семью!</p>
-
+                <h1>Филиал МКА 'Партнер Групп' в городе
+                    Ульяновске рад приветствовать Вас! </h1>
+                <p>Мы гордимся предоставлением качественных услуг, заботливым отношением к каждому клиенту, 
+                    ответственностью и высоким уровнем профессионализма. Наш комфортный офис всегда рад приветствовать 
+                    вас, создавая приятную и удобную атмосферу для ваших визитов. Мы ценим ваше доверие и всегда готовы 
+                    помочь вам с любыми вопросами.</p>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid container-ch-bg" id="bg">
-
+    {% comment %} <div class="container-fluid container-ch-bg" id="bg"> {% endcomment %}
+    <div class="container-fluid container-ch-bg">
         {#        <div class="row p-5">#}
         {#            <div class="col ">#}
         {#                <p class="text-center icon-bg pt-4" style="color: #2b3455"><i class="fa-solid fa-pen-nib fa-2xl"></i>#}
@@ -52,7 +46,7 @@
         {#        </div>#}
 
 
-        <div class="row p-4 pb-5">
+        <div class="row p-4 pb-2">
             <div class="col-xxl-6 col-md-12">
                 <div class="justify-content-center align-items-center d-flex rl-pos">
                     <a class="video-play-button"
@@ -62,13 +56,13 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xxl-6">
+            <div class="justify-content-center align-items-center d-flex rl-pos">
 
 {#                <p>МКА «Партнер Групп» не только решит Ваши проблемы, но и#}
 {#                    предотвратит новые.</p>#}
-
+    
                 <div class="right-bottom-area">
-                    <h1>Наши услуги:</h1>
+                    <h1>Услуги:</h1>
                     <div class="author-lacture">
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item m-2" style="background: #2b3455; color: white">Защита по уголовным делам любой сложности на предварительном следствии и в суде.</li>
@@ -92,15 +86,6 @@
                             </li>
                             <li class="list-group-item m-2" style="background: #2b3455; color: white">Представление интересов клиентов при заключении сделок купли-продажи, аренды и других сделок с недвижимостью.
                             </li>
-{#                            <ul>#}
-{#                                <li>Предупреждение и предотвращение уголовного#}
-{#                                    преследования#}
-{#                                </li>#}
-{#                                <li>Сопровождение в следственных действиях в#}
-{#                                    компании#}
-{#                                </li>#}
-{##}
-{#                            </ul>#}
                         </ul>
                     </div>
                 </div>
@@ -108,9 +93,38 @@
         </div>
 
     </div>
+    <div>      
+    <div class="container mt-1">
+        <div class="row">
+            <div class="col justify-content-center">
+                <h1 class="mb-3">Команда коллегии в городе Ульяновске</h1>
+                <p class="mb-5">Коллектив филиала состоит из квалифицированных адвокатов и юристов, 
+                    обладающих глубокими знаниями в своей области: выпускники престижных университетов 
+                    и профессионалы с опытом работы в правоохранительных структурах, они готовы предоставить 
+                    квалифицированную поддержку в решении даже самых трудных задач.</p>
+            </div>
+        </div>
 
+        <div class="row team-slider mt-5">
+            {% for partner in partners %}
+            <div class="col-md-12">
+                <div class="details">
+                    <img class="rounded" src="{{ partner.photo.url }}" alt="{{ partner.name }}">
+                    <h5 class="text-center mt-3 fw-bold">{{ partner.name }}</h5>
+                    <ul class="list-unstyled list-group list-group-flush text-muted text-center ">
 
+                        <li class="list-group-item">{{ partner.min_context1 }}</li>
+                        <li class="list-group-item">{{ partner.min_context2 }}</li>
+                        <li class="list-group-item">{{ partner.min_context3 }}</li>
+                        <li class="list-group-item">{{ partner.min_context4 }}</li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
 
+        </div>
+    </div>
+</div>
 
 
     {#            <div class="row mt-5">#}
