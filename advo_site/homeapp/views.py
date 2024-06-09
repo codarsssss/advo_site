@@ -64,17 +64,6 @@ def home_index(request: HttpRequest):
     return render(request, 'homeapp/index.html', context=context)
 
 
-def news_detail(request, slug):
-    news_obj = get_object_or_404(News, slug=slug)
-
-    context = {
-        'title': 'Новости',
-        'news_obj': news_obj
-    }
-
-    return render(request, 'homeapp/news_detail.html', context=context)
-
-
 def team_view(request: HttpRequest):
     partners = Partner.objects.filter(work_place='moscow')
     if request.method == 'POST':
@@ -674,3 +663,29 @@ def get_legal_service_list(request: HttpRequest):
         'user': request.session.get('username')
     }
     return render(request, 'homeapp/services/legals/legal_service_list.html', context=context)
+
+def get_news_list(request: HttpRequest):
+    news = News.published.all()
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/news-list/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Новости',
+        'user': request.session.get('username'),
+        'News': news,
+    }
+    return render(request, 'homeapp/news_list.html', context=context)
+
+def news_detail(request, slug):
+    news_obj = get_object_or_404(News, slug=slug)
+
+    context = {
+        'title': 'Новости',
+        'news_obj': news_obj
+    }
+
+    return render(request, 'homeapp/news_detail.html', context=context)
+
+

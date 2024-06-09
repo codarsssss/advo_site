@@ -1,0 +1,75 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block content %}
+
+    {% comment %} {% if News %}
+    <section class="news container">
+        <div class="news_feed_header">
+            <h1>Новости и публикации</h1>
+        </div>
+        <div class="news_feed_content mt-5">
+            <div class="row">
+                <!-- Самая свежая новость -->
+                {% if News %}
+                    <div class="col-md-5">
+                        <div class="news_item latest_news">
+                            <div class="news_item_header">
+                                <p class="text-end">{{ News.0.create_datetime }}</p>
+                                <h2>{{ News.0.title }}</h2>
+                            </div>
+                            <div class="news_item_content">
+                                <p>{{ News.0.text|safe|truncatechars:100 }}</p>
+                            </div>
+                            <div class="button-container" style="text-align: right;">
+                                <a href="/news_{{ News.0.slug }}" class="btn btn-primary">Читать далее</a>
+                            </div>                               
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Остальные новости -->
+                    <div class="col-md-6">
+                        <ul class="list_of_news">
+                            {% for news in News|slice:"1:6" %}
+                            <li class="news-line">
+                                <div class="news_item_content line">
+                                    <p>{{ news.create_datetime|date:"d-m-Y H:i:s" }} - <a href="/news_{{ news.slug }}">{{ news.title }}</a></p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>                        
+                {% endif %}
+            </div>
+        </div>       
+
+    </section> {% endcomment %}
+
+    {% if News %}
+        <section class="news container">
+            <div class="news_feed_header">
+                <h1>Новости и публикации</h1>
+            </div>
+            <div class="news_feed_content swiper mySlider mt-5">
+                <div class="news_content_wrapper swiper-wrapper">
+                    {% for news in News %}
+                        <a class="swiper-slide" href="/news_{{ news.slug }}">
+                            <div class="news_item">
+                                <div class="news_item_header ">
+                                    <p class="text-end">{{ news.create_datetime }}</p>
+                                    <h1>{{ news.title }}</h1>
+                                </div>
+                                <div class="news_item_content">
+                                    <p>{{ news.text|safe }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+
+
+{% endblock content %}
