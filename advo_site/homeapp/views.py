@@ -102,7 +102,7 @@ def cases_view(request: HttpRequest):
         return search_form(request, user_input)
 
     context = {
-        'title': 'Кейсы',
+        'title': 'Практика адвокатов',
         'user': request.session.get('username')
     }
 

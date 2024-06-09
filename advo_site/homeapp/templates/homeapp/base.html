@@ -96,14 +96,19 @@
                             </a>
                         </li>
                     </ul>
-                </li>              
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:cases' %}">
+                        Практика адвокатов</a></li>
+                </li>
 
-                <li class="nav-item dropdown">
+                {% comment %} <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Порядок работы
-                    </a>
-                    <ul class="dropdown-menu">
+                    </a> {% endcomment %}
+                    {% comment %} <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'homeapp:rabotaem' %}">Как мы работаем</a></li>
                         <li><a class="dropdown-item" href="{% url 'homeapp:polnomochiya' %}">Полномочия адвоката</a>
                         </li>
@@ -115,7 +120,7 @@
                         <li><a class="dropdown-item" href="{% url 'homeapp:varianty' %}">Варианты вознаграждения</a>
                         </li>
                     </ul>
-                </li>
+                </li> {% endcomment %}
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -130,9 +135,6 @@
                 </li>
                 {% comment %} <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:cases' %}">Кейсы</a></li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
