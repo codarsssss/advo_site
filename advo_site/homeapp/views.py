@@ -639,7 +639,7 @@ def ulyanovsk_view(request: HttpRequest):
     partners = Partner.objects.filter(work_place='ulyanovsk')
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/team/')
+            return redirect('/ulyanovsk/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
 
@@ -650,3 +650,15 @@ def ulyanovsk_view(request: HttpRequest):
     }
 
     return render(request, 'homeapp/filials/ulyanovsk.html', context=context)
+
+def get_individual_service_list(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/individual-service-list/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Услуги для физических лиц',
+        'user': request.session.get('username')
+    }
+    return render(request, 'homeapp/services/individuals/individual_service_list.html', context=context)

@@ -44,5 +44,6 @@ urlpatterns = [
     path('privicy/', privicy_view, name='privicy'),
     path('search/<int:page_number>', search_view, name='search'),
     path('download/<path:file_path>', download_resume, name='download'),
-    path('news_<slug:slug>/', news_detail, name='news')
+    path('news_<slug:slug>/', news_detail, name='news'),
+    path('individual-service-list/', get_individual_service_list, name='individual_service_list'),
 ]

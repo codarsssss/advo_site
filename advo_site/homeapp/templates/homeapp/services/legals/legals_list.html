@@ -1,11 +1,17 @@
-    {% comment %} <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="{% url 'homeapp:business' %}">Уголовно-правовая защита бизнеса</a></li>
-        <li><a class="dropdown-item" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционный комплайнс</a></li>                                
-        <li><a class="dropdown-item" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная практика</a></li>
-        <li><a class="dropdown-item" href="{% url 'homeapp:korporativnaya' %}">Корпоративная практика</a></li>
-        <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a></li>                                
-        <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}">IT/IP практика</a></li>                                
-        <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная практика</a></li>
-        <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a></li>
-        <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a></li>
-    </ul> {% endcomment %}
+{% extends 'homeapp/base.html' %}
+{% load static %}    
+    
+{% block content %}
+    
+        <div class="container">  
+            <p class="text-center fw-bold m-3">Услуги, оказываемые юридическим лицам:</p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item m-2"><a href="{% url 'homeapp:zashchita' %}">Комплексное абоненсткое сопровождение 
+                     адвокатом</a></li>
+                <li class="list-group-item m-2"><a href="{% url 'homeapp:zashchita' %}">Сопровождение банкротства 
+                    (субсидиарная ответсвенность)</a></li>
+            </ul>  
+    
+        </div>    
+    
+{% endblock %}
