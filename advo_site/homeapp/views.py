@@ -662,3 +662,15 @@ def get_individual_service_list(request: HttpRequest):
         'user': request.session.get('username')
     }
     return render(request, 'homeapp/services/individuals/individual_service_list.html', context=context)
+
+def get_legal_service_list(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/legal-service-list/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Услуги для юридических лиц',
+        'user': request.session.get('username')
+    }
+    return render(request, 'homeapp/services/legals/legal_service_list.html', context=context)

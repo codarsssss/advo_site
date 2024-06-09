@@ -46,4 +46,5 @@ urlpatterns = [
     path('download/<path:file_path>', download_resume, name='download'),
     path('news_<slug:slug>/', news_detail, name='news'),
     path('individual-service-list/', get_individual_service_list, name='individual_service_list'),
+    path('legal-service-list/', get_legal_service_list, name='legal_service_list'),
 ]
