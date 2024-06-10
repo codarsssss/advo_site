@@ -6,14 +6,23 @@ from django.urls import reverse
 from django.utils.html import format_html
 
 
-
 @admin.register(Consultation)
 class ConsultationAdmin(admin.ModelAdmin):
     list_display = ['username', 'number', 'date_application', 'status']
     list_filter = ['status', 'date_application', 'username']
     search_fields = ['username', 'number', 'date_application']
     ordering = ['status', 'date_application', 'username']
-    readonly_fields = ['username', 'number']
+    readonly_fields = ['username', 'number', 'date_application']
+    
+    fieldsets = (
+        (None, {
+            'fields': ('date_application', 'username', 'number', 'status', )
+        }),
+        ('Вопрос клиента', {
+            'fields': ('question', ),
+            'classes': ('collapse',) 
+        }),
+    )
 
 
 @admin.register(Worker)

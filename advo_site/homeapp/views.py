@@ -34,7 +34,8 @@ def search_form(request, user_input):
 def handle_form(request, form_class):
     form = form_class(request.POST)
     if form.is_valid():
-        asyncio.run(send_telegram_message(f'{form.instance.username}-{form.instance.number}'))
+        # asyncio.run(send_telegram_message(f'''{form.instance.number} - {form.instance.username}
+        # {form.instance.question}'''))
         form.save()
         messages.success(request, "Скоро мы с Вами свяжемся для консультации")
         request.session['username'] = request.POST.get('username')
