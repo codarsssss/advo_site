@@ -16,19 +16,20 @@ class Consultation(models.Model):
         CALLED_BACK = "ДА", "ПЕРЕЗВОНИЛИ"
         NO_CALLED_BACK = "НЕТ", "НЕ ПЕРЕЗВОНИЛИ"
 
-    username = models.CharField(max_length=100)
-    number = models.CharField(max_length=12)
+    username = models.CharField(max_length=100, verbose_name="Имя")
+    number = models.CharField(max_length=12, verbose_name="Телефон")
+    question = models.TextField(blank=True, null=True, verbose_name="Ваш вопрос (необязательно)")
     status = models.CharField(
-        max_length=3, choices=Status.choices, default=Status.NO_CALLED_BACK
+        max_length=3, choices=Status.choices, default=Status.NO_CALLED_BACK, verbose_name="Статус"
     )
-    date_application = models.DateTimeField(auto_now_add=True)
+    date_application = models.DateTimeField(auto_now_add=True, verbose_name="Дата заявки")
 
     class Meta:
         ordering = ["-date_application"]
         verbose_name_plural = "Заявки"
 
     def __str__(self):
-        return self.username
+        return f"{self.username}"
 
 
 class Worker(models.Model):

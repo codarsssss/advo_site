@@ -5,12 +5,13 @@ from .models import Consultation, Worker, News, Partner
 
 
 class ConsultationForm(forms.ModelForm):
-    username = forms.CharField(max_length=100)
-    number = forms.CharField(max_length=12)
+    username = forms.CharField(max_length=100, label='Имя')
+    number = forms.CharField(max_length=12, label='Телефон')
+    question = forms.CharField(widget=forms.Textarea, required=False, label='Ваш вопрос (необязательно)')
 
     class Meta:
         model = Consultation
-        fields = ['username', 'number']
+        fields = ['username', 'number', 'question']
 
 
 class WorkerForm(forms.ModelForm):
