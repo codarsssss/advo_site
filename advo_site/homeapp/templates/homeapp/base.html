@@ -120,56 +120,6 @@
                         Новости</a></li>
                 </li>
 
-                {% comment %} <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Порядок работы
-                    </a> {% endcomment %}
-                    {% comment %} <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'homeapp:rabotaem' %}">Как мы работаем</a></li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:polnomochiya' %}">Полномочия адвоката</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:tayna' %}">Адвокатская тайна</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:soglashenie' %}">Соглашение и ордер</a></li>
-                        <li><a class="dropdown-item" href="{% url 'homeapp:varianty' %}">Варианты вознаграждения</a>
-                        </li>
-                    </ul>
-                </li> {% endcomment %}
-
-                {% comment %} <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        О компании
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
-                        <li><a class="dropdown-item" aria-current="page" href="{% url 'homeapp:cases' %}">Кейсы</a></li>
-                        <li><a class="dropdown-item" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
-                    </ul>                   
-                </li> {% endcomment %}
-                {% comment %} <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:team' %}">Команда</a></li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:career' %}">Карьера</a></li>
-                </li> {% endcomment %}
-
-                {% comment %} <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        Филиалы
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'homeapp:ulyanovsk' %}">Ульяновск</a></li>
-{#                            <hr class="dropdown-divider">#}
-
-
-                    </ul>
-                </li> {% endcomment %}
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-search fa-5xl"></i> <!-- Иконка лупы -->
@@ -186,28 +136,7 @@
                     </ul>
                 </li>                   
 
-            </ul>
-            
-            {% comment %} <form class="d-flex" role="search"  method="POST">
-                {% csrf_token %}
-                <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Найти</button>
-            </form>         {% endcomment %}
-
-            {% comment %} <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-search fa-5xl"></i> <!-- Иконка лупы -->
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                        <form class="d-flex p-2" role="search" method="POST">
-                            {% csrf_token %}
-                            <input class="form-control me-2" required name="search_input" type="search" placeholder="поиск" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Найти</button>
-                        </form>
-                    </li>
-                </ul>
-            </div> {% endcomment %}
+            </ul>            
 
             <ul class="navbar-nav list-group-horizontal ms-auto mb-2 mt-2 mb-lg-0 mt-lg-0 justify-content-center icon-nav pt-1">
                 <li class="nav-item p-3">
@@ -233,9 +162,6 @@
     </div>
 </nav>
 
-
-
-
 {% block content %}
 {% endblock %}
 
@@ -243,30 +169,32 @@
     <section class="footer">
         <div class="container">
             <div class="row">
-                {#modal contact#}
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Заказ обратного звонка</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Требуется консультация?</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                             <form method="POST">
                                 {% csrf_token %}
-                                <div class="input-group input-group-lg">
-                                    {#                                        <span class="input-group-text" id="inputGroup-sizing-lg">Имя</span>#}
+                                <div class="input-group input-group-lg">                                    
                                     <input name="username" type="text" class="form-control mb-2"
                                            placeholder="Имя" aria-label="Sizing example input"
                                            aria-describedby="inputGroup-sizing-lg">
                                 </div>
-                                <div class="input-group input-group-lg">
-                                    {#                                        <span class="input-group-text" id="inputGroup-sizing-lg">Телефон</span>#}
+                                <div class="input-group input-group-lg" style="margin: 0 0 9px;">                                    
                                     <input name="number" type="text" class="form-control telmask"
                                            placeholder="Телефон" maxlength="12"
                                            aria-label="Sizing example input"
+                                           aria-describedby="inputGroup-sizing-lg">
+                                </div>
+                                <div class="input-group input-group-lg">
+                                    <input name="question" type="text" class="form-control mb-2"
+                                           placeholder="Ваш вопрос (необязательно)" aria-label="Your question (optional)"
                                            aria-describedby="inputGroup-sizing-lg">
                                 </div>
                                 <div class="modal-footer justify-content-center ps-0">
