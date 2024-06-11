@@ -701,4 +701,15 @@ def get_insolvecy_support_detail(request: HttpRequest):
     }
     return render(request, 'homeapp/services/legals/insolvency_support.html', context=context)
 
+def get_complex_support_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/news-list/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Комплексное сопровождение',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/legals/complex_support.html', context=context)
 

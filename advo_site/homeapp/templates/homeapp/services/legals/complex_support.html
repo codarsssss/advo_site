@@ -1,0 +1,49 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="container">
+        <h1>Комплексное абонентское сопровождение адвокатом</h1>
+
+        <div class="row">
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item m-2">Абонентское юридическое обслуживание позволяет компаниям иметь постоянный доступ 
+                    к профессиональным юристам, готовым помочь в любой ситуации, обеспечивая надежную защиту интересов и 
+                    минимизацию рисков в рамках законодательства</li>
+                <ul>
+                    <li>договорная работа (переговоры с контрагентами)</li>
+                    <li>претензионная работа</li>
+                    <li>взыскание дебиторской задолженности</li>
+                    <li>трудовые споры (увольнение (сокращение) сотрудников)</li>
+                    <li>представительство в арбитражных судах по гражданским и делам об административным правонарушениях</li>
+                    <li>налоговый и бухгалтерский консалтинг (риск-менеджер)</li>
+                    <li>корпоративные споры (корпоративный адвокат)</li>
+                    <li>иные правовые вопросы деятельности компаний (адвокат для организации)</li>
+                </ul>
+                
+            </ul>
+            {% comment %} <div class="row">
+                <p class=" h3 p-4 ">Тарифы на абонентское обслуживание</p>
+            </div> {% endcomment %}
+            <div class="row  pt-4  justify-content-between">
+                <div class="col  mt-3">
+                    <a class="text-decoration-none" href="{% static 'homeapp/docs/Тарифы на абонентское обслуживание.pdf' %}">
+                        <div class="">
+                            <p class="text-center  icon-bg"><i class="fa-solid fa-file-pdf fa-fade fa-lg"
+                                                               style="color: #36355f;"></i></p>
+                            <div class="card-body">
+                                <p class="card-text text-center p-2" style="font-size: 1.5rem;">Тарифы на абоненское обслуживание</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock content %}
+
