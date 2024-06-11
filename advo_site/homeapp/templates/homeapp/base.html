@@ -179,7 +179,8 @@
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <form method="POST">
+                                {% include "homeapp/forms/consultation_form.html" %}
+                            {% comment %} <form method="POST">
                                 {% csrf_token %}
                                 <div class="input-group input-group-lg">                                    
                                     <input name="username" type="text" class="form-control mb-2"
@@ -217,7 +218,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form> {% endcomment %}
                         </div>
                         </div>
                     </div>

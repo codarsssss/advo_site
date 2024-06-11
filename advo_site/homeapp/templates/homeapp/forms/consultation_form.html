@@ -1,0 +1,39 @@
+<form method="POST">
+    {% csrf_token %}
+    <div class="input-group input-group-lg">                                    
+        <input name="username" type="text" class="form-control mb-2"
+               placeholder="Имя" aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <div class="input-group input-group-lg" style="margin: 0 0 9px;">                                    
+        <input name="number" type="text" class="form-control telmask"
+               placeholder="Телефон" maxlength="12"
+               aria-label="Sizing example input"
+               aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <div class="input-group input-group-lg">
+        <input name="question" type="text" class="form-control mb-2"
+               placeholder="Ваш вопрос (необязательно)" aria-label="Your question (optional)"
+               aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <div class="modal-footer justify-content-center ps-0">
+        <div class="container-fluid ps-0 ">
+
+            <div class="row ">
+                <div class="col-4 ">
+                    <button type="submit" class="btn btn-secondary "
+                            data-bs-dismiss="modal">
+                        Оставить
+                        заявку
+                    </button>
+                </div>
+                <div class="col">
+                    <p class=" text-start h5 ">Нажимая на кнопку, вы
+                        соглашаетесь с <br><a
+                                href="{% url 'homeapp:privicy' %}">политикой
+                            конфиденциальности</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
