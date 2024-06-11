@@ -689,4 +689,16 @@ def news_detail(request, slug):
 
     return render(request, 'homeapp/news_detail.html', context=context)
 
+def get_insolvecy_support_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/news-list/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Сопровождение банкротства',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/legals/insolvency_support.html', context=context)
+
 
