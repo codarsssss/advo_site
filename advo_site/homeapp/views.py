@@ -725,3 +725,14 @@ def get_criminal_defense_detail(request: HttpRequest):
     }
     return render(request, 'homeapp/services/individuals/criminal_defense.html', context=context)
 
+def get_civil_defense_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/individual-service-list/civil-defense/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокаты по гражданским делам',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/civil_defense.html', context=context)
