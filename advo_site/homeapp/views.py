@@ -820,3 +820,15 @@ def get_consumer_protection_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/consumer_protection_service.html', context=context)
+
+def get_land_disputes_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/land-disputes/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Земельные споры)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/land_disputes_service.html', context=context)
