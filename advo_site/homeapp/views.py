@@ -760,3 +760,15 @@ def get_migration_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/migration_service.html', context=context)
+
+def get_traffic_accident_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/traffic-accident/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Автоюристы (ДТП)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/traffic_accident_service.html', context=context)
