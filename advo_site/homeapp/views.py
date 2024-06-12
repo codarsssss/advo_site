@@ -720,7 +720,7 @@ def get_criminal_defense_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Адвокаты по уголовным делам',
+        'title': 'Адвокат (Уголовные дела)',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/criminal_defense.html', context=context)
@@ -732,7 +732,7 @@ def get_civil_defense_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Адвокаты по гражданским делам',
+        'title': 'Адвокат (Гражданские дела)',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/civil_defense.html', context=context)
@@ -744,7 +744,7 @@ def get_inheritance_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Адвокаты по делам о наследовании',
+        'title': 'Адвокат (Дела по наследованию)',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/inheritance_service.html', context=context)
@@ -756,7 +756,7 @@ def get_migration_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Адвокаты по миграционным делам',
+        'title': 'Адвокаты (Миграционным дела)',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/migration_service.html', context=context)
@@ -784,3 +784,15 @@ def get_license_revocation_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/license_revocation_service.html', context=context)
+
+def get_family_matters_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/family-matters/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Семейные дела)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/family_matters_service.html', context=context)
