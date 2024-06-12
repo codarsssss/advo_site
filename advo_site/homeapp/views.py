@@ -796,3 +796,16 @@ def get_family_matters_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/family_matters_service.html', context=context)
+
+def get_individual_bankruptcy_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/individual-bankruptcy/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Банкротство физичеких лиц)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/individual_bankruptcy_service.html', context=context)
+    
