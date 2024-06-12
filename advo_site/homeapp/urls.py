@@ -32,6 +32,7 @@ urlpatterns = [
     path('individual-service-list/', get_individual_service_list, name='individual_service_list'),
     path('individual-service-list/criminal-defense/', get_criminal_defense_detail, name='criminal_defense'),
     path('individual-service-list/civil-defense/', get_civil_defense_detail, name='civil_defense'),
+    path('individual-service-list/inheritance/', get_inheritance_detail, name='inheritance'),
     path('legal-service-list/', get_legal_service_list, name='legal_service_list'),
     path('legal-service-list/insolvency-support/', get_insolvecy_support_detail, name='insolvecy_support'),
     path('legal-service-list/complex-support/', get_complex_support_detail, name='complex_support'),

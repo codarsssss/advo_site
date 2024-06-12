@@ -736,3 +736,15 @@ def get_civil_defense_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/civil_defense.html', context=context)
+
+def get_inheritance_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/inheritance/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Страхование',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/inheritance_service.html', context=context)
