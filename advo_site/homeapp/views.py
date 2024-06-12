@@ -744,7 +744,19 @@ def get_inheritance_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Страхование',
+        'title': 'Адвокаты по делам о наследовании',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/inheritance_service.html', context=context)
+
+def get_migration_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/migration/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокаты по миграционным делам',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/migration_service.html', context=context)
