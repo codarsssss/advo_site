@@ -38,6 +38,7 @@ urlpatterns = [
     path('individual-service-list/license-revocation/', get_license_revocation_detail, name='license_revocation'),
     path('individual-service-list/family-matters/', get_family_matters_detail, name='family_matters'),
     path('individual-service-list/individual-bankruptcy/', get_individual_bankruptcy_detail, name='individual_bankruptcy'),
+    path('individual-service-list/consumer-protection/', get_consumer_protection_detail, name='consumer_protection'),
     path('legal-service-list/', get_legal_service_list, name='legal_service_list'),
     path('legal-service-list/insolvency-support/', get_insolvecy_support_detail, name='insolvecy_support'),
     path('legal-service-list/complex-support/', get_complex_support_detail, name='complex_support'),

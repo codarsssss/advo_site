@@ -809,3 +809,14 @@ def get_individual_bankruptcy_detail(request: HttpRequest):
     }
     return render(request, 'homeapp/services/individuals/individual_bankruptcy_service.html', context=context)
     
+def get_consumer_protection_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/consumer-protection/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Защита прав потребителя)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/consumer_protection_service.html', context=context)
