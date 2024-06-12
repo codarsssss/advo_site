@@ -692,7 +692,7 @@ def news_detail(request, slug):
 def get_insolvecy_support_detail(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/news-list/')
+            return redirect('legal-service-list/insolvency-support/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -704,7 +704,7 @@ def get_insolvecy_support_detail(request: HttpRequest):
 def get_complex_support_detail(request: HttpRequest):
     if request.method == 'POST':
         if handle_form(request, ConsultationForm):
-            return redirect('/news-list/')
+            return redirect('legal-service-list/complex-support/')
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
@@ -712,4 +712,16 @@ def get_complex_support_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/legals/complex_support.html', context=context)
+
+def get_criminal_defense_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/individual-service-list/criminal-defense/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокаты по уголовным делам',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/criminal_defense.html', context=context)
 
