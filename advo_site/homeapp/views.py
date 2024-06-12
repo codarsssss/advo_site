@@ -768,7 +768,19 @@ def get_traffic_accident_detail(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
     context = {
-        'title': 'Автоюристы (ДТП)',
+        'title': 'Автоюрист (ДТП)',
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/traffic_accident_service.html', context=context)
+
+def get_license_revocation_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/license-revocation/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Автоюрист (Лишение водительского удостоверения)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/license_revocation_service.html', context=context)
