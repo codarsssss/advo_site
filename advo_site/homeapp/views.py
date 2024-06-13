@@ -856,3 +856,15 @@ def get_medical_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/medical_service.html', context=context)
+
+def get_enforcement_lawyer_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/enforcement-lawyer/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Исполнительного производство)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/enforcement_lawyer_service.html', context=context)
