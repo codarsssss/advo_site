@@ -43,6 +43,7 @@ urlpatterns = [
     path('individual-service-list/debt-recovery/', get_debt_recovery_detail, name='debt_recovery'),
     path('individual-service-list/medical/', get_medical_detail, name='medical'),
     path('individual-service-list/enforcement-lawyer/', get_enforcement_lawyer_detail, name='enforcement_lawyer'),
+    path('individual-service-list/appeals/', get_appeals_detail, name='appeals'),
     path('legal-service-list/', get_legal_service_list, name='legal_service_list'),
     path('legal-service-list/insolvency-support/', get_insolvecy_support_detail, name='insolvecy_support'),
     path('legal-service-list/complex-support/', get_complex_support_detail, name='complex_support'),

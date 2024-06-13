@@ -868,3 +868,15 @@ def get_enforcement_lawyer_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/enforcement_lawyer_service.html', context=context)
+
+def get_appeals_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/appeals/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Обжалование решений)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/appeals_service.html', context=context)
