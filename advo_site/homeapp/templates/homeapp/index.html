@@ -450,7 +450,7 @@
     </div>
     {#slider#}
     <!--================ Новости =================-->
-    {% if News %}
+    {% comment %} {% if News %}
         <section class="news container">
             <div class="news_feed_header">
                 <h1>Новости и публикации</h1>
@@ -487,7 +487,7 @@
                                     style="background-color: rgba(0, 90, 255, 0.05);
                                     border-radius: 5px;">
                                         <p>{{ news.create_datetime }} - <a href="/news_{{ news.slug }}">{{ news.title }}</a></p>
-                                    </div> {% endcomment %}
+                                    </div>
                                 </li>
                                 {% endfor %}
                             </ul>
@@ -496,23 +496,6 @@
                 </div>
             </div>
                 
-            {% comment %} <div class="news_feed_content swiper mySlider mt-5">
-                <div class="news_content_wrapper swiper-wrapper">
-                    {% for news in News %}
-                        <a class="swiper-slide" href="/news_{{ news.slug }}">
-                            <div class="news_item">
-                                <div class="news_item_header ">
-                                    <p class="text-end">{{ news.create_datetime }}</p>
-                                    <h1>{{ news.title }}</h1>
-                                </div>
-                                <div class="news_item_content">
-                                    <p>{{ news.text|safe }}</p>
-                                </div>
-                            </div>
-                        </a>
-                    {% endfor %}
-                </div>
-            </div> {% endcomment %}
-        </section>
-    {% endif %}
+        </section> 
+    {% endif %}{% endcomment %}
 {% endblock %}

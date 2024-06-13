@@ -80,6 +80,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 top-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'homeapp:index' %}">
+                        Главная</a></li>
+                </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Услуги
@@ -180,45 +186,6 @@
                             </div>
                             <div class="modal-body">
                                 {% include "homeapp/forms/consultation_form.html" %}
-                            {% comment %} <form method="POST">
-                                {% csrf_token %}
-                                <div class="input-group input-group-lg">                                    
-                                    <input name="username" type="text" class="form-control mb-2"
-                                           placeholder="Имя" aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                                <div class="input-group input-group-lg" style="margin: 0 0 9px;">                                    
-                                    <input name="number" type="text" class="form-control telmask"
-                                           placeholder="Телефон" maxlength="12"
-                                           aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                                <div class="input-group input-group-lg">
-                                    <input name="question" type="text" class="form-control mb-2"
-                                           placeholder="Ваш вопрос (необязательно)" aria-label="Your question (optional)"
-                                           aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                                <div class="modal-footer justify-content-center ps-0">
-                                    <div class="container-fluid ps-0 ">
-
-                                        <div class="row ">
-                                            <div class="col-4 ">
-                                                <button type="submit" class="btn btn-secondary "
-                                                        data-bs-dismiss="modal">
-                                                    Оставить
-                                                    заявку
-                                                </button>
-                                            </div>
-                                            <div class="col">
-                                                <p class=" text-start h5 ">Нажимая на кнопку, вы
-                                                    соглашаетесь с <br><a
-                                                            href="{% url 'homeapp:privicy' %}">политикой
-                                                        конфиденциальности</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form> {% endcomment %}
                         </div>
                         </div>
                     </div>
@@ -293,72 +260,39 @@
         <div class="row">
             <div class="col-md-4 col-6 ">
                 <ul class="list-unstyled">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Практики
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'homeapp:zashchita' %}">Защита от уголовного
-                                преследования</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:business' %}">Уголовно-правовая защита
-                                бизнеса</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:antikorruptsionnoe' %}">Антикоррупционный
-                                комплайнс</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:arbitrazhnaya' %}">Арбитражная
-                                практика</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:korporativnaya' %}">Корпоративная
-                                практика</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:nalogovaya' %}">Налоговая практика</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:it-ip-praktika' %}"> IT/ IP практика</a>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:meditsinskoe' %}">Медицинская
-                                практика</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:semeynaya' %}">Семейная практика</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:sanktsionnaya' %}">Санкционная
-                                практика</a>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:mediatsiya' %}">Медиация</a>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:zemelnaya' %}">Земельная практика</a>
-                            </li>
 
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
+                        href="{% url 'homeapp:index' %}">Главная</a></li>
+
+                    <li class="nav-item dropdown" style="padding: 0 0 10px;">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Порядок работы
+                            aria-expanded="false">
+                            Услуги
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'homeapp:rabotaem' %}">Как мы работаем</a></li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:polnomochiya' %}">Полномочия адвоката</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:tayna' %}">Адвокатская тайна</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:soglashenie' %}">Соглашение и ордер</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{% url 'homeapp:varianty' %}">Варианты вознагрождения</a>
-                            </li>
+                            <li><a class="dropdown-item" href="{% url 'homeapp:individual_service_list' %}">
+                                Для физических лиц</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeapp:legal_service_list' %}">
+                                Для юридических лиц</a></li>
                         </ul>
                     </li>
+
+                    <li class="nav-item dropdown" style="padding: 0 0 10px;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Адвокаты
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'homeapp:team' %}">Офис в Москве</a></li>
+                            <li><a class="dropdown-item" href="{% url 'homeapp:ulyanovsk' %}">Филиал в Ульяновске</a>
+                        </ul>
+                    </li>
+
                     <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                       href="{% url 'homeapp:team' %}">Команда</a></li>
+                        href="{% url 'homeapp:cases' %}">Практика адвокатов</a></li>                  
+                    
                     <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                       href="{% url 'homeapp:cases' %}">Кейсы</a></li>
-                    <li class="nav-item nav_footer"><a class="nav-link" aria-current="page"
-                                                       href="{% url 'homeapp:career' %}">Карьера</a></li>
+                        href="{% url 'homeapp:news_list' %}">Новости</a></li>
                 </ul>
             </div>
 
