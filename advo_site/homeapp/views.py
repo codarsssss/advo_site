@@ -844,3 +844,15 @@ def get_debt_recovery_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/debt_recovery_service.html', context=context)
+
+def get_medical_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/medical/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Адвокат (Возмещение вреда здоровью)',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/medical_service.html', context=context)
