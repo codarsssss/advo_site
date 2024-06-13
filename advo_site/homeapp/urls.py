@@ -45,6 +45,7 @@ urlpatterns = [
     path('individual-service-list/enforcement-lawyer/', get_enforcement_lawyer_detail, name='enforcement_lawyer'),
     path('individual-service-list/appeals/', get_appeals_detail, name='appeals'),
     path('individual-service-list/administrative-penalties/', get_administrative_penalties_detail, name='administrative_penalties'),
+    path('individual-service-list/online-consultation/', get_online_consultation_detail, name='online_consultation'),
     path('legal-service-list/', get_legal_service_list, name='legal_service_list'),
     path('legal-service-list/insolvency-support/', get_insolvecy_support_detail, name='insolvecy_support'),
     path('legal-service-list/complex-support/', get_complex_support_detail, name='complex_support'),

@@ -892,3 +892,15 @@ def get_administrative_penalties_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/administrative_pinalties_service.html', context=context)
+
+def get_online_consultation_detail(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('individual-service-list/online-consultation/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+    context = {
+        'title': 'Онлайн консультации',
+        'user': request.session.get('username'),
+    }
+    return render(request, 'homeapp/services/individuals/online_consultation_service.html', context=context)
