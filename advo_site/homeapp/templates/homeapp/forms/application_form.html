@@ -1,0 +1,21 @@
+<form method="POST" class="job-form" prefix="form" id="form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <input type="text" name="username" class="form-control" 
+        placeholder="Имя" required autocomplete="">
+    </div>
+
+    <div class="form-group">
+        <input name="number" type="text" class="form-control telmask"
+        placeholder="Телефон" maxlength="12"
+        aria-label="Sizing example input">
+    </div>
+
+    <div class="form-group">
+        <input name="question" type="text" class="form-control"
+               placeholder="Вопрос (необязательно)" aria-label="Question (optional)">
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Отправить</button>
+</form>
