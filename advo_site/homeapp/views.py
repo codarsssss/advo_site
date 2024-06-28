@@ -5,7 +5,7 @@ from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
 
-from .models import News, Partner
+from .models import News, Partner, PracticeCategory
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
@@ -91,12 +91,15 @@ def cases_view(request: HttpRequest):
         user_input = request.POST.get('search_input')
         return search_form(request, user_input)
 
+    practice_categories = PracticeCategory.objects.all()
+
     context = {
         'title': 'Практика адвокатов',
+        'practice_categories': practice_categories,
         'user': request.session.get('username')
     }
 
-    return render(request, 'homeapp/cases.html', context=context)
+    return render(request, 'homeapp/cases_auto.html', context=context)
 
 
 def career_view(request: HttpRequest):

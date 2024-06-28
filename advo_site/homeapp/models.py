@@ -158,3 +158,77 @@ class Partner(models.Model):
 
     def __str__(self):        
         return f"{self.name}: {self.work_place}"
+
+
+class PracticeCategory(models.Model):
+    title = models.CharField(
+        max_length=128, verbose_name="Наименование категории практики"
+        )
+    image = models.ImageField(
+        verbose_name="Изображение", upload_to="practice_category/", blank=True, null=True
+        )
+    class Meta:
+        verbose_name = "Категорию практики"
+        verbose_name_plural = "Категории практик"
+
+    def __str__(self):        
+        return f"{self.title}"
+
+class PracticeInstance(models.Model):
+    WORK_PLACE_CHOICES = (
+        ('moscow', 'Head office: Moscow'),
+        ('ulyanovsk', 'Ulyanovsk branch')
+    )
+
+    work_place = models.CharField(
+        max_length=32,
+        verbose_name="Принадлежность случая",
+        choices=WORK_PLACE_CHOICES, 
+        default="moscow",
+        blank=True,
+        null=True
+    )
+    category = models.ForeignKey(
+        PracticeCategory,
+        on_delete=models.CASCADE,
+        verbose_name="Категория практики"
+    )
+    title = models.CharField(
+        max_length=255, verbose_name="Название случая"
+        )
+    circumstances = models.TextField(
+        verbose_name="Обстоятельства"
+    )
+    lawyer_position = models.TextField(
+        verbose_name="Позиция адвоката"
+    )
+    outcome = models.TextField(
+        verbose_name="Итог"
+    )
+
+    class Meta:
+        verbose_name = "Случай практики"
+        verbose_name_plural = "Случаи практики"
+
+    def __str__(self):
+        return f"{self.title}"
+
+
+class PracticeInstanceImage(models.Model):
+    practice_instance = models.ForeignKey(
+        PracticeInstance,
+        on_delete=models.CASCADE,
+        related_name='images',
+        verbose_name="Случай практики"
+    )
+    image = models.ImageField(
+        upload_to='practice_instance_images/',
+        verbose_name="Изображение"
+    )
+
+    class Meta:
+        verbose_name = "Изображение случая практики"
+        verbose_name_plural = "Изображения случаев практики"
+
+    def __str__(self):
+        return f"Image for {self.practice_instance}"

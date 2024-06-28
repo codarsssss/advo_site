@@ -4,6 +4,7 @@ from .forms import NewsForm, PartnerForm
 from .models import Consultation, Worker, News, Partner
 from django.urls import reverse
 from django.utils.html import format_html
+from .models import PracticeCategory, PracticeInstance, PracticeInstanceImage
 
 
 @admin.register(Consultation)
@@ -59,6 +60,45 @@ class PartnerAdmin(admin.ModelAdmin):
     form = PartnerForm
     list_display = ['name',]
 
+
+class PracticeCategoryAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title',)
+    list_filter = ('title',)
+
+class PracticeInstanceImageInline(admin.TabularInline):
+    model = PracticeInstanceImage
+    extra = 1  # Количество пустых форм для новых изображений
+
+class PracticeInstanceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'work_place', 'get_category_title')
+    search_fields = ('title', 'circumstances', 'lawyer_position', 'outcome')
+    list_filter = ('work_place', 'category__title')
+    list_editable = ('work_place',)
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'work_place', 'category')
+        }),
+        ('Details', {
+            'fields': ('circumstances', 'lawyer_position', 'outcome')
+        }),
+    )
+    inlines = [PracticeInstanceImageInline]
+
+    def get_category_title(self, obj):
+        return obj.category.title
+    get_category_title.short_description = 'Category Title'
+    get_category_title.admin_order_field = 'category__title'
+
+class PracticeInstanceImageAdmin(admin.ModelAdmin):
+    list_display = ('practice_instance', 'image')
+    search_fields = ('practice_instance__title',)
+    list_filter = ('practice_instance',)
+
+# Register models with admin site
+admin.site.register(PracticeCategory, PracticeCategoryAdmin)
+admin.site.register(PracticeInstance, PracticeInstanceAdmin)
+admin.site.register(PracticeInstanceImage, PracticeInstanceImageAdmin)
 
 # admin.site.unregister(User)
 # admin.site.unregister(Group)
