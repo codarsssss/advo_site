@@ -1,0 +1,20 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container">
+    <h3>Практика юристов МКА «Партнер Групп»: {{ category.title }}</h3>
+    <ul>
+        {% for practice in practices %}
+        <li>
+            <a href="{% url 'homeapp:practice_detail' pk=practice.id %}">{{ practice.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+    {% comment %} <a href="{% url 'practice_list' %}">Назад к списку практик</a> {% endcomment %}
+
+
+    {% endblock content %}

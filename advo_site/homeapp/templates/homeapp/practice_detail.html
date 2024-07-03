@@ -1,0 +1,23 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <h1>{{ practice.title }}</h1>
+    <p><strong>Место работы:</strong> {{ practice.get_work_place_display }}</p>
+    <p><strong>Категория:</strong> {{ practice.category.title }}</p>
+    <p><strong>Обстоятельства:</strong> {{ practice.circumstances }}</p>
+    <p><strong>Позиция адвоката:</strong> {{ practice.lawyer_position }}</p>
+    <p><strong>Итог:</strong> {{ practice.outcome }}</p>
+
+    <h2>Изображения</h2>
+    <ul>
+        {% for image in practice.images.all %}
+            <li><img src="{{ image.image.url }}" alt=""></li>
+        {% endfor %}
+    </ul>
+
+    {% comment %} <a href="{% url 'practice_list' %}">Назад к списку практик</a> {% endcomment %}
+
+
+    {% endblock content %}

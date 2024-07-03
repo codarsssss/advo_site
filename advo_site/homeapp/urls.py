@@ -51,6 +51,7 @@ urlpatterns = [
     path('legal-service-list/complex-support/', get_complex_support_detail, name='complex_support'),
     path('news-list/', get_news_list, name='news_list'),
     path('news_<slug:slug>/', news_detail, name='news_detail'),
+    path('practices/category/<int:category_id>/', PracticeCategoryListView.as_view(), name='practice_category_list'),
     path('cases/1/', case_1, name='case_1'),
     path('cases/2/', case_2, name='case_2'),
     path('cases/3/', case_3, name='case_3'),

@@ -9,11 +9,11 @@
         {% for category in practice_categories %}
         <!-- Используем col-md-4 для 3 карточек в ряду и col-sm-6 для 2 карточек в ряду на маленьких экранах -->
         <div class="col-sm-6 col-md-4 mb-4 d-flex align-items-stretch">
-            <a class="text-decoration-none w-100" href="{% url 'homeapp:case_1' %}">
+            <a class="text-decoration-none w-100" href="{% url 'homeapp:practice_category_list' category_id=category.id %}">
                 <!-- Карточка занимает всю высоту родителя -->
                 <div class="card h-100 p-4 m-2">
                     <!-- Изображение сверху карточки -->
-                    <img src="{% static 'homeapp/img/cases/1.jpg' %}" class="card-img-top" alt="...">
+                    {% comment %} <img src="{% static 'homeapp/img/cases/1.jpg' %}" class="card-img-top" alt="..."> {% endcomment %}
                     <div class="card-body">
                         <!-- Текст выравнивается по верхнему краю -->
                         <p class="card-text text-center h4">{{ category.title }}</p>

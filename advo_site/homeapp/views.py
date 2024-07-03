@@ -1,11 +1,14 @@
 import os
 import asyncio
+
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpRequest, FileResponse, Http404
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 
-from .models import News, Partner, PracticeCategory
+from .models import News, Partner, PracticeCategory, PracticeInstance
 from .search import search
 from django.core.paginator import Paginator
 from django.urls import reverse
@@ -82,24 +85,6 @@ def team_view(request: HttpRequest):
 
 
     return render(request, 'homeapp/team.html', context=context)
-
-
-def cases_view(request: HttpRequest):
-    if request.method == 'POST':
-        if handle_form(request, ConsultationForm):
-            return redirect('/cases/')
-        user_input = request.POST.get('search_input')
-        return search_form(request, user_input)
-
-    practice_categories = PracticeCategory.objects.all()
-
-    context = {
-        'title': 'Практика адвокатов',
-        'practice_categories': practice_categories,
-        'user': request.session.get('username')
-    }
-
-    return render(request, 'homeapp/cases_auto.html', context=context)
 
 
 def career_view(request: HttpRequest):
@@ -907,3 +892,41 @@ def get_online_consultation_detail(request: HttpRequest):
         'user': request.session.get('username'),
     }
     return render(request, 'homeapp/services/individuals/online_consultation_service.html', context=context)
+
+class PracticeInstanceDetailView(DetailView):
+    model = PracticeInstance
+    template_name = 'practice_detail.html'
+    context_object_name = 'practice'
+
+
+def cases_view(request: HttpRequest):
+    if request.method == 'POST':
+        if handle_form(request, ConsultationForm):
+            return redirect('/cases/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
+
+    practice_categories = PracticeCategory.objects.all()
+
+    context = {
+        'title': 'Практика адвокатов',
+        'practice_categories': practice_categories,
+        'user': request.session.get('username')
+    }
+
+    return render(request, 'homeapp/cases_auto.html', context=context)
+
+
+class PracticeCategoryListView(ListView):
+    model = PracticeInstance
+    template_name = 'homeapp/practice_category_list.html'
+    context_object_name = 'practices'
+
+    def get_queryset(self):
+        category_id = self.kwargs.get('category_id')
+        return PracticeInstance.objects.filter(category_id=category_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = PracticeCategory.objects.get(id=self.kwargs.get('category_id'))
+        return context
