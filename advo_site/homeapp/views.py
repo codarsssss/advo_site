@@ -10,7 +10,7 @@ from django.views.generic.list import ListView
 
 from .models import News, Partner, PracticeCategory, PracticeInstance
 from .search import search
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.urls import reverse
 from django.conf import settings
 from .notification_bot import send_telegram_message
@@ -917,16 +917,43 @@ def cases_view(request: HttpRequest):
     return render(request, 'homeapp/cases_auto.html', context=context)
 
 
+class PracticeDetailView(DetailView):
+    model = PracticeInstance
+    template_name = 'homeapp/practice_detail.html'
+    context_object_name = 'practice'
+
+
 class PracticeCategoryListView(ListView):
     model = PracticeInstance
     template_name = 'homeapp/practice_category_list.html'
     context_object_name = 'practices'
+    paginate_by = 5  # Количество элементов на страницу
 
     def get_queryset(self):
         category_id = self.kwargs.get('category_id')
-        return PracticeInstance.objects.filter(category_id=category_id)
+        return PracticeInstance.objects.filter(category_id=category_id).order_by('title')
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['category'] = PracticeCategory.objects.get(id=self.kwargs.get('category_id'))
+        category = PracticeCategory.objects.get(id=self.kwargs.get('category_id'))
+        queryset = self.get_queryset()
+        
+        # Пагинация
+        paginator = Paginator(queryset, self.paginate_by)
+        page = self.request.GET.get('page')
+        
+        try:
+            practices = paginator.page(page)
+        except PageNotAnInteger:
+            practices = paginator.page(1)
+        except EmptyPage:
+            practices = paginator.page(paginator.num_pages)
+        
+        context['category'] = category
+        context['practices'] = practices
+        context['is_paginated'] = practices.has_other_pages()
+        context['page_obj'] = practices
+        context['paginator'] = paginator
+        
         return context

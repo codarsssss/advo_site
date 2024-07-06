@@ -1,23 +1,41 @@
 {% extends 'homeapp/base.html' %}
 {% load static %}
+{% load thumbnail %}
 {% block content %}
 
 
-    <h1>{{ practice.title }}</h1>
-    <p><strong>Место работы:</strong> {{ practice.get_work_place_display }}</p>
-    <p><strong>Категория:</strong> {{ practice.category.title }}</p>
+<div class="container">
+        <br/>
+    <h3>{{ practice.title }}</h3>
+    {% comment %} <p><strong>Место работы:</strong> {{ practice.get_work_place_display }}</p>
+    <p><strong>Категория:</strong> {{ practice.category.title }}</p> {% endcomment %}
+    <br/>
     <p><strong>Обстоятельства:</strong> {{ practice.circumstances }}</p>
     <p><strong>Позиция адвоката:</strong> {{ practice.lawyer_position }}</p>
     <p><strong>Итог:</strong> {{ practice.outcome }}</p>
+    {% if practice.verdict_url %}
+    <p><strong>Вердикт:</strong> <a href="{{ practice.verdict_url }}">ссылка</a></p>
+    {% endif %}
+    
+    <br/>
 
-    <h2>Изображения</h2>
-    <ul>
-        {% for image in practice.images.all %}
-            <li><img src="{{ image.image.url }}" alt=""></li>
-        {% endfor %}
-    </ul>
+    {% if practice.images.all %}
+    <div class="images">
+        <ul>
+            {% for image in practice.images.all %}
+                <li>
+                    <a href="{{ image.image.url }}" target="_blank">
+                        {% thumbnail image.image "150x150" crop="center" as thumb %}
+                            <img src="{{ thumb.url }}" alt="Изображение случая практики">
+                        {% endthumbnail %}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
 
     {% comment %} <a href="{% url 'practice_list' %}">Назад к списку практик</a> {% endcomment %}
-
+</div>
 
     {% endblock content %}

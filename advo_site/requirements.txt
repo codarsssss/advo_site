@@ -20,6 +20,7 @@ pyenchant==3.2.2
 pytz==2023.3
 requests==2.31.0
 six==1.16.0
+sorl-thumbnail==12.10.0
 soupsieve==2.4.1
 sqlparse==0.4.3
 transliterate==1.10.2

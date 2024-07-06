@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'tinymce',
     'homeapp.apps.HomeappConfig',
     'staff',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [

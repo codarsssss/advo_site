@@ -663,3 +663,19 @@ h2 {
 .list-group-item {
     font-size: 22px; /* Укажите нужный размер шрифта */
 }
+
+.images ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.images li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.images img {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+}

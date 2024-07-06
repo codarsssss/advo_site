@@ -206,6 +206,12 @@ class PracticeInstance(models.Model):
         verbose_name="Итог"
     )
 
+    verdict_url = models.URLField(
+        verbose_name="Ссылка на приговор",
+        blank=True,
+        null=True
+    )
+
     class Meta:
         verbose_name = "Случай практики"
         verbose_name_plural = "Случаи практики"

@@ -80,7 +80,7 @@ class PracticeInstanceAdmin(admin.ModelAdmin):
             'fields': ('title', 'work_place', 'category')
         }),
         ('Details', {
-            'fields': ('circumstances', 'lawyer_position', 'outcome')
+            'fields': ('circumstances', 'lawyer_position', 'outcome', 'verdict_url')
         }),
     )
     inlines = [PracticeInstanceImageInline]
