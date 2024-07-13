@@ -893,11 +893,6 @@ def get_online_consultation_detail(request: HttpRequest):
     }
     return render(request, 'homeapp/services/individuals/online_consultation_service.html', context=context)
 
-class PracticeInstanceDetailView(DetailView):
-    model = PracticeInstance
-    template_name = 'practice_detail.html'
-    context_object_name = 'practice'
-
 
 def cases_view(request: HttpRequest):
     if request.method == 'POST':
