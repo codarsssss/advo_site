@@ -3,6 +3,7 @@ import asyncio
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpRequest, FileResponse, Http404
+from django.views import View
 from .forms import ConsultationForm, WorkerForm
 from django.contrib import messages
 from django.views.generic.detail import DetailView
@@ -912,31 +913,35 @@ def cases_view(request: HttpRequest):
     return render(request, 'homeapp/cases_auto.html', context=context)
 
 
-class PracticeDetailView(DetailView):
+class PracticeDetailView(DetailView, View):
     model = PracticeInstance
     template_name = 'homeapp/practice_detail.html'
     context_object_name = 'practice'
 
+    def post(self, request, *args, **kwargs):
+        if handle_form(request, ConsultationForm):
+            return redirect('/cases/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
 
-class PracticeCategoryListView(ListView):
+    def get(self, request, *args, **kwargs):
+        return super().get(request, *args, **kwargs)
+
+
+class PracticeCategoryListView(View):
     model = PracticeInstance
     template_name = 'homeapp/practice_category_list.html'
     context_object_name = 'practices'
     paginate_by = 5  # Количество элементов на страницу
 
-    def get_queryset(self):
+    def get(self, request, *args, **kwargs):
         category_id = self.kwargs.get('category_id')
-        return PracticeInstance.objects.filter(category_id=category_id).order_by('title')
-
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        category = PracticeCategory.objects.get(id=self.kwargs.get('category_id'))
-        queryset = self.get_queryset()
+        queryset = PracticeInstance.objects.filter(category_id=category_id).order_by('title')
+        category = PracticeCategory.objects.get(id=category_id)
         
         # Пагинация
         paginator = Paginator(queryset, self.paginate_by)
-        page = self.request.GET.get('page')
+        page = request.GET.get('page')
         
         try:
             practices = paginator.page(page)
@@ -945,10 +950,18 @@ class PracticeCategoryListView(ListView):
         except EmptyPage:
             practices = paginator.page(paginator.num_pages)
         
-        context['category'] = category
-        context['practices'] = practices
-        context['is_paginated'] = practices.has_other_pages()
-        context['page_obj'] = practices
-        context['paginator'] = paginator
+        context = {
+            'category': category,
+            'practices': practices,
+            'is_paginated': practices.has_other_pages(),
+            'page_obj': practices,
+            'paginator': paginator,
+        }
         
-        return context
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        if handle_form(request, ConsultationForm):
+            return redirect('/cases/')
+        user_input = request.POST.get('search_input')
+        return search_form(request, user_input)
