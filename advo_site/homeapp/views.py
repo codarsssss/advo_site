@@ -932,7 +932,7 @@ class PracticeCategoryListView(View):
     model = PracticeInstance
     template_name = 'homeapp/practice_category_list.html'
     context_object_name = 'practices'
-    paginate_by = 5  # Количество элементов на страницу
+    paginate_by = 10  # Количество элементов на страницу
 
     def get(self, request, *args, **kwargs):
         category_id = self.kwargs.get('category_id')
